@@ -185,6 +185,39 @@ const Index = () => {
       {/* Why Choose Us Section */}
       <AboutSection />
       
+      {/* Call to Action Banner */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20" />
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold glow-text">
+              Ready to Build Your <span className="text-primary">Dream PC</span>?
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Join hundreds of satisfied customers who've upgraded their gaming and productivity with Eclipse PC. Let's create something extraordinary together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+              <button 
+                onClick={() => document.getElementById('builds')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
+              >
+                View Pre-Built Systems
+              </button>
+              <button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-4 bg-background/10 backdrop-blur-sm border-2 border-primary/50 text-foreground rounded-lg font-semibold text-lg hover:bg-background/20 hover:border-primary transition-all duration-300 hover:scale-105"
+              >
+                Request Custom Build
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Pre-Configured Builds Section */}
       <section ref={buildsRef} id="builds" className="pt-0 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
