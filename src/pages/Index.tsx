@@ -7,9 +7,12 @@ import ProductCard from "@/components/ProductCard";
 import AboutSection from "@/components/AboutSection";
 import Preloader from "@/components/Preloader";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
-import pcBuild1 from "@/assets/pc-build-1.jpg";
-import pcBuild2 from "@/assets/pc-build-2.jpg";
-import pcBuild3 from "@/assets/pc-build-3.jpg";
+import pcBuild1 from "@/assets/pc-build-4.jpg";
+import pcBuild2 from "@/assets/pc-build-5.jpg";
+import pcBuild3 from "@/assets/pc-build-6.png";
+import pcBuild4 from "@/assets/pc-build-7.jpg";
+import pcBuild5 from "@/assets/pc-build-8.jpg";
+import pcBuild6 from "@/assets/pc-build-9.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,7 +59,7 @@ const Index = () => {
     {
       name: "ECLIPSE CREATOR",
       price: "$2,499",
-      image: pcBuild1,
+      image: pcBuild4,
       specs: {
         processor: "Intel Core i9-14900K",
         gpu: "NVIDIA RTX 4070 12GB",
@@ -67,7 +70,7 @@ const Index = () => {
     {
       name: "ECLIPSE STREAMER",
       price: "$2,199",
-      image: pcBuild2,
+      image: pcBuild5,
       specs: {
         processor: "AMD Ryzen 9 7900X",
         gpu: "NVIDIA RTX 4070 Ti 12GB",
@@ -78,7 +81,7 @@ const Index = () => {
     {
       name: "ECLIPSE ELITE",
       price: "$4,999",
-      image: pcBuild3,
+      image: pcBuild6,
       specs: {
         processor: "Intel Core i9-14900KS",
         gpu: "NVIDIA RTX 4090 24GB",
@@ -182,7 +185,7 @@ const Index = () => {
       <AboutSection />
       
       {/* Pre-Configured Builds Section */}
-      <section ref={buildsRef} id="builds" className="py-24 relative overflow-hidden">
+      <section ref={buildsRef} id="builds" className="py-12 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="section-title text-4xl md:text-6xl font-bold mb-4 glow-text">
