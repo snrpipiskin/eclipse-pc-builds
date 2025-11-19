@@ -4,10 +4,12 @@ import heroImage from "@/assets/hero-pc.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+    <section id="home" className="relative min-h-screen flex items-center pt-20 pb-0">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
+      {/* Seamless bottom gradient across entire section */}
+      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-background via-background/95 via-background/70 via-background/40 to-transparent pointer-events-none" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 -mb-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="inline-block">
@@ -46,16 +48,13 @@ const Hero = () => {
             <div className="absolute inset-0 bg-primary/20 blur-[150px] rounded-full animate-glow-pulse" />
             <div className="absolute inset-0 bg-primary/15 blur-[200px] rounded-full" />
             
-            {/* Image container with gradient overlay */}
+            {/* Image container */}
             <div className="relative overflow-hidden">
               <img 
                 src={heroImage} 
                 alt="Eclipse Gaming Motherboard" 
                 className="relative w-full h-full object-cover group-hover/hero-img:-translate-x-2 transition-transform duration-500"
               />
-              
-              {/* Enhanced bottom blur gradient for smoother transition */}
-              <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-background via-background/90 via-background/60 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
