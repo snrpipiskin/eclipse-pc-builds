@@ -81,13 +81,29 @@ const AboutSection = () => {
       ref={sectionRef}
       className="py-6 relative overflow-hidden"
     >
+      {/* Background depth and tech elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-accent/5 to-transparent depth-blur" />
+        <div className="tech-grid-bg absolute inset-0 opacity-40" />
+      </div>
+
+      {/* Flowing lines */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="flowing-line absolute top-1/2 left-0 w-full h-0.5 opacity-40" style={{ animationDelay: '2s' }} />
+      </div>
+
+      {/* Light accents */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="light-streak absolute bottom-0 left-0 w-[150%] h-[150%] opacity-30" style={{ animationDelay: '4s' }} />
+      </div>
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2
             ref={titleRef}
-            className="text-4xl md:text-6xl font-bold mb-6 glow-text"
+            className="text-4xl md:text-6xl font-bold mb-6 glow-text light-accent"
           >
-            Why Choose <span className="text-primary">Eclipse PC</span>
+            Why Choose <span className="text-primary neon-accent">Eclipse PC</span>
           </h2>
           <p 
             ref={subtitleRef}
