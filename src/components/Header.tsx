@@ -14,7 +14,7 @@ const Header = () => {
         </div>
         
         <div className="hidden md:flex items-center gap-8">
-          <a href="#home" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
+          <a href="/" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
             <span className="relative z-10">Home</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
@@ -22,12 +22,12 @@ const Header = () => {
             <span className="relative z-10">Builds</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
-          <a href="#faq" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
-            <span className="relative z-10">FAQ</span>
+          <a href="/about" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
+            <span className="relative z-10">About</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
-          <a href="#contacts" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
-            <span className="relative z-10">Contacts</span>
+          <a href="/contact" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
+            <span className="relative z-10">Contact</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
         </div>
