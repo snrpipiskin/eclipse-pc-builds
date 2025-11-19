@@ -7,7 +7,6 @@ import ProductCard from "@/components/ProductCard";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Preloader from "@/components/Preloader";
-import FlowingCurves from "@/components/FlowingCurves";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import pcBuild1 from "@/assets/pc-build-4.jpg";
 import pcBuild2 from "@/assets/pc-build-5.jpg";
@@ -150,10 +149,8 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background relative">
-      <FlowingCurves />
-      <div className="relative z-10">
-        <Header />
+    <div className="min-h-screen bg-background">
+      <Header />
       <Hero />
       
       {/* About Section */}
@@ -273,7 +270,6 @@ const Index = () => {
           <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-accent/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }} />
         </div>
       </footer>
-      </div>
     </div>
   );
 };
