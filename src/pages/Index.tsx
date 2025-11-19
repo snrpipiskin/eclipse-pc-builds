@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "@/components/Header";
@@ -6,7 +6,6 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
-import Preloader from "@/components/Preloader";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import pcBuild1 from "@/assets/pc-build-4.jpg";
 import pcBuild2 from "@/assets/pc-build-5.jpg";
@@ -18,13 +17,13 @@ import pcBuild6 from "@/assets/pc-build-9.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
-  const [loading, setLoading] = useState(true);
   const aboutRef = useRef<HTMLElement>(null);
   const buildsRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
 
   const builds = [
     {
+      id: "eclipse-starter",
       name: "ECLIPSE STARTER",
       price: "$1,299",
       image: pcBuild1,
@@ -36,6 +35,7 @@ const Index = () => {
       }
     },
     {
+      id: "eclipse-gaming",
       name: "ECLIPSE GAMING",
       price: "$1,899",
       image: pcBuild2,
@@ -47,6 +47,7 @@ const Index = () => {
       }
     },
     {
+      id: "eclipse-ultimate",
       name: "ECLIPSE ULTIMATE",
       price: "$3,299",
       image: pcBuild3,
@@ -58,6 +59,7 @@ const Index = () => {
       }
     },
     {
+      id: "eclipse-creator",
       name: "ECLIPSE CREATOR",
       price: "$2,499",
       image: pcBuild4,
@@ -69,6 +71,7 @@ const Index = () => {
       }
     },
     {
+      id: "eclipse-streamer",
       name: "ECLIPSE STREAMER",
       price: "$2,199",
       image: pcBuild5,
@@ -80,6 +83,7 @@ const Index = () => {
       }
     },
     {
+      id: "eclipse-elite",
       name: "ECLIPSE ELITE",
       price: "$4,999",
       image: pcBuild6,
@@ -93,8 +97,7 @@ const Index = () => {
   ];
 
   useEffect(() => {
-    if (!loading) {
-      const ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
         // About section animation
         gsap.from(aboutRef.current?.querySelector(".section-title"), {
           scrollTrigger: {
@@ -138,15 +141,10 @@ const Index = () => {
           y: 60,
           duration: 1,
         });
-      });
+    });
 
-      return () => ctx.revert();
-    }
-  }, [loading]);
-
-  if (loading) {
-    return <Preloader onComplete={() => setLoading(false)} />;
-  }
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
