@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-pc.jpg";
+import heroImage from "@/assets/hero-pc.png";
 
 const Hero = () => {
   return (
@@ -54,8 +54,6 @@ const Hero = () => {
                 className="relative w-full h-full object-cover group-hover/hero-img:-translate-x-2 transition-transform duration-500"
               />
               
-              {/* Enhanced bottom blur gradient for smoother transition */}
-              <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-background/70 via-background/40 via-background/20 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
