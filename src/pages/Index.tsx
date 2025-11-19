@@ -197,13 +197,11 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {builds.map((build, index) => (
-              <div key={index} className="product-card">
-                <ProductCard {...build} />
-              </div>
-            ))}
-          </div>
+          {builds.map((build, index) => (
+            <div key={index} className="product-card">
+              <ProductCard {...build} />
+            </div>
+          ))}
         </div>
 
         <div className="absolute inset-0 pointer-events-none">
