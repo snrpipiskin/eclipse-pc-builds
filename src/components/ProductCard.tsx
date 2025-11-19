@@ -1,6 +1,18 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Cpu, HardDrive, Zap, Monitor } from "lucide-react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Cpu, HardDrive, ArrowRight } from "lucide-react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+import { useToast } from "@/hooks/use-toast";
 
 interface ProductCardProps {
   name: string;
@@ -15,92 +27,107 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ name, price, image, specs }: ProductCardProps) => {
+  const [showDialog, setShowDialog] = useState(false);
+  const { toast } = useToast();
+
   const handleOrder = () => {
-    const message = `Hi! I'm interested in the ${name} configuration for ${price}`;
-    const encodedMessage = encodeURIComponent(message);
-    
-    // Create dialog with contact options
-    const contactDialog = window.confirm(
-      `Choose your preferred contact method:\n\nOK - WhatsApp\nCancel - Show more options`
-    );
-    
-    if (contactDialog) {
-      window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
-    } else {
-      const otherOptions = window.confirm(
-        `Choose contact method:\n\nOK - Telegram\nCancel - VK`
-      );
-      
-      if (otherOptions) {
-        window.open(`https://t.me/share/url?url=&text=${encodedMessage}`, '_blank');
-      } else {
-        window.open(`https://vk.com/share.php?url=&title=${encodedMessage}`, '_blank');
-      }
-    }
+    setShowDialog(true);
   };
 
   return (
-    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
-      <div className="relative overflow-hidden bg-secondary/50">
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/50 hover:-translate-y-2 group glass-card">
+      <div className="relative overflow-hidden">
         <img 
           src={image} 
           alt={name}
-          className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+        <div className="absolute top-4 right-4 px-3 py-1 glass-card rounded-full">
+          <span className="text-xs font-bold text-primary">NEW</span>
+        </div>
       </div>
       
-      <CardContent className="p-6 space-y-4">
-        <div>
-          <h3 className="text-2xl font-bold mb-2">{name}</h3>
-          <p className="text-3xl font-bold text-primary">{price}</p>
+      <CardHeader>
+        <div className="flex justify-between items-start">
+          <CardTitle className="text-xl">{name}</CardTitle>
+          <span className="text-2xl font-bold text-primary glow-text">{price}</span>
         </div>
-        
-        <div className="space-y-3 text-sm">
-          <div className="flex items-start gap-3 group/spec p-2 -mx-2 rounded-lg hover:bg-primary/10 transition-all duration-300 cursor-pointer">
-            <Cpu className="h-4 w-4 text-primary mt-0.5 flex-shrink-0 group-hover/spec:scale-125 group-hover/spec:rotate-12 transition-transform duration-300" />
-            <div className="flex-1">
-              <span className="text-muted-foreground group-hover/spec:text-primary transition-colors duration-300">Processor:</span>
-              <p className="font-medium group-hover/spec:text-primary transition-colors duration-300">{specs.processor}</p>
-            </div>
+      </CardHeader>
+      
+      <CardContent className="space-y-3">
+        <div className="space-y-2 text-sm">
+          <div className="flex justify-between items-center py-2 border-b border-border/50">
+            <span className="text-muted-foreground flex items-center">
+              <Cpu className="mr-2 h-4 w-4" />
+              CPU
+            </span>
+            <span className="font-medium text-right">{specs.processor}</span>
           </div>
           
-          <div className="flex items-start gap-3 group/spec p-2 -mx-2 rounded-lg hover:bg-primary/10 transition-all duration-300 cursor-pointer">
-            <Zap className="h-4 w-4 text-primary mt-0.5 flex-shrink-0 group-hover/spec:scale-125 group-hover/spec:rotate-12 transition-transform duration-300" />
-            <div className="flex-1">
-              <span className="text-muted-foreground group-hover/spec:text-primary transition-colors duration-300">Graphics:</span>
-              <p className="font-medium group-hover/spec:text-primary transition-colors duration-300">{specs.gpu}</p>
-            </div>
+          <div className="flex justify-between items-center py-2 border-b border-border/50">
+            <span className="text-muted-foreground flex items-center">
+              <Cpu className="mr-2 h-4 w-4" />
+              GPU
+            </span>
+            <span className="font-medium text-right">{specs.gpu}</span>
           </div>
           
-          <div className="flex items-start gap-3 group/spec p-2 -mx-2 rounded-lg hover:bg-primary/10 transition-all duration-300 cursor-pointer">
-            <Monitor className="h-4 w-4 text-primary mt-0.5 flex-shrink-0 group-hover/spec:scale-125 group-hover/spec:rotate-12 transition-transform duration-300" />
-            <div className="flex-1">
-              <span className="text-muted-foreground group-hover/spec:text-primary transition-colors duration-300">Memory:</span>
-              <p className="font-medium group-hover/spec:text-primary transition-colors duration-300">{specs.ram}</p>
-            </div>
+          <div className="flex justify-between items-center py-2 border-b border-border/50">
+            <span className="text-muted-foreground flex items-center">
+              <HardDrive className="mr-2 h-4 w-4" />
+              RAM
+            </span>
+            <span className="font-medium text-right">{specs.ram}</span>
           </div>
           
-          <div className="flex items-start gap-3 group/spec p-2 -mx-2 rounded-lg hover:bg-primary/10 transition-all duration-300 cursor-pointer">
-            <HardDrive className="h-4 w-4 text-primary mt-0.5 flex-shrink-0 group-hover/spec:scale-125 group-hover/spec:rotate-12 transition-transform duration-300" />
-            <div className="flex-1">
-              <span className="text-muted-foreground group-hover/spec:text-primary transition-colors duration-300">Storage:</span>
-              <p className="font-medium group-hover/spec:text-primary transition-colors duration-300">{specs.storage}</p>
-            </div>
+          <div className="flex justify-between items-center py-2">
+            <span className="text-muted-foreground flex items-center">
+              <HardDrive className="mr-2 h-4 w-4" />
+              Storage
+            </span>
+            <span className="font-medium text-right">{specs.storage}</span>
           </div>
         </div>
       </CardContent>
       
-      <CardFooter className="p-6 pt-0">
+      <CardFooter>
         <Button 
-          className="w-full font-semibold group/btn relative overflow-hidden" 
-          size="lg"
+          className="w-full group/btn relative overflow-hidden glow-box"
           onClick={handleOrder}
         >
-          <span className="relative z-10">Order Now</span>
-          <span className="absolute inset-0 bg-primary/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
+          <span className="relative z-10 flex items-center justify-center">
+            Order Now
+            <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-2 transition-transform" />
+          </span>
         </Button>
       </CardFooter>
+
+      <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
+        <AlertDialogContent className="glass-card">
+          <AlertDialogHeader>
+            <AlertDialogTitle>Ready to Order?</AlertDialogTitle>
+            <AlertDialogDescription>
+              To complete your order for the {name}, please contact us through one of these channels:
+              <div className="mt-4 space-y-2">
+                <p className="font-medium">WhatsApp, Telegram, or VK</p>
+                <p className="text-sm">We'll help you finalize your custom build and answer any questions!</p>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={() => {
+              toast({
+                title: "Thank you!",
+                description: "Please reach out via WhatsApp, Telegram, or VK to complete your order.",
+              });
+            }}>
+              Got it
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </Card>
   );
 };
