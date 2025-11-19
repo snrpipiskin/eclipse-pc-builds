@@ -49,9 +49,6 @@ All colors MUST be HSL.
     
     --glow-primary: 263 70% 60%;
     --glow-secondary: 280 60% 55%;
-    --neon-cyan: 180 100% 50%;
-    --neon-pink: 330 100% 60%;
-    --tech-grid: 240 10% 18%;
   }
 
   .dark {
@@ -93,9 +90,6 @@ All colors MUST be HSL.
     
     --glow-primary: 263 70% 60%;
     --glow-secondary: 280 60% 55%;
-    --neon-cyan: 180 100% 50%;
-    --neon-pink: 330 100% 60%;
-    --tech-grid: 240 10% 18%;
   }
 }
 
@@ -152,67 +146,5 @@ All colors MUST be HSL.
     box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.3),
                 0 0 40px hsl(var(--glow-primary) / 0.2),
                 inset 0 0 20px hsl(var(--glow-primary) / 0.1);
-  }
-
-  .light-accent {
-    box-shadow: 0 4px 20px hsl(var(--glow-primary) / 0.15),
-                0 0 40px hsl(var(--glow-primary) / 0.1);
-  }
-
-  .tech-grid-bg {
-    background-image: 
-      linear-gradient(hsl(var(--tech-grid)) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--tech-grid)) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.3;
-  }
-
-  .flowing-line {
-    background: linear-gradient(90deg, 
-      transparent 0%,
-      hsl(var(--primary) / 0.3) 50%,
-      transparent 100%
-    );
-    animation: flow 8s ease-in-out infinite;
-  }
-
-  @keyframes flow {
-    0%, 100% {
-      transform: translateX(-100%) scaleX(0.8);
-      opacity: 0;
-    }
-    50% {
-      transform: translateX(100%) scaleX(1.2);
-      opacity: 1;
-    }
-  }
-
-  .neon-accent {
-    box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.5),
-                0 0 20px hsl(var(--neon-cyan) / 0.3),
-                0 0 30px hsl(var(--neon-cyan) / 0.2);
-  }
-
-  .depth-blur {
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
-  }
-
-  .light-streak {
-    background: linear-gradient(45deg,
-      transparent 0%,
-      hsl(var(--primary) / 0.1) 50%,
-      transparent 100%
-    );
-    animation: streak 10s linear infinite;
-  }
-
-  @keyframes streak {
-    0% {
-      transform: translateX(-200%) translateY(-200%);
-    }
-    100% {
-      transform: translateX(200%) translateY(200%);
-    }
   }
 }

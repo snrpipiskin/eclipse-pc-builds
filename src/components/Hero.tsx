@@ -92,29 +92,14 @@ const Hero = () => {
         />
       </div>
 
-      {/* Gradient overlay with depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/95 z-[1]" />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80 z-[1]" />
 
-      {/* Tech grid background */}
-      <div className="absolute inset-0 z-[1] tech-grid-bg pointer-events-none" />
-
-      {/* Atmospheric depth blur */}
+      {/* Floating glow orbs */}
       <div className="absolute inset-0 z-[1] pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-primary/5 to-transparent depth-blur" />
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-accent/5 to-transparent depth-blur" />
-      </div>
-
-      {/* Flowing curved lines */}
-      <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
-        <div className="flowing-line absolute top-1/4 left-0 w-full h-1 opacity-60" style={{ animationDelay: '0s' }} />
-        <div className="flowing-line absolute top-1/2 left-0 w-full h-1 opacity-40" style={{ animationDelay: '2s' }} />
-        <div className="flowing-line absolute top-3/4 left-0 w-full h-1 opacity-50" style={{ animationDelay: '4s' }} />
-      </div>
-
-      {/* Light streaks for tech feel */}
-      <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
-        <div className="light-streak absolute top-0 left-0 w-[200%] h-[200%]" style={{ animationDelay: '0s' }} />
-        <div className="light-streak absolute top-0 left-0 w-[200%] h-[200%]" style={{ animationDelay: '5s' }} />
+        <div className="glow-orb absolute top-20 left-20 w-64 h-64 bg-primary/30 rounded-full blur-3xl" />
+        <div className="glow-orb absolute bottom-40 right-20 w-80 h-80 bg-accent/30 rounded-full blur-3xl" />
+        <div className="glow-orb absolute top-1/2 left-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -127,11 +112,11 @@ const Hero = () => {
 
           <h1
             ref={headlineRef}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight glow-text light-accent"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight glow-text"
           >
             Build The PC
             <br />
-            <span className="text-primary neon-accent">Of Your Dreams</span>
+            <span className="text-primary">Of Your Dreams</span>
           </h1>
 
           <p
@@ -145,7 +130,7 @@ const Hero = () => {
           <div ref={ctaRef} className="flex flex-wrap justify-center gap-4">
             <Button
               size="lg"
-              className="font-semibold group/hero relative overflow-hidden glow-box light-accent"
+              className="font-semibold group/hero relative overflow-hidden glow-box"
             >
               <span className="relative z-10 flex items-center">
                 Start Building
@@ -155,7 +140,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="font-semibold glass-card hover:glow-box hover:light-accent transition-all duration-300"
+              className="font-semibold glass-card hover:glow-box transition-all duration-300"
             >
               View Pre-Built PCs
             </Button>

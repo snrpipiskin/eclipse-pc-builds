@@ -155,21 +155,10 @@ const Index = () => {
       
       {/* About Section */}
       <section ref={aboutRef} id="about" className="py-24 relative overflow-hidden">
-        {/* Tech background elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent depth-blur" />
-          <div className="tech-grid-bg absolute inset-0" />
-        </div>
-
-        {/* Flowing lines */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="flowing-line absolute top-1/3 left-0 w-full h-0.5 opacity-30" style={{ animationDelay: '1s' }} />
-        </div>
-
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="section-title text-4xl md:text-6xl font-bold mb-6 glow-text light-accent">
-              About <span className="text-primary neon-accent">Eclipse PC</span>
+            <h2 className="section-title text-4xl md:text-6xl font-bold mb-6 glow-text">
+              About <span className="text-primary">Eclipse PC</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               At Eclipse PC, we're passionate about creating the ultimate computing experience. Since our founding, we've been dedicated to building premium custom PCs that combine cutting-edge technology with exceptional craftsmanship. Our team of expert builders brings years of experience and a deep understanding of what gamers, creators, and professionals need to excel in their work and play.
@@ -197,27 +186,10 @@ const Index = () => {
       
       {/* Pre-Configured Builds Section */}
       <section ref={buildsRef} id="builds" className="pt-6 pb-24 relative overflow-hidden">
-        {/* Atmospheric background */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-accent/5 to-transparent depth-blur" />
-          <div className="tech-grid-bg absolute inset-0" />
-        </div>
-
-        {/* Light streaks */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50">
-          <div className="light-streak absolute top-0 right-0 w-[150%] h-[150%]" style={{ animationDelay: '2s' }} />
-        </div>
-
-        {/* Flowing lines */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="flowing-line absolute top-1/4 left-0 w-full h-0.5 opacity-40" style={{ animationDelay: '3s' }} />
-          <div className="flowing-line absolute bottom-1/4 left-0 w-full h-0.5 opacity-30" style={{ animationDelay: '6s' }} />
-        </div>
-
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="section-title text-4xl md:text-6xl font-bold mb-4 glow-text light-accent">
-              Pre-Configured <span className="text-primary neon-accent">Builds</span>
+            <h2 className="section-title text-4xl md:text-6xl font-bold mb-4 glow-text">
+              Pre-Configured <span className="text-primary">Builds</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Choose from our expertly crafted configurations or customize your own
@@ -233,6 +205,10 @@ const Index = () => {
           </div>
         </div>
 
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
       </section>
 
       {/* Contact Section */}
@@ -240,12 +216,6 @@ const Index = () => {
       
       {/* Footer with Social Media */}
       <footer ref={footerRef} className="py-16 border-t border-border relative overflow-hidden">
-        {/* Subtle tech background */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="tech-grid-bg absolute inset-0 opacity-50" />
-          <div className="absolute top-0 left-1/2 w-1/2 h-full bg-gradient-to-r from-transparent to-primary/3 depth-blur" />
-        </div>
-
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center space-y-6">
             <h3 className="text-2xl font-bold glow-text">Eclipse PC</h3>
@@ -295,6 +265,10 @@ const Index = () => {
           </div>
         </div>
 
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
+          <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-accent/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }} />
+        </div>
       </footer>
     </div>
   );
