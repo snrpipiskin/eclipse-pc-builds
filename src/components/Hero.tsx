@@ -53,9 +53,6 @@ const Hero = () => {
                 alt="Eclipse Gaming Motherboard" 
                 className="relative w-full h-full object-cover group-hover/hero-img:-translate-x-2 transition-transform duration-500"
               />
-              
-              {/* Enhanced bottom blur gradient for smoother transition */}
-              <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-background via-background/90 via-background/60 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
