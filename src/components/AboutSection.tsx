@@ -80,23 +80,18 @@ const AboutSection = () => {
     <section
       ref={sectionRef}
       className="py-24 relative overflow-hidden"
-      data-scroll-section
     >
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2
             ref={titleRef}
             className="text-4xl md:text-6xl font-bold mb-6 glow-text"
-            data-scroll
-            data-scroll-speed="1"
           >
             Why Choose <span className="text-primary">Eclipse PC</span>
           </h2>
           <p 
             ref={subtitleRef}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-            data-scroll
-            data-scroll-speed="0.5"
           >
             Where exceptional quality meets cutting-edge innovation. We don't just build PCs—we craft premium computing experiences tailored for enthusiasts, professionals, and gamers who demand nothing but the best.
           </p>
@@ -107,8 +102,6 @@ const AboutSection = () => {
             <div
               key={index}
               className="glass-card p-8 rounded-lg hover:glow-box transition-all duration-500 group cursor-pointer"
-              data-scroll
-              data-scroll-speed={0.5 + (index * 0.1)}
             >
               <div className="mb-6 inline-block p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
                 <feature.icon className="w-8 h-8 text-primary" />
@@ -125,11 +118,7 @@ const AboutSection = () => {
       </div>
 
       {/* Animated background glow */}
-      <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl pointer-events-none"
-        data-scroll
-        data-scroll-speed="-2"
-      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
     </section>
   );
 };
