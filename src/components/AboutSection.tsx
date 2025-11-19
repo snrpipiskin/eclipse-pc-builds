@@ -46,33 +46,33 @@ const AboutSection = () => {
   const features = [
     {
       icon: Cpu,
-      title: "Premium Components Only",
-      description: "We exclusively use top-tier components from industry leaders like NVIDIA, AMD, Intel, and Corsair. Every part is carefully selected for reliability and performance, ensuring your PC operates at peak efficiency for years to come.",
+      title: "Только премиальные комплектующие",
+      description: "Мы используем исключительно топовые комплектующие от лидеров индустрии, таких как NVIDIA, AMD, Intel и Corsair. Каждая деталь тщательно отобрана для обеспечения надежности и производительности, гарантируя работу вашего ПК на пиковой эффективности на долгие годы.",
     },
     {
       icon: Zap,
-      title: "Unmatched Performance",
-      description: "Our expert builders optimize every aspect of your system - from precision cable management for optimal airflow to custom cooling solutions. Experience lightning-fast load times, smooth multitasking, and graphics that bring your games to life.",
+      title: "Непревзойденная производительность",
+      description: "Наши опытные сборщики оптимизируют каждый аспект вашей системы - от прецизионной прокладки кабелей для оптимального воздушного потока до индивидуальных решений охлаждения. Испытайте молниеносную загрузку, плавную многозадачность и графику, оживляющую ваши игры.",
     },
     {
       icon: Shield,
-      title: "Industry-Leading Warranty",
-      description: "Every Eclipse PC comes with comprehensive warranty coverage and lifetime technical support. We stand behind our craftsmanship with free diagnostics, priority support channels, and hassle-free RMA process. Your investment is protected.",
+      title: "Ведущая в отрасли гарантия",
+      description: "Каждый ПК Eclipse поставляется с полным гарантийным покрытием и пожизненной технической поддержкой. Мы поддерживаем наше мастерство бесплатной диагностикой, приоритетными каналами поддержки и беспроблемным процессом RMA. Ваши инвестиции защищены.",
     },
     {
       icon: Award,
-      title: "Quality Craftsmanship",
-      description: "Each PC is meticulously hand-assembled by certified technicians with years of experience. We conduct rigorous stress testing and quality checks before shipping, ensuring your system arrives ready to dominate any task you throw at it.",
+      title: "Качественное мастерство",
+      description: "Каждый ПК тщательно собирается вручную сертифицированными специалистами с многолетним опытом. Мы проводим строгое стресс-тестирование и проверку качества перед отправкой, гарантируя, что ваша система прибудет готовой справиться с любой задачей.",
     },
     {
       icon: Rocket,
-      title: "Future-Proof Builds",
-      description: "We design with upgradability in mind. Spacious cases, adequate PSU headroom, and strategic component selection mean your Eclipse PC can evolve with technology. Stay ahead of the curve without starting from scratch.",
+      title: "Сборки на будущее",
+      description: "Мы проектируем с учетом возможности модернизации. Просторные корпуса, достаточный запас мощности БП и стратегический подбор комплектующих означают, что ваш Eclipse PC может развиваться вместе с технологиями. Оставайтесь впереди без необходимости начинать с нуля.",
     },
     {
       icon: HeadphonesIcon,
-      title: "Expert Support 24/7",
-      description: "Our dedicated support team is available round the clock to assist you. Whether you need help with setup, optimization tips, or troubleshooting, we're just a call or message away. Experience white-glove service that sets us apart.",
+      title: "Экспертная поддержка 24/7",
+      description: "Наша специализированная команда поддержки доступна круглосуточно для помощи. Нужна ли вам помощь с настройкой, советы по оптимизации или устранение неполадок - мы всего лишь на расстоянии звонка или сообщения. Испытайте первоклассный сервис, который отличает нас.",
     },
   ];
 
@@ -91,17 +91,17 @@ const AboutSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <h2
+          <h2 
             ref={titleRef}
             className="text-4xl md:text-6xl font-bold mb-6 glow-text"
           >
-            Why Choose <span className="text-primary">Eclipse PC</span>
+            Почему выбирают <span className="text-primary">Eclipse PC</span>
           </h2>
           <p 
             ref={subtitleRef}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
-            Where exceptional quality meets cutting-edge innovation. We don't just build PCs—we craft premium computing experiences tailored for enthusiasts, professionals, and gamers who demand nothing but the best.
+            Где исключительное качество встречается с передовыми инновациями. Мы не просто собираем ПК - мы создаем премиальный вычислительный опыт, адаптированный для энтузиастов, профессионалов и геймеров, которые требуют только самого лучшего.
           </p>
         </div>
 
