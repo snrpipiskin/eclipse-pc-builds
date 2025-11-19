@@ -79,10 +79,10 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-4 relative overflow-hidden"
+      className="py-6 relative overflow-hidden"
     >
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-8">
+        <div className="text-center mb-20">
           <h2
             ref={titleRef}
             className="text-4xl md:text-6xl font-bold mb-6 glow-text"
@@ -116,6 +116,9 @@ const AboutSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Animated background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
     </section>
   );
 };
