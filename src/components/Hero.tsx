@@ -77,6 +77,8 @@ const Hero = () => {
       ref={heroRef}
       id="home"
       className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      data-scroll
+      data-scroll-speed="-1"
     >
       {/* Spline 3D Background */}
       <div
