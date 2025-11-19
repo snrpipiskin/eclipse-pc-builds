@@ -42,11 +42,7 @@ const Hero = () => {
           </div>
           
           <div className="relative group/hero-img cursor-pointer">
-            {/* Enhanced glow/lightning effect behind */}
-            <div className="absolute inset-0 bg-primary/20 blur-[150px] rounded-full animate-glow-pulse" />
-            <div className="absolute inset-0 bg-primary/15 blur-[200px] rounded-full" />
-            
-            {/* Image container with gradient overlay */}
+            {/* Image container */}
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
                 src={heroImage} 
