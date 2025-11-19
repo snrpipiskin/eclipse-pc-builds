@@ -1,20 +1,10 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cpu, HardDrive, ArrowRight } from "lucide-react";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { useToast } from "@/hooks/use-toast";
 
 interface ProductCardProps {
+  id: string;
   name: string;
   price: string;
   image: string;
@@ -26,12 +16,11 @@ interface ProductCardProps {
   };
 }
 
-const ProductCard = ({ name, price, image, specs }: ProductCardProps) => {
-  const [showDialog, setShowDialog] = useState(false);
-  const { toast } = useToast();
+const ProductCard = ({ id, name, price, image, specs }: ProductCardProps) => {
+  const navigate = useNavigate();
 
-  const handleOrder = () => {
-    setShowDialog(true);
+  const handleDetails = () => {
+    navigate(`/product/${id}`);
   };
 
   return (
@@ -92,40 +81,14 @@ const ProductCard = ({ name, price, image, specs }: ProductCardProps) => {
       <CardFooter>
         <Button 
           className="w-full group/btn relative overflow-hidden glow-box"
-          onClick={handleOrder}
+          onClick={handleDetails}
         >
           <span className="relative z-10 flex items-center justify-center">
-            Order Now
+            Details
             <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-2 transition-transform" />
           </span>
         </Button>
       </CardFooter>
-
-      <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
-        <AlertDialogContent className="glass-card">
-          <AlertDialogHeader>
-            <AlertDialogTitle>Ready to Order?</AlertDialogTitle>
-            <AlertDialogDescription>
-              To complete your order for the {name}, please contact us through one of these channels:
-              <div className="mt-4 space-y-2">
-                <p className="font-medium">WhatsApp, Telegram, or VK</p>
-                <p className="text-sm">We'll help you finalize your custom build and answer any questions!</p>
-              </div>
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={() => {
-              toast({
-                title: "Thank you!",
-                description: "Please reach out via WhatsApp, Telegram, or VK to complete your order.",
-              });
-            }}>
-              Got it
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
     </Card>
   );
 };
