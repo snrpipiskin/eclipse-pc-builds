@@ -77,8 +77,6 @@ const Hero = () => {
       ref={heroRef}
       id="home"
       className="relative min-h-screen flex items-center pt-20 overflow-hidden"
-      data-scroll
-      data-scroll-speed="-1"
     >
       {/* Spline 3D Background */}
       <div
@@ -126,7 +124,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
             Customize high-performance computers tailored to your needs.
-            From gaming to professional workstations - we build it all.
+            From gaming to workstations, we deliver excellence with fast shipping and expert support.
           </p>
 
           <div ref={ctaRef} className="flex flex-wrap justify-center gap-4">
