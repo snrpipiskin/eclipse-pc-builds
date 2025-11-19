@@ -97,7 +97,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={cardsRef} className="hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
