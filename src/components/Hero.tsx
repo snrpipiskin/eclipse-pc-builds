@@ -82,8 +82,6 @@ const Hero = () => {
       <div
         ref={splineRef}
         className="absolute inset-0 z-0"
-        data-scroll
-        data-scroll-speed="-2"
       >
         <iframe
           src="https://my.spline.design/orb-xkTrsJ4x8kMwcNDzRYSbdX4e/"
@@ -99,14 +97,14 @@ const Hero = () => {
 
       {/* Floating glow orbs */}
       <div className="absolute inset-0 z-[1] pointer-events-none">
-        <div className="glow-orb absolute top-20 left-20 w-64 h-64 bg-primary/30 rounded-full blur-3xl" data-scroll data-scroll-speed="0.5" />
-        <div className="glow-orb absolute bottom-40 right-20 w-80 h-80 bg-accent/30 rounded-full blur-3xl" data-scroll data-scroll-speed="-0.5" />
-        <div className="glow-orb absolute top-1/2 left-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl" data-scroll data-scroll-speed="0.3" />
+        <div className="glow-orb absolute top-20 left-20 w-64 h-64 bg-primary/30 rounded-full blur-3xl" />
+        <div className="glow-orb absolute bottom-40 right-20 w-80 h-80 bg-accent/30 rounded-full blur-3xl" />
+        <div className="glow-orb absolute top-1/2 left-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-block" data-scroll data-scroll-speed="0.5">
+          <div className="inline-block">
             <span className="text-primary text-sm font-bold tracking-wider uppercase">
               Premium Gaming PCs
             </span>
@@ -115,8 +113,6 @@ const Hero = () => {
           <h1
             ref={headlineRef}
             className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight glow-text"
-            data-scroll
-            data-scroll-speed="1"
           >
             Build The PC
             <br />
@@ -126,14 +122,12 @@ const Hero = () => {
           <p
             ref={subtitleRef}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
-            data-scroll
-            data-scroll-speed="0.8"
           >
             Customize high-performance computers tailored to your needs.
             From gaming to professional workstations - we build it all.
           </p>
 
-          <div ref={ctaRef} className="flex flex-wrap justify-center gap-4" data-scroll data-scroll-speed="0.6">
+          <div ref={ctaRef} className="flex flex-wrap justify-center gap-4">
             <Button
               size="lg"
               className="font-semibold group/hero relative overflow-hidden glow-box"
