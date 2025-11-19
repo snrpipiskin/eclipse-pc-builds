@@ -155,6 +155,12 @@ const Index = () => {
       
       {/* About Section */}
       <section ref={aboutRef} id="about" className="py-24 relative overflow-hidden">
+        {/* Animated glowing backgrounds */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-32 right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-glow-pulse" />
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/15 rounded-full blur-3xl animate-glow-fade" style={{ animationDelay: '1s' }} />
+        </div>
+        
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="section-title text-4xl md:text-6xl font-bold mb-6 glow-text">
@@ -186,6 +192,12 @@ const Index = () => {
       
       {/* Pre-Configured Builds Section */}
       <section ref={buildsRef} id="builds" className="pt-6 pb-24 relative overflow-hidden">
+        {/* Animated glowing backgrounds */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-40 left-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-glow-fade" style={{ animationDelay: '2s' }} />
+          <div className="absolute bottom-32 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: '4s' }} />
+        </div>
+        
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="section-title text-4xl md:text-6xl font-bold mb-4 glow-text">
