@@ -79,7 +79,7 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-6 relative overflow-hidden"
+      className="py-4 relative overflow-hidden"
     >
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-8">
