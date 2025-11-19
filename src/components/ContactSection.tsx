@@ -16,8 +16,8 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon!",
+      title: "Сообщение отправлено!",
+      description: "Спасибо за обращение. Мы скоро свяжемся с вами!",
     });
     setFormData({ name: "", email: "", message: "" });
   };
@@ -27,10 +27,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
-            Contact <span className="text-primary">Us</span>
+            Свяжитесь <span className="text-primary">с нами</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to build your dream PC? Get in touch with us today!
+            Готовы собрать ПК своей мечты? Свяжитесь с нами сегодня!
           </p>
         </div>
 
@@ -43,9 +43,9 @@ const ContactSection = () => {
                   <MessageCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-2">WhatsApp & Telegram</h3>
+                  <h3 className="font-bold text-xl mb-2">WhatsApp и Telegram</h3>
                   <p className="text-muted-foreground">
-                    Chat with us instantly for quick responses
+                    Напишите нам для быстрого ответа
                   </p>
                 </div>
               </div>
@@ -59,7 +59,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-bold text-xl mb-2">VK</h3>
                   <p className="text-muted-foreground">
-                    Connect with us on VK for updates and support
+                    Подпишитесь на нас в VK для новостей и поддержки
                   </p>
                 </div>
               </div>
@@ -73,7 +73,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-bold text-xl mb-2">Email</h3>
                   <p className="text-muted-foreground">
-                    Send us a detailed message about your requirements
+                    Отправьте нам подробное сообщение о ваших требованиях
                   </p>
                 </div>
               </div>
@@ -85,13 +85,13 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
+                  Имя
                 </label>
                 <Input
                   id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Your name"
+                  placeholder="Ваше имя"
                   required
                 />
               </div>
@@ -112,13 +112,13 @@ const ContactSection = () => {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
+                  Сообщение
                 </label>
                 <Textarea
                   id="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Tell us about your dream PC build..."
+                  placeholder="Расскажите нам о сборке ПК вашей мечты..."
                   rows={5}
                   required
                 />
@@ -126,7 +126,7 @@ const ContactSection = () => {
 
               <Button type="submit" className="w-full glow-box">
                 <Send className="mr-2 h-4 w-4" />
-                Send Message
+                Отправить сообщение
               </Button>
             </form>
           </div>

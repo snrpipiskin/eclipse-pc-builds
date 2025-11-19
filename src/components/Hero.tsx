@@ -106,7 +106,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-block">
             <span className="text-primary text-sm font-bold tracking-wider uppercase">
-              Premium Gaming PCs
+              Премиальные игровые ПК
             </span>
           </div>
 
@@ -114,16 +114,16 @@ const Hero = () => {
             ref={headlineRef}
             className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight glow-text"
           >
-            Build The PC
+            Собери ПК
             <br />
-            <span className="text-primary">Of Your Dreams</span>
+            <span className="text-primary">Своей мечты</span>
           </h1>
 
           <p
             ref={subtitleRef}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Customize high-performance computers tailored to your needs.
+            Настраиваемые высокопроизводительные компьютеры под ваши задачи.
             From gaming to professional workstations - we build it all.
           </p>
 
@@ -133,7 +133,7 @@ const Hero = () => {
               className="font-semibold group/hero relative overflow-hidden glow-box"
             >
               <span className="relative z-10 flex items-center">
-                Start Building
+                Начать сборку
                 <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
               </span>
             </Button>
@@ -142,7 +142,7 @@ const Hero = () => {
               variant="outline"
               className="font-semibold glass-card hover:glow-box transition-all duration-300"
             >
-              View Pre-Built PCs
+              Готовые сборки
             </Button>
           </div>
         </div>

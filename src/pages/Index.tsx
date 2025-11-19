@@ -162,24 +162,24 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="section-title text-4xl md:text-6xl font-bold mb-6 glow-text">
-              About <span className="text-primary">Eclipse PC</span>
+              О компании <span className="text-primary">Eclipse PC</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              At Eclipse PC, we're passionate about creating the ultimate computing experience. Since our founding, we've been dedicated to building premium custom PCs that combine cutting-edge technology with exceptional craftsmanship. Our team of expert builders brings years of experience and a deep understanding of what gamers, creators, and professionals need to excel in their work and play.
+              В Eclipse PC мы увлечены созданием непревзойденного компьютерного опыта. С момента основания мы посвятили себя сборке премиальных кастомных ПК, сочетающих передовые технологии с исключительным мастерством. Наша команда опытных сборщиков привносит многолетний опыт и глубокое понимание того, что нужно геймерам, креаторам и профессионалам для достижения успеха в работе и игре.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="text-5xl font-bold text-primary mb-2">500+</div>
-              <p className="text-muted-foreground">Custom Builds Delivered</p>
+              <p className="text-muted-foreground">Индивидуальных сборок доставлено</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-primary mb-2">98%</div>
-              <p className="text-muted-foreground">Customer Satisfaction</p>
+              <p className="text-muted-foreground">Удовлетворенность клиентов</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-primary mb-2">5yrs</div>
-              <p className="text-muted-foreground">Average Warranty</p>
+              <div className="text-5xl font-bold text-primary mb-2">5 лет</div>
+              <p className="text-muted-foreground">Средняя гарантия</p>
             </div>
           </div>
         </div>
@@ -200,10 +200,10 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="section-title text-4xl md:text-6xl font-bold mb-4 glow-text">
-              Pre-Configured <span className="text-primary">Builds</span>
+              Готовые <span className="text-primary">сборки</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose from our expertly crafted configurations or customize your own
+              Выберите из наших экспертно созданных конфигураций или настройте свою собственную
             </p>
           </div>
           
@@ -231,7 +231,7 @@ const Index = () => {
           <div className="text-center space-y-6">
             <h3 className="text-2xl font-bold glow-text">Eclipse PC</h3>
             <p className="text-muted-foreground">
-              Building the future, one PC at a time
+              Строим будущее, один ПК за раз
             </p>
             
             {/* Social Media Links */}

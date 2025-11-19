@@ -29,7 +29,7 @@ const productData = {
     name: "ECLIPSE STARTER",
     price: "$1,299",
     images: [pcBuild1, pcBuild7, pcBuild8],
-    description: "Perfect for entry-level gaming and everyday computing. Delivers smooth 1080p gaming performance with modern titles while maintaining excellent build quality and upgradability for future needs.",
+    description: "Идеален для начального уровня игр и повседневных вычислений. Обеспечивает плавную игровую производительность в 1080p с современными играми, сохраняя отличное качество сборки и возможность модернизации на будущее.",
     specs: {
       processor: "AMD Ryzen 5 7600X",
       gpu: "NVIDIA RTX 4060 8GB",
@@ -41,7 +41,7 @@ const productData = {
     name: "ECLIPSE GAMING",
     price: "$1,899",
     images: [pcBuild2, pcBuild9, pcBuild7],
-    description: "Built for serious gamers who demand high-performance 1440p gaming. Features the powerful Ryzen 7 7800X3D with 3D V-Cache technology for exceptional gaming performance and the RTX 4070 Ti for ultra settings.",
+    description: "Создан для серьезных геймеров, требующих высокопроизводительного гейминга в 1440p. Оснащен мощным Ryzen 7 7800X3D с технологией 3D V-Cache для исключительной игровой производительности и RTX 4070 Ti для ультра настроек.",
     specs: {
       processor: "AMD Ryzen 7 7800X3D",
       gpu: "NVIDIA RTX 4070 Ti 12GB",
@@ -53,7 +53,7 @@ const productData = {
     name: "ECLIPSE ULTIMATE",
     price: "$3,299",
     images: [pcBuild3, pcBuild8, pcBuild9],
-    description: "The ultimate gaming powerhouse for 4K gaming at maximum settings. Powered by the flagship RTX 4090 and Ryzen 9 7950X, this beast handles any game or workload with uncompromising performance.",
+    description: "Абсолютная игровая мощь для 4K гейминга на максимальных настройках. Оснащен флагманским RTX 4090 и Ryzen 9 7950X, этот зверь справляется с любой игрой или задачей с бескомпромиссной производительностью.",
     specs: {
       processor: "AMD Ryzen 9 7950X",
       gpu: "NVIDIA RTX 4090 24GB",
@@ -65,7 +65,7 @@ const productData = {
     name: "ECLIPSE CREATOR",
     price: "$2,499",
     images: [pcBuild4, pcBuild7, pcBuild8],
-    description: "Optimized for content creators and professionals. With 64GB of RAM and Intel's flagship i9-14900K, tackle video editing, 3D rendering, and multitasking with exceptional speed and reliability.",
+    description: "Оптимизирован для контент-криейторов и профессионалов. С 64 ГБ ОЗУ и флагманским Intel i9-14900K справляйтесь с редактированием видео, 3D-рендерингом и многозадачностью с исключительной скоростью и надежностью.",
     specs: {
       processor: "Intel Core i9-14900K",
       gpu: "NVIDIA RTX 4070 12GB",
@@ -77,7 +77,7 @@ const productData = {
     name: "ECLIPSE STREAMER",
     price: "$2,199",
     images: [pcBuild5, pcBuild9, pcBuild7],
-    description: "Designed specifically for streamers and content creators who need simultaneous gaming and streaming performance. The Ryzen 9 7900X handles encoding effortlessly while maintaining high FPS in demanding games.",
+    description: "Разработан специально для стримеров и контент-криейторов, которым нужна одновременная производительность в играх и стриминге. Ryzen 9 7900X легко справляется с кодированием, сохраняя высокий FPS в требовательных играх.",
     specs: {
       processor: "AMD Ryzen 9 7900X",
       gpu: "NVIDIA RTX 4070 Ti 12GB",
@@ -89,7 +89,7 @@ const productData = {
     name: "ECLIPSE ELITE",
     price: "$4,999",
     images: [pcBuild6, pcBuild8, pcBuild9],
-    description: "The absolute pinnacle of computing performance with no compromises. Featuring the special-binned i9-14900KS and a massive 128GB of RAM, this workstation-class build crushes any professional or gaming workload.",
+    description: "Абсолютная вершина вычислительной производительности без компромиссов. Оснащенный специально отобранным i9-14900KS и огромными 128 ГБ ОЗУ, эта сборка рабочей станции уровня сокрушает любую профессиональную или игровую нагрузку.",
     specs: {
       processor: "Intel Core i9-14900KS",
       gpu: "NVIDIA RTX 4090 24GB",
@@ -113,8 +113,8 @@ const ProductDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Product not found</h1>
-          <Button onClick={() => navigate("/")}>Back to Home</Button>
+          <h1 className="text-2xl font-bold mb-4">Продукт не найден</h1>
+          <Button onClick={() => navigate("/")}>Вернуться на главную</Button>
         </div>
       </div>
     );
@@ -133,7 +133,7 @@ const ProductDetail = () => {
           className="mb-6"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Back
+          Назад
         </Button>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -188,22 +188,22 @@ const ProductDetail = () => {
             </div>
 
             <div className="space-y-4 glass-card p-6 rounded-lg">
-              <h2 className="text-xl font-semibold mb-4">Specifications</h2>
+              <h2 className="text-xl font-semibold mb-4">Характеристики</h2>
               <div className="space-y-3">
                 <div className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">Processor</span>
+                  <span className="text-muted-foreground">Процессор</span>
                   <span className="font-medium">{product.specs.processor}</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">Graphics Card</span>
+                  <span className="text-muted-foreground">Видеокарта</span>
                   <span className="font-medium">{product.specs.gpu}</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">Memory</span>
+                  <span className="text-muted-foreground">Память</span>
                   <span className="font-medium">{product.specs.ram}</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-muted-foreground">Storage</span>
+                  <span className="text-muted-foreground">Хранилище</span>
                   <span className="font-medium">{product.specs.storage}</span>
                 </div>
               </div>
@@ -214,7 +214,7 @@ const ProductDetail = () => {
               className="w-full glow-box"
               onClick={handleOrder}
             >
-              Order Now
+              Заказать
             </Button>
           </div>
         </div>
@@ -235,24 +235,24 @@ const ProductDetail = () => {
       <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
         <AlertDialogContent className="glass-card">
           <AlertDialogHeader>
-            <AlertDialogTitle>Ready to Order?</AlertDialogTitle>
+            <AlertDialogTitle>Готовы заказать?</AlertDialogTitle>
             <AlertDialogDescription>
-              To complete your order for the {product.name}, please contact us through one of these channels:
+              Чтобы завершить ваш заказ {product.name}, пожалуйста, свяжитесь с нами через один из этих каналов:
               <div className="mt-4 space-y-2">
-                <p className="font-medium">WhatsApp, Telegram, or VK</p>
-                <p className="text-sm">We'll help you finalize your custom build and answer any questions!</p>
+                <p className="font-medium">WhatsApp, Telegram или VK</p>
+                <p className="text-sm">Мы поможем вам завершить индивидуальную сборку и ответим на любые вопросы!</p>
               </div>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel>Отмена</AlertDialogCancel>
             <AlertDialogAction onClick={() => {
               toast({
-                title: "Thank you!",
-                description: "Please reach out via WhatsApp, Telegram, or VK to complete your order.",
+                title: "Спасибо!",
+                description: "Пожалуйста, свяжитесь с нами через WhatsApp, Telegram или VK, чтобы завершить ваш заказ.",
               });
             }}>
-              Got it
+              Понятно
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

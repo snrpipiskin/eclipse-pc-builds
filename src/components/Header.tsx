@@ -22,30 +22,30 @@ const Header = () => {
         
         <div className="hidden md:flex items-center gap-8">
           <button onClick={() => scrollToSection('home')} className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
-            <span className="relative z-10">Home</span>
+            <span className="relative z-10">Главная</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </button>
           <button onClick={() => scrollToSection('about')} className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
-            <span className="relative z-10">About</span>
+            <span className="relative z-10">О нас</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </button>
           <button onClick={() => scrollToSection('builds')} className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
-            <span className="relative z-10">Builds</span>
+            <span className="relative z-10">Сборки</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </button>
           <button onClick={() => scrollToSection('contact')} className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
-            <span className="relative z-10">Contact</span>
+            <span className="relative z-10">Контакты</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </button>
         </div>
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="default" className="font-semibold">
-            Start Building
+            Начать сборку
           </Button>
           <ContactDialog>
             <Button variant="outline" className="font-semibold border-primary/50 hover:bg-primary/10">
-              Want Custom?
+              Хотите индивидуально?
             </Button>
           </ContactDialog>
         </div>

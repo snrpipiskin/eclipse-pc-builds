@@ -27,7 +27,7 @@ const ContactDialog = ({ children }: ContactDialogProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Request sent! We'll contact you soon about your custom build.");
+    toast.success("Запрос отправлен! Мы скоро свяжемся с вами по поводу вашей индивидуальной сборки.");
     setOpen(false);
     setFormData({ name: "", email: "", message: "" });
   };
@@ -38,20 +38,20 @@ const ContactDialog = ({ children }: ContactDialogProps) => {
       <DialogContent className="sm:max-w-[500px] glass-card border-border/50">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold glow-text">
-            Custom Build Request
+            Запрос на индивидуальную сборку
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
-            Tell us about your dream PC and we'll craft a custom solution for you.
+            Расскажите нам о ПК вашей мечты, и мы создадим индивидуальное решение для вас.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Name</Label>
+            <Label htmlFor="name">Имя</Label>
             <Input
               id="name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="Your name"
+              placeholder="Ваше имя"
               required
               className="bg-background/50"
             />
@@ -63,24 +63,24 @@ const ContactDialog = ({ children }: ContactDialogProps) => {
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="your.email@example.com"
+              placeholder="ваш.email@example.com"
               required
               className="bg-background/50"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">What are you looking for?</Label>
+            <Label htmlFor="message">Что вы ищете?</Label>
             <Textarea
               id="message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Tell us about your requirements, budget, and intended use..."
+              placeholder="Расскажите нам о ваших требованиях, бюджете и предполагаемом использовании..."
               required
               className="bg-background/50 min-h-[120px]"
             />
           </div>
           <Button type="submit" className="w-full font-semibold">
-            Send Request
+            Отправить запрос
           </Button>
         </form>
       </DialogContent>
