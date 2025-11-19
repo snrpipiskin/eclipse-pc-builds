@@ -42,19 +42,20 @@ const Hero = () => {
           </div>
           
           <div className="relative group/hero-img cursor-pointer">
-            {/* Smoke effect behind */}
-            <div className="absolute inset-0 bg-primary/10 blur-[120px] rounded-full" />
+            {/* Enhanced glow/lightning effect behind */}
+            <div className="absolute inset-0 bg-primary/20 blur-[150px] rounded-full animate-glow-pulse" />
+            <div className="absolute inset-0 bg-primary/15 blur-[200px] rounded-full" />
             
             {/* Image container with gradient overlay */}
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
                 src={heroImage} 
                 alt="Eclipse Gaming Motherboard" 
-                className="relative w-full h-full object-cover group-hover/hero-img:translate-x-2 transition-transform duration-500"
+                className="relative w-full h-full object-cover group-hover/hero-img:-translate-x-2 transition-transform duration-500"
               />
               
-              {/* Bottom blur gradient for smooth transition */}
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
+              {/* Enhanced bottom blur gradient for smoother transition */}
+              <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-background via-background/90 via-background/60 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
