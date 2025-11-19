@@ -1,11 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
-import ContactDialog from "./ContactDialog";
 
 const Hero = () => {
-  const [contactOpen, setContactOpen] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -79,6 +77,8 @@ const Hero = () => {
       ref={heroRef}
       id="home"
       className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      data-scroll
+      data-scroll-speed="-1"
     >
       {/* Spline 3D Background */}
       <div
@@ -126,7 +126,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
             Customize high-performance computers tailored to your needs.
-            From gaming to workstations, we deliver excellence with fast shipping and expert support.
+            From gaming to professional workstations - we build it all.
           </p>
 
           <div ref={ctaRef} className="flex flex-wrap justify-center gap-4">
@@ -143,15 +143,12 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="font-semibold glass-card hover:glow-box transition-all duration-300"
-              onClick={() => setContactOpen(true)}
             >
-              Want Custom?
+              View Pre-Built PCs
             </Button>
           </div>
         </div>
       </div>
-
-      <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
     </section>
   );
 };
