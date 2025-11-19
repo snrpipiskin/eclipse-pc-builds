@@ -47,7 +47,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-primary/15 blur-[200px] rounded-full" />
             
             {/* Image container with gradient overlay */}
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative overflow-hidden">
               <img 
                 src={heroImage} 
                 alt="Eclipse Gaming Motherboard" 
