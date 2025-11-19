@@ -1,27 +1,34 @@
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/eclipse-logo.png";
 
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-primary" />
-          <span className="text-2xl font-bold tracking-tight">ECLIPSE PC</span>
+        <div className="flex items-center gap-3 group cursor-pointer">
+          <div className="relative h-10 w-10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
+            <img src={logo} alt="Eclipse PC Logo" className="h-full w-full object-contain" />
+          </div>
+          <span className="text-2xl font-bold tracking-tight group-hover:text-primary transition-colors duration-300">ECLIPSE PC</span>
         </div>
         
         <div className="hidden md:flex items-center gap-8">
-          <a href="#home" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
-            Home
+          <a href="#home" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
+            <span className="relative z-10">Home</span>
+            <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
-          <a href="#builds" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
-            Builds
+          <a href="#builds" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
+            <span className="relative z-10">Builds</span>
+            <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
-          <a href="#faq" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
-            FAQ
+          <a href="#faq" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
+            <span className="relative z-10">FAQ</span>
+            <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
-          <a href="#contacts" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
-            Contacts
+          <a href="#contacts" className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
+            <span className="relative z-10">Contacts</span>
+            <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
         </div>
 
