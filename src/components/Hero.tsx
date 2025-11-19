@@ -28,22 +28,25 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="font-semibold group">
-                Start Building
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="font-semibold group/hero relative overflow-hidden hover:shadow-lg hover:shadow-primary/50 transition-all duration-300">
+                <span className="relative z-10 flex items-center">
+                  Start Building
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 scale-x-0 group-hover/hero:scale-x-100 transition-transform duration-500 origin-left" />
               </Button>
-              <Button size="lg" variant="outline" className="font-semibold border-border hover:bg-secondary">
+              <Button size="lg" variant="outline" className="font-semibold border-border hover:bg-primary/10 hover:border-primary hover:text-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/30">
                 View Pre-Built PCs
               </Button>
             </div>
           </div>
           
-          <div className="relative">
-            <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full" />
+          <div className="relative group/hero-img">
+            <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full group-hover/hero-img:bg-primary/30 transition-colors duration-500" />
             <img 
               src={heroImage} 
               alt="Eclipse Gaming PC" 
-              className="relative rounded-2xl shadow-2xl"
+              className="relative rounded-2xl shadow-2xl group-hover/hero-img:scale-105 transition-transform duration-700 group-hover/hero-img:shadow-primary/50"
             />
           </div>
         </div>
