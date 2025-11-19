@@ -55,7 +55,7 @@ const Hero = () => {
               />
               
               {/* Enhanced bottom blur gradient for smoother transition */}
-              <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-background via-background/90 via-background/60 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-background/70 via-background/40 via-background/20 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
