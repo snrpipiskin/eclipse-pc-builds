@@ -1,9 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
+import ContactDialog from "./ContactDialog";
 
 const Hero = () => {
+  const [contactOpen, setContactOpen] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -141,12 +143,15 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="font-semibold glass-card hover:glow-box transition-all duration-300"
+              onClick={() => setContactOpen(true)}
             >
-              View Pre-Built PCs
+              Want Custom?
             </Button>
           </div>
         </div>
       </div>
+
+      <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
     </section>
   );
 };

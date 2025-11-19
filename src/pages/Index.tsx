@@ -89,6 +89,20 @@ const Index = () => {
   useEffect(() => {
     if (!loading) {
       const ctx = gsap.context(() => {
+        // Parallax effect for background elements
+        gsap.utils.toArray<HTMLElement>(".parallax-slow").forEach((elem) => {
+          gsap.to(elem, {
+            yPercent: 30,
+            ease: "none",
+            scrollTrigger: {
+              trigger: elem,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1,
+            },
+          });
+        });
+
         // Builds section animation
         gsap.from(buildsRef.current?.querySelector(".section-title"), {
           scrollTrigger: {
@@ -133,7 +147,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background scroll-smooth">
       <Header />
       <Hero />
       <AboutSection />
@@ -158,10 +172,10 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Background particles */}
+        {/* Background particles with parallax */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="parallax-slow absolute top-1/4 left-1/4 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
+          <div className="parallax-slow absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
       </section>
       
@@ -178,12 +192,12 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Floating particles */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
-          <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-accent/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }} />
-        </div>
-      </footer>
+      {/* Floating particles with parallax */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="parallax-slow absolute top-1/2 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
+        <div className="parallax-slow absolute top-1/3 right-1/3 w-24 h-24 bg-accent/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }} />
+      </div>
+    </footer>
     </div>
   );
 };

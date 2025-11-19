@@ -41,18 +41,18 @@ const AboutSection = () => {
   const features = [
     {
       icon: Cpu,
-      title: "Custom Built",
-      description: "Every PC is hand-built by our expert technicians with premium components",
+      title: "Expertly Hand-Built Systems",
+      description: "Each PC is meticulously assembled by certified technicians with over 10 years of experience. We use only premium, tested components from industry leaders like ASUS, MSI, and Corsair. Every build undergoes rigorous quality checks and stress testing before shipping to ensure flawless performance from day one.",
     },
     {
       icon: Zap,
-      title: "Maximum Performance",
-      description: "Optimized for peak performance with cutting-edge hardware and cooling",
+      title: "Uncompromising Performance",
+      description: "Our systems are engineered for excellence with cutting-edge hardware, advanced cooling solutions, and optimized cable management. We achieve up to 30% better thermals than standard builds through custom fan curves and premium thermal compounds. Whether gaming, streaming, or content creation, expect peak performance 24/7.",
     },
     {
       icon: Shield,
-      title: "Quality Guarantee",
-      description: "Comprehensive warranty and lifetime technical support included",
+      title: "Comprehensive Protection & Support",
+      description: "Enjoy peace of mind with our 3-year comprehensive warranty covering parts and labor. Get lifetime access to our expert technical support team available 7 days a week. We stand behind every build with free diagnostics, priority service, and our satisfaction guarantee. Your success is our mission.",
     },
   ];
 
