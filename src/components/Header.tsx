@@ -11,7 +11,7 @@ const Header = () => {
           <div className="relative h-10 w-10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
             <img src={logo} alt="Eclipse PC Logo" className="h-full w-full object-contain" />
           </div>
-          <div className="h-10 transition-all duration-300 group-hover:scale-105 group-hover:brightness-[1.3] group-hover:contrast-[1.2] group-hover:hue-rotate-[-15deg]">
+          <div className="h-10 transition-all duration-300 group-hover:scale-105 group-hover:brightness-150 group-hover:saturate-150 group-hover:[filter:brightness(1.5)_saturate(1.5)_hue-rotate(90deg)]">
             <img src={textLogo} alt="Eclipse PC" className="h-full w-auto object-contain" />
           </div>
         </a>
