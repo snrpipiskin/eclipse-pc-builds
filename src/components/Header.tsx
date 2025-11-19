@@ -1,14 +1,19 @@
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/eclipse-logo.png";
+import textLogo from "@/assets/eclipse-text-logo.png";
 
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="/" className="group cursor-pointer">
-          <span className="text-2xl font-bold glow-text transition-all duration-300 group-hover:scale-105 inline-block">
-            ECLIPSE PC
-          </span>
+        <a href="/" className="flex items-center gap-3 group cursor-pointer">
+          <div className="relative h-10 w-10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
+            <img src={logo} alt="Eclipse PC Logo" className="h-full w-full object-contain" />
+          </div>
+          <div className="h-10 transition-all duration-300 group-hover:scale-105 group-hover:brightness-[1.3] group-hover:contrast-[1.2] group-hover:hue-rotate-[-15deg]">
+            <img src={textLogo} alt="Eclipse PC" className="h-full w-auto object-contain" />
+          </div>
         </a>
         
         <div className="hidden md:flex items-center gap-8">
