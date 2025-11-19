@@ -44,9 +44,6 @@ const ProductCard = ({ name, price, image, specs }: ProductCardProps) => {
           style={{ filter: 'brightness(1.1)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent group-hover:bg-primary/20 transition-colors duration-500" />
-        <div className="absolute top-4 right-4 px-3 py-1 glass-card rounded-full">
-          <span className="text-xs font-bold text-primary">NEW</span>
-        </div>
       </div>
       
       <CardHeader>

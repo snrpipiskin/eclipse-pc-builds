@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 import Preloader from "@/components/Preloader";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import pcBuild1 from "@/assets/pc-build-4.jpg";
@@ -210,6 +211,9 @@ const Index = () => {
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
       </section>
+
+      {/* Contact Section */}
+      <ContactSection />
       
       {/* Footer with Social Media */}
       <footer ref={footerRef} className="py-16 border-t border-border relative overflow-hidden">

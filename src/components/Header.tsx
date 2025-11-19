@@ -33,6 +33,10 @@ const Header = () => {
             <span className="relative z-10">Builds</span>
             <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
           </button>
+          <button onClick={() => scrollToSection('contact')} className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 group/link">
+            <span className="relative z-10">Contact</span>
+            <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 origin-left" />
+          </button>
         </div>
 
         <div className="hidden md:flex items-center gap-3">
