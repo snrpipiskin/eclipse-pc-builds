@@ -231,7 +231,7 @@ const ProductDetail = () => {
                   <span className="font-medium">{product.specs.cooling}</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">Оперативная память</span>
+                  <span className="text-muted-foreground">ОЗУ</span>
                   <span className="font-medium">{product.specs.ram}</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-border/50">
