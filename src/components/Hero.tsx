@@ -29,7 +29,6 @@ const Hero = () => {
       .from(ctaRef.current?.children ?? [], {
         opacity: 0,
         y: 20,
-        stagger: 0.2,
         duration: 0.6,
       }, "-=0.4")
       .from(splineRef.current, {
