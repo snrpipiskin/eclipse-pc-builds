@@ -105,12 +105,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-block">
-            <span className="text-primary text-sm font-bold tracking-wider uppercase">
-              Премиальные игровые ПК
-            </span>
-          </div>
-
           <h1
             ref={headlineRef}
             className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight glow-text"
