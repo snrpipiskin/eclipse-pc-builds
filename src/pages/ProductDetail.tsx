@@ -38,6 +38,11 @@ import flow5 from "@/assets/flow-5.jpg";
 import eclipse1 from "@/assets/eclipse-1.jpg";
 import eclipse2 from "@/assets/eclipse-2.jpg";
 import eclipse3 from "@/assets/eclipse-3.jpg";
+import eclipsePro1 from "@/assets/eclipse-pro-1.jpg";
+import eclipsePro2 from "@/assets/eclipse-pro-2.jpg";
+import eclipsePro3 from "@/assets/eclipse-pro-3.jpg";
+import eclipsePro4 from "@/assets/eclipse-pro-4.jpg";
+import eclipsePro5 from "@/assets/eclipse-pro-5.jpg";
 
 const productData = {
   "eclipse-starter": {
@@ -121,19 +126,19 @@ const productData = {
     }
   },
   "eclipse-elite": {
-    name: "ECLIPSE ELITE",
-    price: "499 900₽",
-    images: [pcBuild6, pcBuild8, pcBuild9],
-    description: "Абсолютная вершина вычислительной производительности без компромиссов. Оснащенный специально отобранным i9-14900KS и огромными 128 ГБ ОЗУ, эта сборка рабочей станции уровня сокрушает любую профессиональную или игровую нагрузку.",
+    name: "ECLIPSE PRO",
+    price: "98 000₽",
+    images: [eclipsePro1, eclipsePro2, eclipsePro3, eclipsePro4, eclipsePro5],
+    description: "Продвинутая игровая сборка с впечатляющей RGB-подсветкой. AMD Ryzen 5 7500F в паре с RTX 5060 обеспечивают отличную производительность для современных игр в Full HD и 1440p.",
     specs: {
-      processor: "Intel Core i9-14900KS",
-      gpu: "NVIDIA RTX 4090 24GB",
-      motherboard: "ASUS ROG Maximus Z790",
-      cooling: "EK-AIO Elite 360",
-      ram: "128GB DDR5 6400MHz",
-      storage: "8TB NVMe Gen4 SSD",
-      psu: "1200W 80+ Titanium",
-      case: "Lian Li O11 XL"
+      processor: "AMD Ryzen 5 7500F",
+      gpu: "NVIDIA RTX 5060",
+      motherboard: "MSI PRO B650M-B",
+      cooling: "XASTRA AR400 ARGB",
+      ram: "16Гб ADATA XPG Lancer 2x8Гб 5600МГц",
+      storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+      psu: "Deepcool GAMERSTORM PF600X, 600W, 80+ Bronze",
+      case: "XASTRA A400M"
     }
   }
 };
