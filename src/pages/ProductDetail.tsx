@@ -57,6 +57,13 @@ import purplePc3 from "@/assets/purple-pc-3.webp";
 import purplePc4 from "@/assets/purple-pc-4.webp";
 import purplePc5 from "@/assets/purple-pc-5.webp";
 import purplePc6 from "@/assets/purple-pc-6.webp";
+import rgbSpectrum1 from "@/assets/rgb-spectrum-1.webp";
+import rgbSpectrum2 from "@/assets/rgb-spectrum-2.webp";
+import rgbSpectrum3 from "@/assets/rgb-spectrum-3.webp";
+import rgbSpectrum4 from "@/assets/rgb-spectrum-4.webp";
+import rgbSpectrum5 from "@/assets/rgb-spectrum-5.webp";
+import rgbSpectrum6 from "@/assets/rgb-spectrum-6.webp";
+import rgbSpectrum7 from "@/assets/rgb-spectrum-7.webp";
 
 const productData = {
   "eclipse-starter": {
@@ -201,6 +208,22 @@ const productData = {
       storage: "1TB SSD",
       psu: "1STPLAYER BLACK SIR 600W 80 PLUS",
       case: "HSPD"
+    }
+  },
+  "rgb-spectrum": {
+    name: "RGB SPECTRUM",
+    price: "59 000₽",
+    images: [rgbSpectrum1, rgbSpectrum2, rgbSpectrum3, rgbSpectrum4, rgbSpectrum5, rgbSpectrum6, rgbSpectrum7],
+    description: "Впечатляющая сборка с радужной RGB-подсветкой. AMD Ryzen 5 5500 и MSI RTX 5050 8GB обеспечивают отличную производительность в играх. Яркие RGB-вентиляторы создают завораживающее световое шоу. 32GB оперативной памяти и быстрый SSD 1TB гарантируют комфортную работу.",
+    specs: {
+      processor: "AMD Ryzen 5 5500",
+      gpu: "MSI RTX 5050 8GB Gaming",
+      motherboard: "Gigabyte A520M K V2",
+      cooling: "RGB охлаждение",
+      ram: "32GB Netac Shadow 2x16Гб DDR4 3200",
+      storage: "1TB Reletech PCI-E 4.0 SSD",
+      psu: "4FAN 600W 80+",
+      case: "Xastra A402M Black"
     }
   }
 };

@@ -41,6 +41,7 @@ import auraLite1 from "@/assets/aura-lite-1.jpg";
 import auraLite2 from "@/assets/aura-lite-2.jpg";
 import auraLite3 from "@/assets/aura-lite-3.jpg";
 import purplePc1 from "@/assets/purple-pc-1.webp";
+import rgbSpectrum1 from "@/assets/rgb-spectrum-1.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,6 +106,22 @@ const Index = () => {
         storage: "1TB SSD",
         psu: "1STPLAYER BLACK SIR 600W 80 PLUS",
         case: "HSPD"
+      }
+    },
+    {
+      id: "rgb-spectrum",
+      name: "RGB SPECTRUM",
+      price: "59 000₽",
+      image: rgbSpectrum1,
+      specs: {
+        processor: "AMD Ryzen 5 5500",
+        gpu: "MSI RTX 5050 8GB Gaming",
+        motherboard: "Gigabyte A520M K V2",
+        cooling: "RGB охлаждение",
+        ram: "32GB Netac Shadow 2x16Гб DDR4 3200",
+        storage: "1TB Reletech PCI-E 4.0 SSD",
+        psu: "4FAN 600W 80+",
+        case: "Xastra A402M Black"
       }
     },
     {
