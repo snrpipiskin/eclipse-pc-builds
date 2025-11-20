@@ -142,7 +142,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="font-semibold border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
+                className="font-semibold bg-background/90 backdrop-blur-sm border-2 border-primary/50 hover:bg-primary/20 hover:border-primary transition-all duration-300"
               >
                 Хотите индивидуально?
               </Button>
