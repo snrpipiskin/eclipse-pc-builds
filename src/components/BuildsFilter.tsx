@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -8,6 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 interface BuildsFilterProps {
   onFilterChange: (filters: FilterState) => void;
@@ -20,6 +21,7 @@ export interface FilterState {
   ramSize: string;
   caseColor: string;
   priceRange: string;
+  searchQuery: string;
 }
 
 const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
@@ -29,7 +31,8 @@ const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
     cpuBrand: "all",
     ramSize: "all",
     caseColor: "all",
-    priceRange: "all"
+    priceRange: "all",
+    searchQuery: ""
   });
 
   const handleFilterChange = (key: keyof FilterState, value: string) => {
@@ -45,7 +48,8 @@ const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
       cpuBrand: "all",
       ramSize: "all",
       caseColor: "all",
-      priceRange: "all"
+      priceRange: "all",
+      searchQuery: ""
     };
     setFilters(defaultFilters);
     onFilterChange(defaultFilters);
@@ -64,6 +68,19 @@ const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
           >
             Сбросить всё
           </Button>
+        </div>
+
+
+        {/* Search Bar */}
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          <Input
+            type="text"
+            placeholder="Поиск по названию или характеристикам..."
+            value={filters.searchQuery}
+            onChange={(e) => handleFilterChange("searchQuery", e.target.value)}
+            className="pl-10 bg-background/80 border-border/50 hover:border-primary/50 focus:border-primary transition-colors h-12 text-base"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
