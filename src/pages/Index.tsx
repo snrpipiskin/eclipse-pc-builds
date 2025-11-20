@@ -24,6 +24,9 @@ import flow2 from "@/assets/flow-2.jpg";
 import flow3 from "@/assets/flow-3.jpg";
 import flow4 from "@/assets/flow-4.jpg";
 import flow5 from "@/assets/flow-5.jpg";
+import eclipse1 from "@/assets/eclipse-1.jpg";
+import eclipse2 from "@/assets/eclipse-2.jpg";
+import eclipse3 from "@/assets/eclipse-3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -99,18 +102,18 @@ const Index = () => {
     },
     {
       id: "eclipse-streamer",
-      name: "ECLIPSE STREAMER",
-      price: "219 900₽",
+      name: "ECLIPSE",
+      price: "150 000₽",
       image: pcBuild5,
       specs: {
-        processor: "AMD Ryzen 9 7900X",
-        gpu: "NVIDIA RTX 4070 Ti 12GB",
-        motherboard: "MSI B650",
-        cooling: "Arctic Liquid Freezer II",
-        ram: "32GB DDR5 6000MHz",
-        storage: "2TB NVMe Gen4 SSD + 2TB HDD",
-        psu: "750W 80+ Gold",
-        case: "NZXT H710i"
+        processor: "Intel Core i5-14600KF",
+        gpu: "NVIDIA RTX 5060 Ti 16Gb",
+        motherboard: "MSI PRO B760-P II",
+        cooling: "Ocypus Delta L36 ARGB V2",
+        ram: "32Гб ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+        psu: "PHANTEKS AMP BH, 650W, 80+ Bronze",
+        case: "ARDOR GAMING Crystal CC2"
       }
     },
     {
