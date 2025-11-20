@@ -26,7 +26,7 @@ export interface FilterState {
 
 const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
   const [filters, setFilters] = useState<FilterState>({
-    sortBy: "default",
+    sortBy: "price-asc",
     gpuBrand: "all",
     cpuBrand: "all",
     ramSize: "all",
@@ -43,7 +43,7 @@ const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
 
   const resetFilters = () => {
     const defaultFilters: FilterState = {
-      sortBy: "default",
+      sortBy: "price-asc",
       gpuBrand: "all",
       cpuBrand: "all",
       ramSize: "all",
