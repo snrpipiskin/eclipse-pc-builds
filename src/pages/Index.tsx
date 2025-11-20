@@ -53,7 +53,8 @@ const Index = () => {
     cpuBrand: "all",
     ramSize: "all",
     caseColor: "all",
-    priceRange: "all"
+    priceRange: "all",
+    searchQuery: ""
   });
 
   const builds = [
@@ -190,6 +191,23 @@ const Index = () => {
   // Filter and sort builds
   const getFilteredAndSortedBuilds = () => {
     let filtered = [...builds];
+
+    // Search filter
+    if (filters.searchQuery.trim() !== "") {
+      const query = filters.searchQuery.toLowerCase();
+      filtered = filtered.filter(build => {
+        return (
+          build.name.toLowerCase().includes(query) ||
+          build.specs.processor.toLowerCase().includes(query) ||
+          build.specs.gpu.toLowerCase().includes(query) ||
+          build.specs.motherboard.toLowerCase().includes(query) ||
+          build.specs.ram.toLowerCase().includes(query) ||
+          build.specs.storage.toLowerCase().includes(query) ||
+          build.specs.case.toLowerCase().includes(query) ||
+          build.price.includes(query)
+        );
+      });
+    }
 
     // Filter by GPU brand
     if (filters.gpuBrand !== "all") {
