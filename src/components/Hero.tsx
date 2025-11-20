@@ -26,7 +26,7 @@ const Hero = () => {
         y: 30,
         duration: 0.8,
       }, "-=0.6")
-      .from(ctaRef.current?.children ?? [], {
+      .from(ctaRef.current?.querySelectorAll('button') ?? [], {
         opacity: 0,
         y: 20,
         duration: 0.6,
