@@ -1,4 +1,4 @@
-import { Menu, Phone } from "lucide-react";
+import { Menu, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import textLogo from "@/assets/eclipse-text-logo.png";
 import ContactDialog from "@/components/ContactDialog";
@@ -56,6 +56,10 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-muted/50 border border-border/50 text-xs text-muted-foreground">
+            <MapPin className="h-4 w-4" />
+            <span>Чеченская Республика, Грозный, бульвар М.А. Эсамбаева, 5</span>
+          </div>
           <a 
             href="tel:+79993989762" 
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-sm font-semibold text-primary hover:bg-primary/20 hover:border-primary/30 transition-all duration-300 group"
