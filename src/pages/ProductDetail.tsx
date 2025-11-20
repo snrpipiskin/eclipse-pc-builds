@@ -14,7 +14,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import pcBuild1 from "@/assets/pc-build-4.jpg";
+import pcBuild1 from "@/assets/apex-hero-1.jpg";
+import pcBuild1_2 from "@/assets/apex-hero-2.jpg";
 import pcBuild2 from "@/assets/pc-build-5.jpg";
 import pcBuild3 from "@/assets/pc-build-6.png";
 import pcBuild4 from "@/assets/pc-build-7.jpg";
@@ -26,19 +27,19 @@ import pcBuild9 from "@/assets/pc-build-3.jpg";
 
 const productData = {
   "eclipse-starter": {
-    name: "ECLIPSE STARTER",
-    price: "129 900₽",
-    images: [pcBuild1, pcBuild7, pcBuild8],
-    description: "Идеален для начального уровня игр и повседневных вычислений. Обеспечивает плавную игровую производительность в 1080p с современными играми, сохраняя отличное качество сборки и возможность модернизации на будущее.",
+    name: "APEX HERO",
+    price: "198 000₽",
+    images: [pcBuild1, pcBuild1_2, pcBuild7],
+    description: "Мощная игровая сборка с новейшими технологиями. Процессор AMD Ryzen 7 7800X3D с технологией 3D V-Cache обеспечивает исключительную производительность в играх, а RTX 5070 позволяет наслаждаться играми в высоком разрешении с максимальными настройками графики.",
     specs: {
-      processor: "AMD Ryzen 5 7600X",
-      gpu: "NVIDIA RTX 4060 8GB",
-      motherboard: "ASUS B650",
-      cooling: "DeepCool AK400",
-      ram: "16GB DDR5 5600MHz",
-      storage: "1TB NVMe SSD",
-      psu: "600W 80+ Bronze",
-      case: "DeepCool CC560"
+      processor: "AMD Ryzen 7 7800X3D",
+      gpu: "NVIDIA RTX 5070 (BLACK)",
+      motherboard: "ASRock B650 Pro RS",
+      cooling: "Cougar Poseidon Elite 360 ARGB",
+      ram: "32Гб DDR5 ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
+      storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+      psu: "1STPLAYER NGDP, 850W, 80+ Gold",
+      case: "LIAN LI O11 Vision COMPACT"
     }
   },
   "eclipse-gaming": {
