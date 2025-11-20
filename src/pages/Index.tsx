@@ -47,7 +47,7 @@ const Index = () => {
     {
       id: "eclipse-gaming",
       name: "ECLIPSE WHITE",
-      price: "189 900₽",
+      price: "155 000₽",
       image: pcBuild2,
       specs: {
         processor: "Intel Core i5-14600KF",
