@@ -141,8 +141,8 @@ const Hero = () => {
             <ContactDialog>
               <Button
                 size="lg"
-                variant="outline"
-                className="font-semibold glass-card hover:glow-box transition-all duration-300"
+                variant="secondary"
+                className="font-semibold hover:glow-box transition-all duration-300"
               >
                 Хотите индивидуальное решение?
               </Button>
