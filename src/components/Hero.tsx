@@ -138,15 +138,6 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
               </span>
             </Button>
-            <ContactDialog>
-              <Button
-                size="lg"
-                variant="outline"
-                className="font-semibold bg-background/90 backdrop-blur-sm border-2 border-primary/50 hover:bg-primary/20 hover:border-primary transition-all duration-300"
-              >
-                Хотите индивидуально?
-              </Button>
-            </ContactDialog>
           </div>
         </div>
       </div>
