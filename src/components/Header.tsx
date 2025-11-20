@@ -47,6 +47,11 @@ const Header = () => {
             <Phone className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
             <span>+7 (999) 398-97-62</span>
           </a>
+          <ContactDialog>
+            <Button size="sm" className="font-semibold">
+              Индивидуально
+            </Button>
+          </ContactDialog>
         </div>
 
         <Button variant="ghost" size="icon" className="md:hidden">
