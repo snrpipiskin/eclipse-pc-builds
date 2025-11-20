@@ -30,7 +30,7 @@ const Hero = () => {
         opacity: 0,
         y: 20,
         duration: 0.6,
-        clearProps: "all"
+        clearProps: "transform,opacity"
       }, "-=0.4")
       .from(splineRef.current, {
         opacity: 0,
