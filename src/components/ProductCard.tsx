@@ -89,11 +89,11 @@ const ProductCard = ({ id, name, price, image, specs }: ProductCardProps) => {
           </div>
           
           <div className="flex justify-between items-center py-2 border-b border-border/50">
-            <span className="text-muted-foreground flex items-center">
+            <span className="text-muted-foreground flex items-center shrink-0">
               <img src={ramIcon} alt="" className="mr-2 h-4 w-4 brightness-0 invert" />
               ОЗУ
             </span>
-            <span className="font-medium text-right">{specs.ram}</span>
+            <span className="font-medium text-right break-words ml-2">{specs.ram}</span>
           </div>
           
           <div className="flex justify-between items-center py-2 border-b border-border/50">

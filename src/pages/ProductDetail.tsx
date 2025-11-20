@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ZoomIn } from "lucide-react";
+import { ArrowLeft, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -29,7 +29,7 @@ const productData = {
   "eclipse-starter": {
     name: "APEX HERO",
     price: "198 000₽",
-    images: [pcBuild1, pcBuild1_2, pcBuild7],
+    images: [pcBuild1, pcBuild1_2],
     description: "Мощная игровая сборка с новейшими технологиями. Процессор AMD Ryzen 7 7800X3D с технологией 3D V-Cache обеспечивает исключительную производительность в играх, а RTX 5070 позволяет наслаждаться играми в высоком разрешении с максимальными настройками графики.",
     specs: {
       processor: "AMD Ryzen 7 7800X3D",
@@ -149,6 +149,14 @@ const ProductDetail = () => {
     setShowDialog(true);
   };
 
+  const handlePrevImage = () => {
+    setSelectedImage((prev) => (prev === 0 ? product.images.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = () => {
+    setSelectedImage((prev) => (prev === product.images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-6 py-8">
@@ -177,6 +185,24 @@ const ProductDetail = () => {
               >
                 <ZoomIn className="h-5 w-5" />
               </button>
+              
+              {/* Navigation Arrows */}
+              {product.images.length > 1 && (
+                <>
+                  <button
+                    onClick={handlePrevImage}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
+                  >
+                    <ChevronLeft className="h-6 w-6" />
+                  </button>
+                  <button
+                    onClick={handleNextImage}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
+                  >
+                    <ChevronRight className="h-6 w-6" />
+                  </button>
+                </>
+              )}
             </div>
 
             {/* Thumbnail Gallery */}
