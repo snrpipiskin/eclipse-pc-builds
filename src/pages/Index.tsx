@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "@/components/Header";
@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
+import BuildsFilter, { FilterState } from "@/components/BuildsFilter";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import pcBuild1 from "@/assets/apex-hero-1.jpg";
 import pcBuild2 from "@/assets/pc-build-5.jpg";
@@ -46,6 +47,14 @@ const Index = () => {
   const aboutRef = useRef<HTMLElement>(null);
   const buildsRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
+  const [filters, setFilters] = useState<FilterState>({
+    sortBy: "default",
+    gpuBrand: "all",
+    cpuBrand: "all",
+    ramSize: "all",
+    caseColor: "all",
+    priceRange: "all"
+  });
 
   const builds = [
     {
@@ -178,6 +187,89 @@ const Index = () => {
     }
   ];
 
+  // Filter and sort builds
+  const getFilteredAndSortedBuilds = () => {
+    let filtered = [...builds];
+
+    // Filter by GPU brand
+    if (filters.gpuBrand !== "all") {
+      filtered = filtered.filter(build => {
+        const gpu = build.specs.gpu.toLowerCase();
+        if (filters.gpuBrand === "nvidia") return gpu.includes("nvidia") || gpu.includes("rtx") || gpu.includes("geforce");
+        if (filters.gpuBrand === "amd") return gpu.includes("amd") || gpu.includes("radeon");
+        if (filters.gpuBrand === "asus") return gpu.includes("asus");
+        return true;
+      });
+    }
+
+    // Filter by CPU brand
+    if (filters.cpuBrand !== "all") {
+      filtered = filtered.filter(build => {
+        const cpu = build.specs.processor.toLowerCase();
+        if (filters.cpuBrand === "intel") return cpu.includes("intel") || cpu.includes("core") || cpu.includes("xeon");
+        if (filters.cpuBrand === "amd") return cpu.includes("amd") || cpu.includes("ryzen");
+        return true;
+      });
+    }
+
+    // Filter by RAM size
+    if (filters.ramSize !== "all") {
+      filtered = filtered.filter(build => {
+        const ram = build.specs.ram.toLowerCase();
+        const size = filters.ramSize;
+        return ram.includes(`${size}гб`) || ram.includes(`${size}gb`);
+      });
+    }
+
+    // Filter by case color
+    if (filters.caseColor !== "all") {
+      filtered = filtered.filter(build => {
+        const caseName = build.name.toLowerCase();
+        const caseSpec = build.specs.case.toLowerCase();
+        if (filters.caseColor === "white") return caseName.includes("white") || caseSpec.includes("white");
+        if (filters.caseColor === "black") return !caseName.includes("white") && (caseName.includes("black") || caseSpec.includes("black") || (!caseSpec.includes("white") && !caseSpec.includes("rgb")));
+        if (filters.caseColor === "rgb") return caseSpec.includes("rgb") || caseSpec.includes("argb") || caseName.includes("gaming");
+        return true;
+      });
+    }
+
+    // Filter by price range
+    if (filters.priceRange !== "all") {
+      filtered = filtered.filter(build => {
+        const price = parseInt(build.price.replace(/\s/g, "").replace("₽", ""));
+        if (filters.priceRange === "0-50000") return price < 50000;
+        if (filters.priceRange === "50000-100000") return price >= 50000 && price < 100000;
+        if (filters.priceRange === "100000-150000") return price >= 100000 && price < 150000;
+        if (filters.priceRange === "150000-200000") return price >= 150000 && price < 200000;
+        if (filters.priceRange === "200000+") return price >= 200000;
+        return true;
+      });
+    }
+
+    // Sort builds
+    if (filters.sortBy !== "default") {
+      filtered.sort((a, b) => {
+        if (filters.sortBy === "price-asc") {
+          return parseInt(a.price.replace(/\s/g, "").replace("₽", "")) - parseInt(b.price.replace(/\s/g, "").replace("₽", ""));
+        }
+        if (filters.sortBy === "price-desc") {
+          return parseInt(b.price.replace(/\s/g, "").replace("₽", "")) - parseInt(a.price.replace(/\s/g, "").replace("₽", ""));
+        }
+        if (filters.sortBy === "name-asc") {
+          return a.name.localeCompare(b.name);
+        }
+        if (filters.sortBy === "name-desc") {
+          return b.name.localeCompare(a.name);
+        }
+        return 0;
+      });
+    }
+
+    return filtered;
+  };
+
+  const filteredBuilds = getFilteredAndSortedBuilds();
+
   useEffect(() => {
     const ctx = gsap.context(() => {
         // About section animation
@@ -289,13 +381,22 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {builds.map((build, index) => (
-              <div key={index} className="product-card">
-                <ProductCard {...build} />
-              </div>
-            ))}
-          </div>
+          <BuildsFilter onFilterChange={setFilters} />
+          
+          {filteredBuilds.length === 0 ? (
+            <div className="text-center py-20">
+              <p className="text-xl text-muted-foreground">Нет компьютеров, соответствующих выбранным фильтрам</p>
+              <p className="text-sm text-muted-foreground mt-2">Попробуйте изменить параметры фильтрации</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredBuilds.map((build, index) => (
+                <div key={index} className="product-card">
+                  <ProductCard {...build} />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="absolute inset-0 pointer-events-none">
