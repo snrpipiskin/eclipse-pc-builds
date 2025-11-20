@@ -157,7 +157,7 @@ const productData = {
       cooling: "JONSBO CR-1000 EVO ARGB",
       ram: "16GB DDR4 2x8Гб 3200МГц",
       storage: "500GB SSD",
-      psu: "Стандартный",
+      psu: "600W 80+ Bronze",
       case: "Gaming RGB (более 30 на выбор)"
     }
   }
