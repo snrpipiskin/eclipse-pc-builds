@@ -50,7 +50,7 @@ const productData = {
   },
   "eclipse-gaming": {
     name: "ECLIPSE WHITE",
-    price: "189 900₽",
+    price: "155 000₽",
     images: [pcBuild2, eclipseWhite1, eclipseWhite2],
     description: "Создан для серьезных геймеров, требующих высокопроизводительного гейминга в 1440p. Оснащен мощным Intel Core i5-14600KF для отличной игровой производительности и RTX 5060 Ti для высоких настроек графики.",
     specs: {
