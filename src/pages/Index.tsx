@@ -32,6 +32,10 @@ import eclipsePro2 from "@/assets/eclipse-pro-2.jpg";
 import eclipsePro3 from "@/assets/eclipse-pro-3.jpg";
 import eclipsePro4 from "@/assets/eclipse-pro-4.jpg";
 import eclipsePro5 from "@/assets/eclipse-pro-5.jpg";
+import eclipseStart1 from "@/assets/eclipse-start-1.jpg";
+import eclipseStart2 from "@/assets/eclipse-start-2.jpg";
+import eclipseStart3 from "@/assets/eclipse-start-3.jpg";
+import eclipseStart4 from "@/assets/eclipse-start-4.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,6 +139,22 @@ const Index = () => {
         storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
         psu: "Deepcool GAMERSTORM PF600X, 600W, 80+ Bronze",
         case: "XASTRA A400M"
+      }
+    },
+    {
+      id: "eclipse-start",
+      name: "ECLIPSE START",
+      price: "39 500₽",
+      image: eclipseStart1,
+      specs: {
+        processor: "AMD Ryzen 5 5500",
+        gpu: "RTX 2060 Super",
+        motherboard: "Asus / Msi / Gigabyte",
+        cooling: "Стандартное",
+        ram: "16GB",
+        storage: "500GB SSD",
+        psu: "Стандартный",
+        case: "Gaming RGB (более 30 на выбор)"
       }
     }
   ];
