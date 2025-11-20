@@ -36,6 +36,9 @@ import eclipseStart1 from "@/assets/eclipse-start-1.jpg";
 import eclipseStart2 from "@/assets/eclipse-start-2.jpg";
 import eclipseStart3 from "@/assets/eclipse-start-3.jpg";
 import eclipseStart4 from "@/assets/eclipse-start-4.jpg";
+import auraLite1 from "@/assets/aura-lite-1.jpg";
+import auraLite2 from "@/assets/aura-lite-2.jpg";
+import auraLite3 from "@/assets/aura-lite-3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -155,6 +158,22 @@ const Index = () => {
         storage: "500GB SSD",
         psu: "600W 80+ Bronze",
         case: "Gaming RGB (более 30 на выбор)"
+      }
+    },
+    {
+      id: "aura-lite",
+      name: "AURA LITE",
+      price: "31 990₽",
+      image: auraLite1,
+      specs: {
+        processor: "Intel Core Xeon E5-2640v4 (10 ядер / 20 потоков, 3.4 GHz)",
+        gpu: "ASUS GeForce RTX 2060 6GB",
+        motherboard: "Серверная материнская плата",
+        cooling: "Стандартное",
+        ram: "16GB DDR4 2133 Mhz",
+        storage: "SSD 120GB, HDD 500GB",
+        psu: "700W IWONGOU ATX (RM700) WHITE Bronze",
+        case: "Warrior Z5 с 3 ARGB вентиляторами"
       }
     }
   ];
