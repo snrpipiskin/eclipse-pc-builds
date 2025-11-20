@@ -132,10 +132,8 @@ const Hero = () => {
               size="lg"
               className="font-semibold group/hero relative overflow-hidden glow-box"
             >
-              <span className="relative z-10 flex items-center">
-                Начать сборку
-                <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
-              </span>
+              Начать сборку
+              <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
             </Button>
             <ContactDialog>
               <Button
