@@ -52,6 +52,11 @@ import auraLite1 from "@/assets/aura-lite-1.jpg";
 import auraLite2 from "@/assets/aura-lite-2.jpg";
 import auraLite3 from "@/assets/aura-lite-3.jpg";
 import purplePc1 from "@/assets/purple-pc-1.webp";
+import purplePc2 from "@/assets/purple-pc-2.webp";
+import purplePc3 from "@/assets/purple-pc-3.webp";
+import purplePc4 from "@/assets/purple-pc-4.webp";
+import purplePc5 from "@/assets/purple-pc-5.webp";
+import purplePc6 from "@/assets/purple-pc-6.webp";
 
 const productData = {
   "eclipse-starter": {
@@ -185,7 +190,7 @@ const productData = {
   "purple-gaming": {
     name: "PURPLE POWER",
     price: "53 000₽",
-    images: [purplePc1],
+    images: [purplePc1, purplePc2, purplePc3, purplePc4, purplePc5, purplePc6],
     description: "Яркая игровая сборка с фиолетовой RGB-подсветкой. AMD Ryzen 5 5500 в паре с мощной GIGABYTE RTX 3060 12GB обеспечивают высокую производительность в современных играх. Увеличенный объем оперативной памяти 32GB идеален для многозадачности.",
     specs: {
       processor: "AMD Ryzen 5 5500",
