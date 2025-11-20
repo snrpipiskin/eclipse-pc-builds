@@ -46,45 +46,28 @@ export const buildsData = [
     image: auraLite1,
     images: [auraLite1, auraLite2, auraLite3],
     specs: {
-      processor: "Intel Core Xeon E5-2640v4 (10 ядер / 20 потоков, 3.4 GHz)",
-      gpu: "ASUS GeForce RTX 2060 6GB",
+      processor: "Xeon E5-2640v4",
+      gpu: "RTX 2060 6GB",
       motherboard: "Серверная материнская плата",
-      cooling: "Стандартное",
-      ram: "16GB DDR4 2133 Mhz",
+      cooling: "JONSBO CR-1000 EVO ARGB WHITE",
+      ram: "16Гб DDR4 2133 2x8Гб 2133МГц",
       storage: "SSD 120GB, HDD 500GB",
-      psu: "700W IWONGOU ATX (RM700) WHITE Bronze",
-      case: "Warrior Z5 с 3 ARGB"
-    }
-  },
-  {
-    id: "eclipse-start",
-    name: "ECLIPSE START",
-    price: "39 500₽",
-    image: eclipseStart1,
-    images: [eclipseStart1, eclipseStart2, eclipseStart3, eclipseStart4],
-    specs: {
-      processor: "AMD Ryzen 5 5500",
-      gpu: "RTX 2060 Super",
-      motherboard: "Asus / Msi / Gigabyte",
-      cooling: "JONSBO CR-1000 EVO ARGB",
-      ram: "16GB DDR4 2x8Гб 3200МГц",
-      storage: "500GB SSD",
-      psu: "600W 80+ Bronze",
-      case: "Gaming RGB (более 30 на выбор)"
+      psu: "700W IWONGOU ATX (RM700) WHITE Bronze+",
+      case: "Warrior Z5 WHITE"
     }
   },
   {
     id: "purple-gaming",
-    name: "PURPLE POWER",
+    name: "ECLIPSE START",
     price: "53 000₽",
     image: purplePc1,
     images: [purplePc1, purplePc2, purplePc3, purplePc4, purplePc5, purplePc6],
     specs: {
       processor: "AMD Ryzen 5 5500",
-      gpu: "GIGABYTE RTX 3060 12GB",
+      gpu: "RTX 3060 12GB",
       motherboard: "MSI A520M PRO",
       cooling: "Jonsbo CR1000-Max",
-      ram: "32GB DDR4 3200 2x16Гб",
+      ram: "32Гб DDR4 2х16Гб 3200МГц",
       storage: "1TB SSD",
       psu: "1STPLAYER BLACK SIR 600W 80 PLUS",
       case: "HSPD"
@@ -92,16 +75,16 @@ export const buildsData = [
   },
   {
     id: "rgb-spectrum",
-    name: "RGB SPECTRUM",
+    name: "NEXUS LITE",
     price: "59 000₽",
     image: rgbSpectrum1,
     images: [rgbSpectrum1, rgbSpectrum2, rgbSpectrum3, rgbSpectrum4, rgbSpectrum5, rgbSpectrum6, rgbSpectrum7],
     specs: {
       processor: "AMD Ryzen 5 5500",
-      gpu: "MSI RTX 5050 8GB Gaming",
+      gpu: "RTX 5050 8GB",
       motherboard: "Gigabyte A520M K V2",
-      cooling: "RGB охлаждение",
-      ram: "32GB Netac Shadow 2x16Гб DDR4 3200",
+      cooling: "JONSBO CR-1000 EVO ARGB",
+      ram: "32GB DDR4 3200 2x16Гб",
       storage: "1TB Reletech PCI-E 4.0 SSD",
       psu: "4FAN 600W 80+",
       case: "Xastra A402M Black"
@@ -118,8 +101,8 @@ export const buildsData = [
       gpu: "NVIDIA RTX 5060",
       motherboard: "MSI PRO H610M-G DDR4",
       cooling: "XASTRA AR400 ARGB",
-      ram: "16Гб ADATA XPG SPECTRIX D45G RGB 2x8Гб 3200МГц",
-      storage: "1000 ГБ M.2 NVMe накопитель MSI SPATIUM M371",
+      ram: "16Гб DDR4 2x8Гб 3200МГц",
+      storage: "1TB SSD",
       psu: "GAMERSTORM PF500X, 500W, 80+ Bronze",
       case: "XASTRA A400M"
     }

@@ -124,8 +124,8 @@ const productData = {
       gpu: "NVIDIA RTX 5060",
       motherboard: "MSI PRO H610M-G DDR4",
       cooling: "XASTRA AR400 ARGB",
-      ram: "16Гб ADATA XPG SPECTRIX D45G RGB 2x8Гб 3200МГц",
-      storage: "1000 ГБ M.2 NVMe накопитель MSI SPATIUM M371",
+      ram: "16Гб DDR4 2x8Гб 3200МГц",
+      storage: "1TB SSD",
       psu: "GAMERSTORM PF500X, 500W, 80+ Bronze",
       case: "XASTRA A400M"
     }
@@ -162,65 +162,49 @@ const productData = {
       case: "XASTRA A400M"
     }
   },
-  "eclipse-start": {
-    name: "ECLIPSE START",
-    price: "39 500₽",
-    images: [eclipseStart1, eclipseStart2, eclipseStart3, eclipseStart4],
-    description: "Отличная начальная сборка с мощной видеокартой RTX 2060 Super. Процессор AMD Ryzen 5 5500 обеспечивает стабильную работу в современных играх. Возможность выбора из более 30 игровых корпусов с RGB-подсветкой.",
-    specs: {
-      processor: "AMD Ryzen 5 5500",
-      gpu: "RTX 2060 Super",
-      motherboard: "Asus / Msi / Gigabyte",
-      cooling: "JONSBO CR-1000 EVO ARGB",
-      ram: "16GB DDR4 2x8Гб 3200МГц",
-      storage: "500GB SSD",
-      psu: "600W 80+ Bronze",
-      case: "Gaming RGB (более 30 на выбор)"
-    }
-  },
   "aura-lite": {
     name: "AURA LITE",
     price: "31 990₽",
     images: [auraLite1, auraLite2, auraLite3],
     description: "Экономичная сборка на базе серверного процессора Intel Xeon E5-2640v4 с 10 ядрами и 20 потоками. В паре с RTX 2060 6GB обеспечивает отличную производительность в современных играх при доступной цене.",
     specs: {
-      processor: "Intel Core Xeon E5-2640v4 (10 ядер / 20 потоков, 3.4 GHz)",
-      gpu: "ASUS GeForce RTX 2060 6GB",
+      processor: "Xeon E5-2640v4",
+      gpu: "RTX 2060 6GB",
       motherboard: "Серверная материнская плата",
-      cooling: "Стандартное",
-      ram: "16GB DDR4 2133 Mhz",
+      cooling: "JONSBO CR-1000 EVO ARGB WHITE",
+      ram: "16Гб DDR4 2133 2x8Гб 2133МГц",
       storage: "SSD 120GB, HDD 500GB",
-      psu: "700W IWONGOU ATX (RM700) WHITE Bronze",
-      case: "Warrior Z5 с 3 ARGB"
+      psu: "700W IWONGOU ATX (RM700) WHITE Bronze+",
+      case: "Warrior Z5 WHITE"
     }
   },
   "purple-gaming": {
-    name: "PURPLE POWER",
+    name: "ECLIPSE START",
     price: "53 000₽",
     images: [purplePc1, purplePc2, purplePc3, purplePc4, purplePc5, purplePc6],
-    description: "Яркая игровая сборка с фиолетовой RGB-подсветкой. AMD Ryzen 5 5500 в паре с мощной GIGABYTE RTX 3060 12GB обеспечивают высокую производительность в современных играх. Увеличенный объем оперативной памяти 32GB идеален для многозадачности.",
+    description: "Яркая игровая сборка с фиолетовой RGB-подсветкой. AMD Ryzen 5 5500 в паре с мощной RTX 3060 12GB обеспечивают высокую производительность в современных играх. Увеличенный объем оперативной памяти 32GB идеален для многозадачности.",
     specs: {
       processor: "AMD Ryzen 5 5500",
-      gpu: "GIGABYTE RTX 3060 12GB",
+      gpu: "RTX 3060 12GB",
       motherboard: "MSI A520M PRO",
       cooling: "Jonsbo CR1000-Max",
-      ram: "32GB DDR4 3200 2x16Гб",
+      ram: "32Гб DDR4 2х16Гб 3200МГц",
       storage: "1TB SSD",
       psu: "1STPLAYER BLACK SIR 600W 80 PLUS",
       case: "HSPD"
     }
   },
   "rgb-spectrum": {
-    name: "RGB SPECTRUM",
+    name: "NEXUS LITE",
     price: "59 000₽",
     images: [rgbSpectrum1, rgbSpectrum2, rgbSpectrum3, rgbSpectrum4, rgbSpectrum5, rgbSpectrum6, rgbSpectrum7],
-    description: "Впечатляющая сборка с радужной RGB-подсветкой. AMD Ryzen 5 5500 и MSI RTX 5050 8GB обеспечивают отличную производительность в играх. Яркие RGB-вентиляторы создают завораживающее световое шоу. 32GB оперативной памяти и быстрый SSD 1TB гарантируют комфортную работу.",
+    description: "Впечатляющая сборка с радужной RGB-подсветкой. AMD Ryzen 5 5500 и RTX 5050 8GB обеспечивают отличную производительность в играх. Яркие RGB-вентиляторы создают завораживающее световое шоу. 32GB оперативной памяти и быстрый SSD 1TB гарантируют комфортную работу.",
     specs: {
       processor: "AMD Ryzen 5 5500",
-      gpu: "MSI RTX 5050 8GB Gaming",
+      gpu: "RTX 5050 8GB",
       motherboard: "Gigabyte A520M K V2",
-      cooling: "RGB охлаждение",
-      ram: "32GB Netac Shadow 2x16Гб DDR4 3200",
+      cooling: "JONSBO CR-1000 EVO ARGB",
+      ram: "32GB DDR4 3200 2x16Гб",
       storage: "1TB Reletech PCI-E 4.0 SSD",
       psu: "4FAN 600W 80+",
       case: "Xastra A402M Black"

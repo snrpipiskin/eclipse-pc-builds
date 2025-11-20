@@ -43,7 +43,15 @@ const ContactSection = () => {
                   <MessageCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-2">WhatsApp и Telegram</h3>
+                  <h3 className="font-bold text-xl mb-2">
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                      WhatsApp
+                    </a>
+                    {" и "}
+                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                      Telegram
+                    </a>
+                  </h3>
                   <p className="text-muted-foreground">
                     Напишите нам для быстрого ответа
                   </p>
@@ -57,7 +65,11 @@ const ContactSection = () => {
                   <Send className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-2">VK</h3>
+                  <h3 className="font-bold text-xl mb-2">
+                    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                      VK
+                    </a>
+                  </h3>
                   <p className="text-muted-foreground">
                     Подпишитесь на нас в VK для новостей и поддержки
                   </p>

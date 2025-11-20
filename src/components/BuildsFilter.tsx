@@ -112,7 +112,6 @@ const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
                 <SelectItem value="all">Все производители</SelectItem>
                 <SelectItem value="nvidia">NVIDIA</SelectItem>
                 <SelectItem value="amd">AMD</SelectItem>
-                <SelectItem value="asus">ASUS</SelectItem>
               </SelectContent>
             </Select>
           </div>
