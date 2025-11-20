@@ -142,7 +142,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="font-semibold border-2 border-primary/70 bg-primary/5 text-foreground hover:bg-primary/20 hover:border-primary transition-all duration-300"
+                className="font-semibold glass-card hover:glow-box transition-all duration-300"
               >
                 Хотите индивидуальное решение?
               </Button>
