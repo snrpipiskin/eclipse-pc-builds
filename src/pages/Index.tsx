@@ -150,8 +150,8 @@ const Index = () => {
         processor: "AMD Ryzen 5 5500",
         gpu: "RTX 2060 Super",
         motherboard: "Asus / Msi / Gigabyte",
-        cooling: "Стандартное",
-        ram: "16GB",
+        cooling: "JONSBO CR-1000 EVO ARGB",
+        ram: "16GB DDR4 2x8Гб 3200МГц",
         storage: "500GB SSD",
         psu: "Стандартный",
         case: "Gaming RGB (более 30 на выбор)"
