@@ -59,7 +59,7 @@ const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
     <div className="mb-12 p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50">
       <div className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
-          <h3 className="text-xl font-semibold text-foreground">Фильтры и сортировка</h3>
+          <h3 className="text-xl font-semibold text-foreground">Поиск и фильтры</h3>
           <Button 
             variant="outline" 
             size="sm"
