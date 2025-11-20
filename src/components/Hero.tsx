@@ -128,7 +128,7 @@ const Hero = () => {
             From gaming to professional workstations - we build it all.
           </p>
 
-          <div ref={ctaRef} className="flex flex-wrap justify-center gap-4">
+          <div ref={ctaRef} className="flex flex-col items-center gap-4">
             <Button
               size="lg"
               className="font-semibold group/hero relative overflow-hidden glow-box"
@@ -139,13 +139,9 @@ const Hero = () => {
               </span>
             </Button>
             <ContactDialog>
-              <Button
-                size="lg"
-                variant="hero-glow"
-                className="font-semibold"
-              >
+              <button className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 underline underline-offset-4">
                 Хотите индивидуально?
-              </Button>
+              </button>
             </ContactDialog>
           </div>
         </div>
