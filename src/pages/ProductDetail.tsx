@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
 import { ArrowLeft, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -217,7 +218,8 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-6 py-8">
+      <Header />
+      <div className="container mx-auto px-6 py-8 pt-24">
         <Button
           variant="ghost"
           onClick={() => navigate("/")}
