@@ -59,99 +59,19 @@ const Index = () => {
 
   const builds = [
     {
-      id: "eclipse-starter",
-      name: "APEX HERO",
-      price: "198 000₽",
-      image: pcBuild1,
+      id: "aura-lite",
+      name: "AURA LITE",
+      price: "31 990₽",
+      image: auraLite1,
       specs: {
-        processor: "AMD Ryzen 7 7800X3D",
-        gpu: "NVIDIA RTX 5070 (BLACK)",
-        motherboard: "ASRock B650 Pro RS",
-        cooling: "Cougar Poseidon Elite 360 ARGB",
-        ram: "32Гб DDR5 ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
-        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-        psu: "1STPLAYER NGDP, 850W, 80+ Gold",
-        case: "LIAN LI O11 Vision COMPACT"
-      }
-    },
-    {
-      id: "eclipse-gaming",
-      name: "ECLIPSE WHITE",
-      price: "155 000₽",
-      image: pcBuild2,
-      specs: {
-        processor: "Intel Core i5-14600KF",
-        gpu: "NVIDIA RTX 5060 Ti 16Gb (BLACK)",
-        motherboard: "ASRock B760 Pro RS",
-        cooling: "Cougar Poseidon Elite 360 ARGB",
-        ram: "32Гб ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
-        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-        psu: "PHANTEKS AMP BH, 650W, 80+ Bronze White",
-        case: "ARDOR GAMING Crystal CC2"
-      }
-    },
-    {
-      id: "eclipse-ultimate",
-      name: "FLOW WHITE",
-      price: "99 000₽",
-      image: pcBuild3,
-      specs: {
-        processor: "AMD Ryzen 5 7500F",
-        gpu: "NVIDIA RTX 5060 (BLACK)",
-        motherboard: "MSI PRO B650M-B",
-        cooling: "JONSBO CR-1000 V2 PRO ARGB White",
-        ram: "16Гб ADATA XPG Lancer 2x8Гб 5600МГц",
-        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-        psu: "PHANTEKS AMP BH 650W (80+ BRONZE) White",
-        case: "Powercase Alisio Micro Z3W"
-      }
-    },
-    {
-      id: "eclipse-creator",
-      name: "FLOW",
-      price: "87 000₽",
-      image: pcBuild4,
-      specs: {
-        processor: "Intel Core i5-12400F",
-        gpu: "NVIDIA RTX 5060",
-        motherboard: "MSI PRO H610M-G DDR4",
-        cooling: "XASTRA AR400 ARGB",
-        ram: "16Гб ADATA XPG SPECTRIX D45G RGB 2x8Гб 3200МГц",
-        storage: "1000 ГБ M.2 NVMe накопитель MSI SPATIUM M371",
-        psu: "GAMERSTORM PF500X, 500W, 80+ Bronze",
-        case: "XASTRA A400M"
-      }
-    },
-    {
-      id: "eclipse-streamer",
-      name: "ECLIPSE",
-      price: "150 000₽",
-      image: pcBuild5,
-      specs: {
-        processor: "Intel Core i5-14600KF",
-        gpu: "NVIDIA RTX 5060 Ti 16Gb",
-        motherboard: "MSI PRO B760-P II",
-        cooling: "Ocypus Delta L36 ARGB V2",
-        ram: "32Гб ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
-        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-        psu: "PHANTEKS AMP BH, 650W, 80+ Bronze",
-        case: "ARDOR GAMING Crystal CC2"
-      }
-    },
-    {
-      id: "eclipse-elite",
-      name: "ECLIPSE PRO",
-      price: "98 000₽",
-      image: pcBuild6,
-      specs: {
-        processor: "AMD Ryzen 5 7500F",
-        gpu: "NVIDIA RTX 5060",
-        motherboard: "MSI PRO B650M-B",
-        cooling: "XASTRA AR400 ARGB",
-        ram: "16Гб ADATA XPG Lancer 2x8Гб 5600МГц",
-        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-        psu: "Deepcool GAMERSTORM PF600X, 600W, 80+ Bronze",
-        case: "XASTRA A400M"
+        processor: "Intel Core Xeon E5-2640v4 (10 ядер / 20 потоков, 3.4 GHz)",
+        gpu: "ASUS GeForce RTX 2060 6GB",
+        motherboard: "Серверная материнская плата",
+        cooling: "Стандартное",
+        ram: "16GB DDR4 2133 Mhz",
+        storage: "SSD 120GB, HDD 500GB",
+        psu: "700W IWONGOU ATX (RM700) WHITE Bronze",
+        case: "Warrior Z5 с 3 ARGB вентиляторами"
       }
     },
     {
@@ -171,19 +91,99 @@ const Index = () => {
       }
     },
     {
-      id: "aura-lite",
-      name: "AURA LITE",
-      price: "31 990₽",
-      image: auraLite1,
+      id: "eclipse-creator",
+      name: "FLOW",
+      price: "87 000₽",
+      image: pcBuild4,
       specs: {
-        processor: "Intel Core Xeon E5-2640v4 (10 ядер / 20 потоков, 3.4 GHz)",
-        gpu: "ASUS GeForce RTX 2060 6GB",
-        motherboard: "Серверная материнская плата",
-        cooling: "Стандартное",
-        ram: "16GB DDR4 2133 Mhz",
-        storage: "SSD 120GB, HDD 500GB",
-        psu: "700W IWONGOU ATX (RM700) WHITE Bronze",
-        case: "Warrior Z5 с 3 ARGB вентиляторами"
+        processor: "Intel Core i5-12400F",
+        gpu: "NVIDIA RTX 5060",
+        motherboard: "MSI PRO H610M-G DDR4",
+        cooling: "XASTRA AR400 ARGB",
+        ram: "16Гб ADATA XPG SPECTRIX D45G RGB 2x8Гб 3200МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель MSI SPATIUM M371",
+        psu: "GAMERSTORM PF500X, 500W, 80+ Bronze",
+        case: "XASTRA A400M"
+      }
+    },
+    {
+      id: "eclipse-elite",
+      name: "ECLIPSE PRO",
+      price: "98 000₽",
+      image: pcBuild6,
+      specs: {
+        processor: "AMD Ryzen 5 7500F",
+        gpu: "NVIDIA RTX 5060",
+        motherboard: "MSI PRO B650M-B",
+        cooling: "XASTRA AR400 ARGB",
+        ram: "16Гб ADATA XPG Lancer 2x8Гб 5600МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+        psu: "Deepcool GAMERSTORM PF600X, 600W, 80+ Bronze",
+        case: "XASTRA A400M"
+      }
+    },
+    {
+      id: "eclipse-ultimate",
+      name: "FLOW WHITE",
+      price: "99 000₽",
+      image: pcBuild3,
+      specs: {
+        processor: "AMD Ryzen 5 7500F",
+        gpu: "NVIDIA RTX 5060 (BLACK)",
+        motherboard: "MSI PRO B650M-B",
+        cooling: "JONSBO CR-1000 V2 PRO ARGB White",
+        ram: "16Гб ADATA XPG Lancer 2x8Гб 5600МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+        psu: "PHANTEKS AMP BH 650W (80+ BRONZE) White",
+        case: "Powercase Alisio Micro Z3W"
+      }
+    },
+    {
+      id: "eclipse-streamer",
+      name: "ECLIPSE",
+      price: "150 000₽",
+      image: pcBuild5,
+      specs: {
+        processor: "Intel Core i5-14600KF",
+        gpu: "NVIDIA RTX 5060 Ti 16Gb",
+        motherboard: "MSI PRO B760-P II",
+        cooling: "Ocypus Delta L36 ARGB V2",
+        ram: "32Гб ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+        psu: "PHANTEKS AMP BH, 650W, 80+ Bronze",
+        case: "ARDOR GAMING Crystal CC2"
+      }
+    },
+    {
+      id: "eclipse-gaming",
+      name: "ECLIPSE WHITE",
+      price: "155 000₽",
+      image: pcBuild2,
+      specs: {
+        processor: "Intel Core i5-14600KF",
+        gpu: "NVIDIA RTX 5060 Ti 16Gb (BLACK)",
+        motherboard: "ASRock B760 Pro RS",
+        cooling: "Cougar Poseidon Elite 360 ARGB",
+        ram: "32Гб ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+        psu: "PHANTEKS AMP BH, 650W, 80+ Bronze White",
+        case: "ARDOR GAMING Crystal CC2"
+      }
+    },
+    {
+      id: "eclipse-starter",
+      name: "APEX HERO",
+      price: "198 000₽",
+      image: pcBuild1,
+      specs: {
+        processor: "AMD Ryzen 7 7800X3D",
+        gpu: "NVIDIA RTX 5070 (BLACK)",
+        motherboard: "ASRock B650 Pro RS",
+        cooling: "Cougar Poseidon Elite 360 ARGB",
+        ram: "32Гб DDR5 ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+        psu: "1STPLAYER NGDP, 850W, 80+ Gold",
+        case: "LIAN LI O11 Vision COMPACT"
       }
     }
   ];
