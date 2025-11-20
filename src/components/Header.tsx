@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import textLogo from "@/assets/eclipse-text-logo.png";
 import ContactDialog from "@/components/ContactDialog";
@@ -40,6 +40,13 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
+          <a 
+            href="tel:+79993989762" 
+            className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300"
+          >
+            <Phone className="h-4 w-4" />
+            <span>+7 (999) 398-97-62</span>
+          </a>
           <ContactDialog>
             <Button variant="outline" className="font-semibold border-primary/50 hover:bg-primary/10">
               Хотите индивидуально?
