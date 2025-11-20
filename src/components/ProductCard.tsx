@@ -1,7 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cpu, HardDrive, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import cpuIcon from "@/assets/icons/cpu.png";
+import gpuIcon from "@/assets/icons/gpu.png";
+import motherboardIcon from "@/assets/icons/motherboard.png";
+import coolingIcon from "@/assets/icons/cooling.png";
+import ramIcon from "@/assets/icons/ram.png";
+import ssdIcon from "@/assets/icons/ssd.png";
+import psuIcon from "@/assets/icons/psu.png";
+import caseIcon from "@/assets/icons/case.png";
 
 interface ProductCardProps {
   id: string;
@@ -11,8 +19,12 @@ interface ProductCardProps {
   specs: {
     processor: string;
     gpu: string;
+    motherboard: string;
+    cooling: string;
     ram: string;
     storage: string;
+    psu: string;
+    case: string;
   };
 }
 
@@ -46,34 +58,66 @@ const ProductCard = ({ id, name, price, image, specs }: ProductCardProps) => {
         <div className="space-y-2 text-sm">
           <div className="flex justify-between items-center py-2 border-b border-border/50">
             <span className="text-muted-foreground flex items-center">
-              <Cpu className="mr-2 h-4 w-4" />
-              CPU
+              <img src={cpuIcon} alt="" className="mr-2 h-4 w-4 opacity-70" />
+              Процессор
             </span>
             <span className="font-medium text-right">{specs.processor}</span>
           </div>
           
           <div className="flex justify-between items-center py-2 border-b border-border/50">
             <span className="text-muted-foreground flex items-center">
-              <Cpu className="mr-2 h-4 w-4" />
-              GPU
+              <img src={gpuIcon} alt="" className="mr-2 h-4 w-4 opacity-70" />
+              Видеокарта
             </span>
             <span className="font-medium text-right">{specs.gpu}</span>
           </div>
           
           <div className="flex justify-between items-center py-2 border-b border-border/50">
             <span className="text-muted-foreground flex items-center">
-              <HardDrive className="mr-2 h-4 w-4" />
-              RAM
+              <img src={motherboardIcon} alt="" className="mr-2 h-4 w-4 opacity-70" />
+              Материнская плата
+            </span>
+            <span className="font-medium text-right">{specs.motherboard}</span>
+          </div>
+          
+          <div className="flex justify-between items-center py-2 border-b border-border/50">
+            <span className="text-muted-foreground flex items-center">
+              <img src={coolingIcon} alt="" className="mr-2 h-4 w-4 opacity-70" />
+              Охлаждение
+            </span>
+            <span className="font-medium text-right">{specs.cooling}</span>
+          </div>
+          
+          <div className="flex justify-between items-center py-2 border-b border-border/50">
+            <span className="text-muted-foreground flex items-center">
+              <img src={ramIcon} alt="" className="mr-2 h-4 w-4 opacity-70" />
+              Оперативная память
             </span>
             <span className="font-medium text-right">{specs.ram}</span>
           </div>
           
-          <div className="flex justify-between items-center py-2">
+          <div className="flex justify-between items-center py-2 border-b border-border/50">
             <span className="text-muted-foreground flex items-center">
-              <HardDrive className="mr-2 h-4 w-4" />
-              Storage
+              <img src={ssdIcon} alt="" className="mr-2 h-4 w-4 opacity-70" />
+              SSD накопитель
             </span>
             <span className="font-medium text-right">{specs.storage}</span>
+          </div>
+          
+          <div className="flex justify-between items-center py-2 border-b border-border/50">
+            <span className="text-muted-foreground flex items-center">
+              <img src={psuIcon} alt="" className="mr-2 h-4 w-4 opacity-70" />
+              Блок питания
+            </span>
+            <span className="font-medium text-right">{specs.psu}</span>
+          </div>
+          
+          <div className="flex justify-between items-center py-2">
+            <span className="text-muted-foreground flex items-center">
+              <img src={caseIcon} alt="" className="mr-2 h-4 w-4 opacity-70" />
+              Корпус
+            </span>
+            <span className="font-medium text-right">{specs.case}</span>
           </div>
         </div>
       </CardContent>
@@ -84,7 +128,7 @@ const ProductCard = ({ id, name, price, image, specs }: ProductCardProps) => {
           onClick={handleDetails}
         >
           <span className="relative z-10 flex items-center justify-center">
-            Details
+            Подробнее
             <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-2 transition-transform" />
           </span>
         </Button>
