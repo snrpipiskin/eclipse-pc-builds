@@ -51,6 +51,7 @@ import eclipseStart4 from "@/assets/eclipse-start-4.jpg";
 import auraLite1 from "@/assets/aura-lite-1.jpg";
 import auraLite2 from "@/assets/aura-lite-2.jpg";
 import auraLite3 from "@/assets/aura-lite-3.jpg";
+import purplePc1 from "@/assets/purple-pc-1.webp";
 
 const productData = {
   "eclipse-starter": {
@@ -178,7 +179,23 @@ const productData = {
       ram: "16GB DDR4 2133 Mhz",
       storage: "SSD 120GB, HDD 500GB",
       psu: "700W IWONGOU ATX (RM700) WHITE Bronze",
-      case: "Warrior Z5 с 3 ARGB вентиляторами"
+      case: "Warrior Z5 с 3 ARGB"
+    }
+  },
+  "purple-gaming": {
+    name: "PURPLE POWER",
+    price: "53 000₽",
+    images: [purplePc1],
+    description: "Яркая игровая сборка с фиолетовой RGB-подсветкой. AMD Ryzen 5 5500 в паре с мощной GIGABYTE RTX 3060 12GB обеспечивают высокую производительность в современных играх. Увеличенный объем оперативной памяти 32GB идеален для многозадачности.",
+    specs: {
+      processor: "AMD Ryzen 5 5500",
+      gpu: "GIGABYTE RTX 3060 12GB",
+      motherboard: "MSI A520M PRO",
+      cooling: "Jonsbo CR1000-Max",
+      ram: "32GB DDR4 3200 2x16Гб",
+      storage: "1TB SSD",
+      psu: "1STPLAYER BLACK SIR 600W 80 PLUS",
+      case: "HSPD"
     }
   }
 };
