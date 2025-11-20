@@ -24,6 +24,8 @@ import pcBuild6 from "@/assets/pc-build-9.jpg";
 import pcBuild7 from "@/assets/pc-build-1.jpg";
 import pcBuild8 from "@/assets/pc-build-2.jpg";
 import pcBuild9 from "@/assets/pc-build-3.jpg";
+import eclipseWhite1 from "@/assets/eclipse-white-1.jpg";
+import eclipseWhite2 from "@/assets/eclipse-white-2.jpg";
 
 const productData = {
   "eclipse-starter": {
@@ -43,19 +45,19 @@ const productData = {
     }
   },
   "eclipse-gaming": {
-    name: "ECLIPSE GAMING",
+    name: "ECLIPSE WHITE",
     price: "189 900₽",
-    images: [pcBuild2, pcBuild9, pcBuild7],
-    description: "Создан для серьезных геймеров, требующих высокопроизводительного гейминга в 1440p. Оснащен мощным Ryzen 7 7800X3D с технологией 3D V-Cache для исключительной игровой производительности и RTX 4070 Ti для ультра настроек.",
+    images: [pcBuild2, eclipseWhite1, eclipseWhite2],
+    description: "Создан для серьезных геймеров, требующих высокопроизводительного гейминга в 1440p. Оснащен мощным Intel Core i5-14600KF для отличной игровой производительности и RTX 5060 Ti для высоких настроек графики.",
     specs: {
-      processor: "AMD Ryzen 7 7800X3D",
-      gpu: "NVIDIA RTX 4070 Ti 12GB",
-      motherboard: "MSI X670E",
-      cooling: "Arctic Freezer 360",
-      ram: "32GB DDR5 6000MHz",
-      storage: "2TB NVMe Gen4 SSD",
-      psu: "750W 80+ Gold",
-      case: "Lian Li O11 Dynamic"
+      processor: "Intel Core i5-14600KF",
+      gpu: "NVIDIA RTX 5060 Ti 16Gb (BLACK)",
+      motherboard: "ASRock B760 Pro RS",
+      cooling: "Cougar Poseidon Elite 360 ARGB",
+      ram: "32Гб ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
+      storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+      psu: "PHANTEKS AMP BH, 650W, 80+ Bronze White",
+      case: "ARDOR GAMING Crystal CC2"
     }
   },
   "eclipse-ultimate": {
