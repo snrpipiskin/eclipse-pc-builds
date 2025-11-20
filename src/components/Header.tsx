@@ -42,16 +42,11 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-3">
           <a 
             href="tel:+79993989762" 
-            className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-sm font-semibold text-primary hover:bg-primary/20 hover:border-primary/30 transition-all duration-300 group"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
             <span>+7 (999) 398-97-62</span>
           </a>
-          <ContactDialog>
-            <Button variant="outline" className="font-semibold border-primary/50 hover:bg-primary/10">
-              Хотите индивидуально?
-            </Button>
-          </ContactDialog>
         </div>
 
         <Button variant="ghost" size="icon" className="md:hidden">
