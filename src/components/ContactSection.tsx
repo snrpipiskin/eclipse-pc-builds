@@ -42,19 +42,25 @@ const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <MessageCircle className="w-6 h-6 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-xl mb-2">
-                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors cursor-pointer">
-                      WhatsApp
-                    </a>
-                    {" и "}
-                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors cursor-pointer">
-                      Telegram
-                    </a>
-                  </h3>
-                  <p className="text-muted-foreground">
+                <div className="flex-1">
+                  <h3 className="font-bold text-xl mb-3">Мессенджеры</h3>
+                  <p className="text-muted-foreground mb-4">
                     Напишите нам для быстрого ответа
                   </p>
+                  <div className="flex flex-wrap gap-3">
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2">
+                        <MessageCircle className="w-4 h-4" />
+                        WhatsApp
+                      </Button>
+                    </a>
+                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2">
+                        <Send className="w-4 h-4" />
+                        Telegram
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -64,15 +70,17 @@ const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Send className="w-6 h-6 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-xl mb-2">
-                    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors cursor-pointer">
-                      VK
-                    </a>
-                  </h3>
-                  <p className="text-muted-foreground">
+                <div className="flex-1">
+                  <h3 className="font-bold text-xl mb-3">Социальные сети</h3>
+                  <p className="text-muted-foreground mb-4">
                     Подпишитесь на нас в VK для новостей и поддержки
                   </p>
+                  <a href="https://vk.com/" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="gap-2">
+                      <Send className="w-4 h-4" />
+                      VK
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
