@@ -56,9 +56,9 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-muted/50 border border-border/50 text-xs text-muted-foreground">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-muted/50 border border-border/50 text-sm font-semibold text-foreground/80">
             <MapPin className="h-4 w-4" />
-            <span>Чеченская Республика, Грозный, бульвар М.А. Эсамбаева, 5</span>
+            <span>г.Грозный, б-р М.А. Эсамбаева, 5</span>
           </div>
           <a 
             href="tel:+79993989762" 
