@@ -128,7 +128,7 @@ const Hero = () => {
             From gaming to professional workstations - we build it all.
           </p>
 
-          <div ref={ctaRef} className="flex flex-wrap justify-center gap-4">
+          <div ref={ctaRef} className="flex flex-wrap justify-center items-center gap-4">
             <Button
               size="lg"
               className="font-semibold group/hero relative overflow-hidden glow-box"
