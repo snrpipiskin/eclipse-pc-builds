@@ -41,10 +41,8 @@ const ProductCard = ({ id, name, price, image, specs }: ProductCardProps) => {
         <img 
           src={image} 
           alt={name}
-          className="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-125 group-hover:saturate-150"
-          style={{ filter: 'brightness(1.1)' }}
+          className="w-full h-80 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 group-hover:saturate-125"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent group-hover:bg-primary/20 transition-colors duration-500" />
       </div>
       
       <CardHeader>
