@@ -130,7 +130,7 @@ const Hero = () => {
           <div ref={ctaRef} className="flex flex-wrap justify-center items-center gap-4">
             <Button
               size="lg"
-              className="font-semibold group/hero relative overflow-hidden glow-box"
+              className="inline-flex items-center font-semibold group/hero relative overflow-hidden glow-box"
             >
               Начать сборку
               <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
@@ -139,7 +139,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="font-semibold border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
+                className="inline-flex items-center font-semibold border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
               >
                 Хотите индивидуально?
               </Button>
