@@ -139,7 +139,7 @@ const Hero = () => {
               </span>
             </Button>
             <ContactDialog>
-              <button className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 underline underline-offset-4">
+              <button className="text-sm bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300 underline underline-offset-4 font-medium">
                 Хотите индивидуально?
               </button>
             </ContactDialog>
