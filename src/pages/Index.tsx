@@ -247,17 +247,17 @@ const Index = () => {
               О компании <span className="text-primary">Eclipse PC</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              В Eclipse PC мы увлечены созданием непревзойденного компьютерного опыта. С момента основания мы посвятили себя сборке премиальных кастомных ПК, сочетающих передовые технологии с исключительным мастерством. Наша команда опытных сборщиков привносит многолетний опыт и глубокое понимание того, что нужно геймерам, креаторам и профессионалам для достижения успеха в работе и игре.
+              В Eclipse PC мы увлечены созданием непревзойденного компьютерного опыта. С момента основания мы посвятили себя сборке как бюджетных, так и премиальных кастомных ПК, сочетающих передовые технологии с исключительным мастерством. Наша команда опытных сборщиков привносит многолетний опыт и глубокое понимание того, что нужно геймерам, креаторам и профессионалам для достижения успеха в работе и игре.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-5xl font-bold text-primary mb-2">500+</div>
+              <div className="text-5xl font-bold text-primary mb-2">100+</div>
               <p className="text-muted-foreground">Индивидуальных сборок доставлено</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-primary mb-2">98%</div>
-              <p className="text-muted-foreground">Удовлетворенность клиентов</p>
+              <p className="text-muted-foreground">Клиентов довольны</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-primary mb-2">5 лет</div>
