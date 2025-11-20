@@ -108,7 +108,7 @@ const Index = () => {
     },
     {
       id: "eclipse-elite",
-      name: "ECLIPSE PRO",
+      name: "NEXUS CORE",
       price: "98 000₽",
       image: pcBuild6,
       specs: {
