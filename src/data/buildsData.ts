@@ -94,7 +94,7 @@ export const buildsData = [
     id: "eclipse-creator",
     name: "FLOW",
     price: "87 000₽",
-    image: pcBuild4,
+    image: flow1,
     images: [flow1, flow2, flow3, flow4, flow5],
     specs: {
       processor: "Intel Core i5-12400F",
