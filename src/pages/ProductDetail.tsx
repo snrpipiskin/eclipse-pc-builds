@@ -27,7 +27,7 @@ import pcBuild9 from "@/assets/pc-build-3.jpg";
 const productData = {
   "eclipse-starter": {
     name: "ECLIPSE STARTER",
-    price: "$1,299",
+    price: "129 900₽",
     images: [pcBuild1, pcBuild7, pcBuild8],
     description: "Идеален для начального уровня игр и повседневных вычислений. Обеспечивает плавную игровую производительность в 1080p с современными играми, сохраняя отличное качество сборки и возможность модернизации на будущее.",
     specs: {
@@ -39,7 +39,7 @@ const productData = {
   },
   "eclipse-gaming": {
     name: "ECLIPSE GAMING",
-    price: "$1,899",
+    price: "189 900₽",
     images: [pcBuild2, pcBuild9, pcBuild7],
     description: "Создан для серьезных геймеров, требующих высокопроизводительного гейминга в 1440p. Оснащен мощным Ryzen 7 7800X3D с технологией 3D V-Cache для исключительной игровой производительности и RTX 4070 Ti для ультра настроек.",
     specs: {
@@ -51,7 +51,7 @@ const productData = {
   },
   "eclipse-ultimate": {
     name: "ECLIPSE ULTIMATE",
-    price: "$3,299",
+    price: "329 900₽",
     images: [pcBuild3, pcBuild8, pcBuild9],
     description: "Абсолютная игровая мощь для 4K гейминга на максимальных настройках. Оснащен флагманским RTX 4090 и Ryzen 9 7950X, этот зверь справляется с любой игрой или задачей с бескомпромиссной производительностью.",
     specs: {
@@ -63,7 +63,7 @@ const productData = {
   },
   "eclipse-creator": {
     name: "ECLIPSE CREATOR",
-    price: "$2,499",
+    price: "249 900₽",
     images: [pcBuild4, pcBuild7, pcBuild8],
     description: "Оптимизирован для контент-криейторов и профессионалов. С 64 ГБ ОЗУ и флагманским Intel i9-14900K справляйтесь с редактированием видео, 3D-рендерингом и многозадачностью с исключительной скоростью и надежностью.",
     specs: {
@@ -75,7 +75,7 @@ const productData = {
   },
   "eclipse-streamer": {
     name: "ECLIPSE STREAMER",
-    price: "$2,199",
+    price: "219 900₽",
     images: [pcBuild5, pcBuild9, pcBuild7],
     description: "Разработан специально для стримеров и контент-криейторов, которым нужна одновременная производительность в играх и стриминге. Ryzen 9 7900X легко справляется с кодированием, сохраняя высокий FPS в требовательных играх.",
     specs: {
@@ -87,7 +87,7 @@ const productData = {
   },
   "eclipse-elite": {
     name: "ECLIPSE ELITE",
-    price: "$4,999",
+    price: "499 900₽",
     images: [pcBuild6, pcBuild8, pcBuild9],
     description: "Абсолютная вершина вычислительной производительности без компромиссов. Оснащенный специально отобранным i9-14900KS и огромными 128 ГБ ОЗУ, эта сборка рабочей станции уровня сокрушает любую профессиональную или игровую нагрузку.",
     specs: {

@@ -25,7 +25,7 @@ const Index = () => {
     {
       id: "eclipse-starter",
       name: "ECLIPSE STARTER",
-      price: "$1,299",
+      price: "129 900₽",
       image: pcBuild1,
       specs: {
         processor: "AMD Ryzen 5 7600X",
@@ -37,7 +37,7 @@ const Index = () => {
     {
       id: "eclipse-gaming",
       name: "ECLIPSE GAMING",
-      price: "$1,899",
+      price: "189 900₽",
       image: pcBuild2,
       specs: {
         processor: "AMD Ryzen 7 7800X3D",
@@ -49,7 +49,7 @@ const Index = () => {
     {
       id: "eclipse-ultimate",
       name: "ECLIPSE ULTIMATE",
-      price: "$3,299",
+      price: "329 900₽",
       image: pcBuild3,
       specs: {
         processor: "AMD Ryzen 9 7950X",
@@ -61,7 +61,7 @@ const Index = () => {
     {
       id: "eclipse-creator",
       name: "ECLIPSE CREATOR",
-      price: "$2,499",
+      price: "249 900₽",
       image: pcBuild4,
       specs: {
         processor: "Intel Core i9-14900K",
@@ -73,7 +73,7 @@ const Index = () => {
     {
       id: "eclipse-streamer",
       name: "ECLIPSE STREAMER",
-      price: "$2,199",
+      price: "219 900₽",
       image: pcBuild5,
       specs: {
         processor: "AMD Ryzen 9 7900X",
@@ -85,7 +85,7 @@ const Index = () => {
     {
       id: "eclipse-elite",
       name: "ECLIPSE ELITE",
-      price: "$4,999",
+      price: "499 900₽",
       image: pcBuild6,
       specs: {
         processor: "Intel Core i9-14900KS",
