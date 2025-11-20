@@ -19,6 +19,11 @@ import flowWhite1 from "@/assets/flow-white-1.jpg";
 import flowWhite2 from "@/assets/flow-white-2.jpg";
 import flowWhite3 from "@/assets/flow-white-3.jpg";
 import flowWhite4 from "@/assets/flow-white-4.jpg";
+import flow1 from "@/assets/flow-1.jpg";
+import flow2 from "@/assets/flow-2.jpg";
+import flow3 from "@/assets/flow-3.jpg";
+import flow4 from "@/assets/flow-4.jpg";
+import flow5 from "@/assets/flow-5.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,18 +83,18 @@ const Index = () => {
     },
     {
       id: "eclipse-creator",
-      name: "ECLIPSE CREATOR",
-      price: "249 900₽",
+      name: "FLOW",
+      price: "87 000₽",
       image: pcBuild4,
       specs: {
-        processor: "Intel Core i9-14900K",
-        gpu: "NVIDIA RTX 4070 12GB",
-        motherboard: "ASUS Z790",
-        cooling: "Noctua NH-D15",
-        ram: "64GB DDR5 5600MHz",
-        storage: "2TB NVMe Gen4 SSD",
-        psu: "850W 80+ Gold",
-        case: "Fractal Design Torrent"
+        processor: "Intel Core i5-12400F",
+        gpu: "NVIDIA RTX 5060",
+        motherboard: "MSI PRO H610M-G DDR4",
+        cooling: "XASTRA AR400 ARGB",
+        ram: "16Гб ADATA XPG SPECTRIX D45G RGB 2x8Гб 3200МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель MSI SPATIUM M371",
+        psu: "GAMERSTORM PF500X, 500W, 80+ Bronze",
+        case: "XASTRA A400M"
       }
     },
     {
