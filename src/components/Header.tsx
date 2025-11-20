@@ -39,14 +39,6 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
-          <ContactDialog>
-            <Button variant="outline" className="font-semibold border-primary/50 hover:bg-primary/10">
-              Хотите индивидуально?
-            </Button>
-          </ContactDialog>
-        </div>
-
         <Button variant="ghost" size="icon" className="md:hidden">
           <Menu className="h-5 w-5" />
         </Button>
