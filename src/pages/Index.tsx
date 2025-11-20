@@ -72,7 +72,7 @@ const Index = () => {
         ram: "16GB DDR4 2133 Mhz",
         storage: "SSD 120GB, HDD 500GB",
         psu: "700W IWONGOU ATX (RM700) WHITE Bronze",
-        case: "Warrior Z5 с 3 ARGB вентиляторами"
+        case: "Warrior Z5 с 3 ARGB"
       }
     },
     {
