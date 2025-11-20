@@ -15,6 +15,10 @@ import pcBuild5 from "@/assets/pc-build-8.jpg";
 import pcBuild6 from "@/assets/pc-build-9.jpg";
 import eclipseWhite1 from "@/assets/eclipse-white-1.jpg";
 import eclipseWhite2 from "@/assets/eclipse-white-2.jpg";
+import flowWhite1 from "@/assets/flow-white-1.jpg";
+import flowWhite2 from "@/assets/flow-white-2.jpg";
+import flowWhite3 from "@/assets/flow-white-3.jpg";
+import flowWhite4 from "@/assets/flow-white-4.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,18 +62,18 @@ const Index = () => {
     },
     {
       id: "eclipse-ultimate",
-      name: "ECLIPSE ULTIMATE",
-      price: "329 900₽",
+      name: "FLOW WHITE",
+      price: "99 000₽",
       image: pcBuild3,
       specs: {
-        processor: "AMD Ryzen 9 7950X",
-        gpu: "NVIDIA RTX 4090 24GB",
-        motherboard: "ASUS ROG X670E",
-        cooling: "NZXT Kraken Z73",
-        ram: "64GB DDR5 6400MHz",
-        storage: "4TB NVMe Gen4 SSD",
-        psu: "1000W 80+ Platinum",
-        case: "Corsair 5000D Airflow"
+        processor: "AMD Ryzen 5 7500F",
+        gpu: "NVIDIA RTX 5060 (BLACK)",
+        motherboard: "MSI PRO B650M-B",
+        cooling: "JONSBO CR-1000 V2 PRO ARGB White",
+        ram: "16Гб ADATA XPG Lancer 2x8Гб 5600МГц",
+        storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
+        psu: "PHANTEKS AMP BH 650W (80+ BRONZE) White",
+        case: "Powercase Alisio Micro Z3W"
       }
     },
     {
