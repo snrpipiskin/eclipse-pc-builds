@@ -125,7 +125,6 @@ const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
             Настраиваемые высокопроизводительные компьютеры под ваши задачи.
-            From gaming to professional workstations - we build it all.
           </p>
 
           <div ref={ctaRef} className="flex flex-wrap justify-center items-center gap-4">
@@ -133,7 +132,7 @@ const Hero = () => {
               size="lg"
               className="inline-flex items-center font-semibold group/hero relative overflow-hidden glow-box"
             >
-              Начать сборку
+              Конфигурации
               <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
             </Button>
             <ContactDialog>
@@ -142,7 +141,7 @@ const Hero = () => {
                 variant="outline"
                 className="inline-flex items-center font-semibold border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
               >
-                Хотите индивидуально?
+                Индивидуальная сборка
               </Button>
             </ContactDialog>
           </div>
