@@ -133,7 +133,7 @@ const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
 
           {/* Case Color */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-muted-foreground">Цвет корпуса</label>
+            <label className="text-sm font-medium text-muted-foreground">Цвет компьютера</label>
             <Select value={filters.caseColor} onValueChange={(value) => handleFilterChange("caseColor", value)}>
               <SelectTrigger className="bg-background/80 border-border/50 hover:border-primary/50 transition-colors">
                 <SelectValue placeholder="Все" />
@@ -142,7 +142,6 @@ const BuildsFilter = ({ onFilterChange }: BuildsFilterProps) => {
                 <SelectItem value="all">Все цвета</SelectItem>
                 <SelectItem value="white">Белый</SelectItem>
                 <SelectItem value="black">Черный</SelectItem>
-                <SelectItem value="rgb">RGB/Gaming</SelectItem>
               </SelectContent>
             </Select>
           </div>
