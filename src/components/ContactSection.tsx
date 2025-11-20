@@ -44,11 +44,11 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl mb-2">
-                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors cursor-pointer">
                       WhatsApp
                     </a>
                     {" и "}
-                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors cursor-pointer">
                       Telegram
                     </a>
                   </h3>
@@ -66,7 +66,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl mb-2">
-                    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors cursor-pointer">
                       VK
                     </a>
                   </h3>
