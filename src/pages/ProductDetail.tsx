@@ -33,8 +33,12 @@ const productData = {
     specs: {
       processor: "AMD Ryzen 5 7600X",
       gpu: "NVIDIA RTX 4060 8GB",
+      motherboard: "ASUS B650",
+      cooling: "DeepCool AK400",
       ram: "16GB DDR5 5600MHz",
-      storage: "1TB NVMe SSD"
+      storage: "1TB NVMe SSD",
+      psu: "600W 80+ Bronze",
+      case: "DeepCool CC560"
     }
   },
   "eclipse-gaming": {
@@ -45,8 +49,12 @@ const productData = {
     specs: {
       processor: "AMD Ryzen 7 7800X3D",
       gpu: "NVIDIA RTX 4070 Ti 12GB",
+      motherboard: "MSI X670E",
+      cooling: "Arctic Freezer 360",
       ram: "32GB DDR5 6000MHz",
-      storage: "2TB NVMe Gen4 SSD"
+      storage: "2TB NVMe Gen4 SSD",
+      psu: "750W 80+ Gold",
+      case: "Lian Li O11 Dynamic"
     }
   },
   "eclipse-ultimate": {
@@ -57,8 +65,12 @@ const productData = {
     specs: {
       processor: "AMD Ryzen 9 7950X",
       gpu: "NVIDIA RTX 4090 24GB",
+      motherboard: "ASUS ROG X670E",
+      cooling: "NZXT Kraken Z73",
       ram: "64GB DDR5 6400MHz",
-      storage: "4TB NVMe Gen4 SSD"
+      storage: "4TB NVMe Gen4 SSD",
+      psu: "1000W 80+ Platinum",
+      case: "Corsair 5000D Airflow"
     }
   },
   "eclipse-creator": {
@@ -69,8 +81,12 @@ const productData = {
     specs: {
       processor: "Intel Core i9-14900K",
       gpu: "NVIDIA RTX 4070 12GB",
+      motherboard: "ASUS Z790",
+      cooling: "Noctua NH-D15",
       ram: "64GB DDR5 5600MHz",
-      storage: "2TB NVMe Gen4 SSD"
+      storage: "2TB NVMe Gen4 SSD",
+      psu: "850W 80+ Gold",
+      case: "Fractal Design Torrent"
     }
   },
   "eclipse-streamer": {
@@ -81,8 +97,12 @@ const productData = {
     specs: {
       processor: "AMD Ryzen 9 7900X",
       gpu: "NVIDIA RTX 4070 Ti 12GB",
+      motherboard: "MSI B650",
+      cooling: "Arctic Liquid Freezer II",
       ram: "32GB DDR5 6000MHz",
-      storage: "2TB NVMe Gen4 SSD + 2TB HDD"
+      storage: "2TB NVMe Gen4 SSD + 2TB HDD",
+      psu: "750W 80+ Gold",
+      case: "NZXT H710i"
     }
   },
   "eclipse-elite": {
@@ -93,8 +113,12 @@ const productData = {
     specs: {
       processor: "Intel Core i9-14900KS",
       gpu: "NVIDIA RTX 4090 24GB",
+      motherboard: "ASUS ROG Maximus Z790",
+      cooling: "EK-AIO Elite 360",
       ram: "128GB DDR5 6400MHz",
-      storage: "8TB NVMe Gen4 SSD"
+      storage: "8TB NVMe Gen4 SSD",
+      psu: "1200W 80+ Titanium",
+      case: "Lian Li O11 XL"
     }
   }
 };
@@ -199,12 +223,28 @@ const ProductDetail = () => {
                   <span className="font-medium">{product.specs.gpu}</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">Память</span>
+                  <span className="text-muted-foreground">Материнская плата</span>
+                  <span className="font-medium">{product.specs.motherboard}</span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-border/50">
+                  <span className="text-muted-foreground">Охлаждение</span>
+                  <span className="font-medium">{product.specs.cooling}</span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-border/50">
+                  <span className="text-muted-foreground">Оперативная память</span>
                   <span className="font-medium">{product.specs.ram}</span>
                 </div>
-                <div className="flex justify-between py-2">
-                  <span className="text-muted-foreground">Хранилище</span>
+                <div className="flex justify-between py-2 border-b border-border/50">
+                  <span className="text-muted-foreground">SSD накопитель</span>
                   <span className="font-medium">{product.specs.storage}</span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-border/50">
+                  <span className="text-muted-foreground">Блок питания</span>
+                  <span className="font-medium">{product.specs.psu}</span>
+                </div>
+                <div className="flex justify-between py-2">
+                  <span className="text-muted-foreground">Корпус</span>
+                  <span className="font-medium">{product.specs.case}</span>
                 </div>
               </div>
             </div>
