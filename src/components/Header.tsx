@@ -40,9 +40,6 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="default" className="font-semibold">
-            Начать сборку
-          </Button>
           <ContactDialog>
             <Button variant="outline" className="font-semibold border-primary/50 hover:bg-primary/10">
               Хотите индивидуально?

@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
+import ContactDialog from "@/components/ContactDialog";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -137,13 +138,15 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
               </span>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="font-semibold glass-card hover:glow-box transition-all duration-300"
-            >
-              Готовые сборки
-            </Button>
+            <ContactDialog>
+              <Button
+                size="lg"
+                variant="outline"
+                className="font-semibold glass-card hover:glow-box transition-all duration-300"
+              >
+                Хотите индивидуальное решение?
+              </Button>
+            </ContactDialog>
           </div>
         </div>
       </div>
