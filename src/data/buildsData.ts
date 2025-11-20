@@ -19,6 +19,7 @@ import rgbSpectrum5 from "@/assets/rgb-spectrum-5.webp";
 import rgbSpectrum6 from "@/assets/rgb-spectrum-6.webp";
 import rgbSpectrum7 from "@/assets/rgb-spectrum-7.webp";
 import pcBuild1 from "@/assets/apex-hero-1.jpg";
+import apexHero2 from "@/assets/apex-hero-2.jpg";
 import pcBuild2 from "@/assets/pc-build-5.jpg";
 import pcBuild3 from "@/assets/pc-build-6.png";
 import pcBuild4 from "@/assets/pc-build-7.jpg";
@@ -29,9 +30,15 @@ import flow2 from "@/assets/flow-2.jpg";
 import flow3 from "@/assets/flow-3.jpg";
 import flow4 from "@/assets/flow-4.jpg";
 import flow5 from "@/assets/flow-5.jpg";
+import flowWhite1 from "@/assets/flow-white-1.jpg";
+import flowWhite2 from "@/assets/flow-white-2.jpg";
+import flowWhite3 from "@/assets/flow-white-3.jpg";
+import flowWhite4 from "@/assets/flow-white-4.jpg";
 import eclipse1 from "@/assets/eclipse-1.jpg";
 import eclipse2 from "@/assets/eclipse-2.jpg";
 import eclipse3 from "@/assets/eclipse-3.jpg";
+import eclipseWhite1 from "@/assets/eclipse-white-1.jpg";
+import eclipseWhite2 from "@/assets/eclipse-white-2.jpg";
 import eclipsePro1 from "@/assets/eclipse-pro-1.jpg";
 import eclipsePro2 from "@/assets/eclipse-pro-2.jpg";
 import eclipsePro3 from "@/assets/eclipse-pro-3.jpg";
@@ -128,8 +135,8 @@ export const buildsData = [
     id: "eclipse-ultimate",
     name: "FLOW WHITE",
     price: "99 000₽",
-    image: pcBuild3,
-    images: [pcBuild3],
+    image: flowWhite1,
+    images: [flowWhite1, flowWhite2, flowWhite3, flowWhite4],
     specs: {
       processor: "AMD Ryzen 5 7500F",
       gpu: "NVIDIA RTX 5060 (BLACK)",
@@ -162,8 +169,8 @@ export const buildsData = [
     id: "eclipse-gaming",
     name: "ECLIPSE WHITE",
     price: "155 000₽",
-    image: pcBuild2,
-    images: [pcBuild2],
+    image: eclipseWhite1,
+    images: [eclipseWhite1, eclipseWhite2],
     specs: {
       processor: "Intel Core i5-14600KF",
       gpu: "NVIDIA RTX 5060 Ti 16Gb (BLACK)",
@@ -180,7 +187,7 @@ export const buildsData = [
     name: "APEX HERO",
     price: "198 000₽",
     image: pcBuild1,
-    images: [pcBuild1],
+    images: [pcBuild1, apexHero2],
     specs: {
       processor: "AMD Ryzen 7 7800X3D",
       gpu: "NVIDIA RTX 5070 (BLACK)",
