@@ -40,6 +40,7 @@ import eclipseStart4 from "@/assets/eclipse-start-4.jpg";
 import auraLite1 from "@/assets/aura-lite-1.jpg";
 import auraLite2 from "@/assets/aura-lite-2.jpg";
 import auraLite3 from "@/assets/aura-lite-3.jpg";
+import purplePc1 from "@/assets/purple-pc-1.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,6 +89,22 @@ const Index = () => {
         storage: "500GB SSD",
         psu: "600W 80+ Bronze",
         case: "Gaming RGB (более 30 на выбор)"
+      }
+    },
+    {
+      id: "purple-gaming",
+      name: "PURPLE POWER",
+      price: "53 000₽",
+      image: purplePc1,
+      specs: {
+        processor: "AMD Ryzen 5 5500",
+        gpu: "GIGABYTE RTX 3060 12GB",
+        motherboard: "MSI A520M PRO",
+        cooling: "Jonsbo CR1000-Max",
+        ram: "32GB DDR4 3200 2x16Гб",
+        storage: "1TB SSD",
+        psu: "1STPLAYER BLACK SIR 600W 80 PLUS",
+        case: "HSPD"
       }
     },
     {
