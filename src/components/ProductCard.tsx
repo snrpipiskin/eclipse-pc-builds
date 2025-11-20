@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,6 +17,7 @@ interface ProductCardProps {
   name: string;
   price: string;
   image: string;
+  images?: string[];
   specs: {
     processor: string;
     gpu: string;
@@ -28,23 +30,61 @@ interface ProductCardProps {
   };
 }
 
-const ProductCard = ({ id, name, price, image, specs }: ProductCardProps) => {
+const ProductCard = ({ id, name, price, image, images, specs }: ProductCardProps) => {
   const navigate = useNavigate();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const imageArray = images && images.length > 0 ? images : [image];
 
   const handleDetails = () => {
     navigate(`/product/${id}`);
   };
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (imageArray.length <= 1) return;
+    
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const percentage = x / rect.width;
+    const index = Math.floor(percentage * imageArray.length);
+    const clampedIndex = Math.max(0, Math.min(index, imageArray.length - 1));
+    
+    setCurrentImageIndex(clampedIndex);
+  };
+
+  const handleMouseLeave = () => {
+    setCurrentImageIndex(0);
+  };
+
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/50 hover:-translate-y-2 group glass-card">
-      <div className="relative overflow-hidden">
+      <div 
+        className="relative overflow-hidden cursor-pointer"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
         <img 
-          src={image} 
+          src={imageArray[currentImageIndex]} 
           alt={name}
-          className="w-full h-80 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-125 group-hover:saturate-150"
+          className="w-full h-80 object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-125 group-hover:saturate-150"
           style={{ filter: 'brightness(1.1)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-background/20 to-transparent group-hover:bg-primary/10 transition-colors duration-500" />
+        
+        {/* Image indicators */}
+        {imageArray.length > 1 && (
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            {imageArray.map((_, index) => (
+              <div
+                key={index}
+                className={`h-1 rounded-full transition-all ${
+                  index === currentImageIndex 
+                    ? 'w-6 bg-primary' 
+                    : 'w-1 bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
       
       <CardHeader>
