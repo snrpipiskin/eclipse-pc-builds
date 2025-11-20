@@ -238,8 +238,33 @@ const ProductDetail = () => {
             <AlertDialogTitle>Готовы заказать?</AlertDialogTitle>
             <AlertDialogDescription>
               Чтобы завершить ваш заказ {product.name}, пожалуйста, свяжитесь с нами через один из этих каналов:
-              <div className="mt-4 space-y-2">
-                <p className="font-medium">WhatsApp, Telegram или VK</p>
+              <div className="mt-4 space-y-3">
+                <div className="flex flex-col gap-2">
+                  <a 
+                    href={`https://api.whatsapp.com/send/?phone=79993989762&text=Здравствуйте%2C+меня+заинтересовала+сборка%3A+${product.name}&type=phone_number&app_absent=0`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-primary hover:underline"
+                  >
+                    WhatsApp
+                  </a>
+                  <a 
+                    href="https://t.me/eclipsepcxx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-primary hover:underline"
+                  >
+                    Telegram
+                  </a>
+                  <a 
+                    href="https://vk.com/eclipse_pc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-primary hover:underline"
+                  >
+                    VK
+                  </a>
+                </div>
                 <p className="text-sm">Мы поможем вам завершить индивидуальную сборку и ответим на любые вопросы!</p>
               </div>
             </AlertDialogDescription>
