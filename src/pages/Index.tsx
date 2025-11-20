@@ -55,7 +55,6 @@ const Index = () => {
         const gpu = build.specs.gpu.toLowerCase();
         if (filters.gpuBrand === "nvidia") return gpu.includes("nvidia") || gpu.includes("rtx") || gpu.includes("geforce");
         if (filters.gpuBrand === "amd") return gpu.includes("amd") || gpu.includes("radeon");
-        if (filters.gpuBrand === "asus") return gpu.includes("asus");
         return true;
       });
     }
