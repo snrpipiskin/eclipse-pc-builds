@@ -45,6 +45,7 @@ const handler = async (req: Request): Promise<Response> => {
     formData.append("subject", "Новое обращение с сайта Eclipse PC");
     formData.append("from_name", "Eclipse PC Website");
     formData.append("replyto", email);
+    formData.append("to", "davidmedov@icloud.com");
 
     const web3FormsResponse = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
