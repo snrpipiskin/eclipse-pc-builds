@@ -36,7 +36,7 @@ jobs:
             --compress \
             --delete \
             --verbose \
-            ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/www/eclipsepc.ru/
+            ./dist/ u3316718@31.31.198.142:/www/eclipsepc.ru/
 
       - name: Cleanup
         if: always()
