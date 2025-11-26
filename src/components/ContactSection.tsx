@@ -90,6 +90,20 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
+
+            <div className="glass-card p-6 rounded-lg">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Phone className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl mb-2">Адрес</h3>
+                  <p className="text-muted-foreground">
+                    Пушково 15
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Contact Form */}
