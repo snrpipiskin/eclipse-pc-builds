@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ContactDialogProps {
   children: React.ReactNode;
@@ -25,11 +26,23 @@ const ContactDialog = ({ children }: ContactDialogProps) => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Запрос отправлен! Мы скоро свяжемся с вами по поводу вашей индивидуальной сборки.");
-    setOpen(false);
-    setFormData({ name: "", email: "", message: "" });
+    
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast.success("Запрос отправлен! Мы скоро свяжемся с вами по поводу вашей индивидуальной сборки.");
+      setOpen(false);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending contact request:", error);
+      toast.error("Произошла ошибка при отправке. Пожалуйста, попробуйте позже.");
+    }
   };
 
   return (

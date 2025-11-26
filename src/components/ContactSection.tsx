@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -13,13 +14,29 @@ const ContactSection = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Сообщение отправлено!",
-      description: "Спасибо за обращение. Мы скоро свяжемся с вами!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Сообщение отправлено!",
+        description: "Спасибо за обращение. Мы скоро свяжемся с вами!",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending contact:", error);
+      toast({
+        title: "Ошибка",
+        description: "Произошла ошибка при отправке. Пожалуйста, попробуйте позже.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
