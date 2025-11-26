@@ -121,31 +121,23 @@ const Hero = () => {
             Настраиваемые высокопроизводительные компьютеры под ваши задачи.
           </p>
 
-          <div ref={ctaRef} className="flex flex-col items-center gap-4">
-            <div className="flex flex-wrap justify-center items-center gap-4">
-              <Button
-                size="lg"
-                className="inline-flex items-center font-semibold group/hero relative overflow-hidden glow-box"
-              >
-                Конфигурации
-                <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
-              </Button>
-              <ContactDialog>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="inline-flex items-center font-semibold border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
-                >
-                  Индивидуальная сборка
-                </Button>
-              </ContactDialog>
-            </div>
+          <div ref={ctaRef} className="flex flex-wrap justify-center items-center gap-4">
             <Button
               size="lg"
-              variant="ghost"
-              className="pointer-events-none opacity-50"
+              className="inline-flex items-center font-semibold group/hero relative overflow-hidden glow-box"
             >
+              Конфигурации
+              <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
             </Button>
+            <ContactDialog>
+              <Button
+                size="lg"
+                variant="outline"
+                className="inline-flex items-center font-semibold border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
+              >
+                Индивидуальная сборка
+              </Button>
+            </ContactDialog>
           </div>
         </div>
       </div>
