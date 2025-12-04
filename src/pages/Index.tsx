@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "@/components/Header";
@@ -6,6 +7,7 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
+import FAQSection from "@/components/FAQSection";
 import BuildsFilter, { FilterState } from "@/components/BuildsFilter";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { buildsData } from "@/data/buildsData";
@@ -270,6 +272,9 @@ const Index = () => {
 
       {/* Contact Section */}
       <ContactSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
       
       {/* Footer with Social Media */}
       <footer ref={footerRef} className="py-16 border-t border-border relative overflow-hidden">
@@ -315,9 +320,31 @@ const Index = () => {
                 <Youtube className="w-6 h-6" />
               </a>
             </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 pt-4">
+              <Link 
+                to="/privacy" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Политика конфиденциальности
+              </Link>
+              <Link 
+                to="/terms" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Условия использования
+              </Link>
+              <Link 
+                to="/cookies" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Политика Cookies
+              </Link>
+            </div>
             
             <p className="text-sm text-muted-foreground pt-6">
-              © 2024 Eclipse PC. All rights reserved.
+              © 2024 Eclipse PC. Все права защищены.
             </p>
           </div>
         </div>
