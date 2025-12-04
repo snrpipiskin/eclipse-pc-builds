@@ -193,7 +193,7 @@ const Index = () => {
       <Hero />
       
       {/* About Section */}
-      <section ref={aboutRef} id="about" className="py-24 relative overflow-hidden">
+      <section ref={aboutRef} id="about" className="py-24 relative overflow-hidden scroll-mt-20">
         {/* Animated glowing backgrounds - conditional rendering */}
         {!isLowPerformance && (
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -232,7 +232,7 @@ const Index = () => {
       <AboutSection />
       
       {/* Pre-Configured Builds Section */}
-      <section ref={buildsRef} id="builds" className="pt-6 pb-24 relative overflow-hidden">
+      <section ref={buildsRef} id="builds" className="pt-6 pb-24 relative overflow-hidden scroll-mt-20">
         {/* Animated glowing backgrounds - conditional */}
         {!isLowPerformance && (
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
