@@ -64,7 +64,7 @@ const Hero = () => {
     <section
       ref={heroRef}
       id="home"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden scroll-mt-20"
+      className="relative min-h-screen flex items-center pt-24 overflow-hidden scroll-mt-24"
     >
       {/* Spline 3D Background - Only on high-performance devices */}
       {splineLoaded && !isLowPerformance && (
