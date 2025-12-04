@@ -4,22 +4,48 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Сообщение отправлено!",
-      description: "Спасибо за обращение. Мы скоро свяжемся с вами!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-telegram", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          source: "Форма обратной связи"
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Сообщение отправлено!",
+        description: "Спасибо за обращение. Мы скоро свяжемся с вами!",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить сообщение. Попробуйте позже.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -136,9 +162,9 @@ const ContactSection = () => {
                 />
               </div>
 
-              <Button type="submit" className="w-full glow-box">
+              <Button type="submit" className="w-full glow-box" disabled={isLoading}>
                 <Send className="mr-2 h-4 w-4" />
-                Отправить сообщение
+                {isLoading ? "Отправка..." : "Отправить сообщение"}
               </Button>
             </form>
           </div>

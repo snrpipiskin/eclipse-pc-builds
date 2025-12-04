@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ContactDialogProps {
   children: React.ReactNode;
@@ -19,17 +20,38 @@ interface ContactDialogProps {
 
 const ContactDialog = ({ children }: ContactDialogProps) => {
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Запрос отправлен! Мы скоро свяжемся с вами по поводу вашей индивидуальной сборки.");
-    setOpen(false);
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-telegram", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          source: "Запрос на индивидуальную сборку"
+        }
+      });
+
+      if (error) throw error;
+
+      toast.success("Запрос отправлен! Мы скоро свяжемся с вами по поводу вашей индивидуальной сборки.");
+      setOpen(false);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error("Не удалось отправить запрос. Попробуйте позже.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -79,8 +101,8 @@ const ContactDialog = ({ children }: ContactDialogProps) => {
               className="bg-background/50 min-h-[120px]"
             />
           </div>
-          <Button type="submit" className="w-full font-semibold">
-            Отправить запрос
+          <Button type="submit" className="w-full font-semibold" disabled={isLoading}>
+            {isLoading ? "Отправка..." : "Отправить запрос"}
           </Button>
         </form>
       </DialogContent>
