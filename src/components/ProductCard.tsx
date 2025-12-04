@@ -56,7 +56,7 @@ const ProductCard = ({ id, name, price, image, images, specs }: ProductCardProps
   };
 
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/50 hover:-translate-y-2 group glass-card">
+    <Card className="overflow-hidden transition-all duration-200 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 group glass-card">
       <div 
         className="relative overflow-hidden cursor-pointer"
         onMouseMove={handleMouseMove}
@@ -65,10 +65,11 @@ const ProductCard = ({ id, name, price, image, images, specs }: ProductCardProps
         <img 
           src={imageArray[currentImageIndex]} 
           alt={name}
-          className="w-full h-80 object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-125 group-hover:saturate-150"
-          style={{ filter: 'brightness(1.1)' }}
+          loading="lazy"
+          className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+          style={{ filter: 'brightness(1.05)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-background/20 to-transparent group-hover:bg-primary/10 transition-colors duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
         
         {/* Image indicators */}
         {imageArray.length > 1 && (

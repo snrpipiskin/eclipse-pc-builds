@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Cpu, Zap, Shield, Award, HeadphonesIcon, Rocket } from "lucide-react";
+import { usePerformance } from "@/hooks/use-performance";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,38 +11,43 @@ const AboutSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+  const { isLowPerformance, prefersReducedMotion } = usePerformance();
 
   useEffect(() => {
+    if (prefersReducedMotion) return;
+
     const ctx = gsap.context(() => {
-      // Create timeline for coordinated animations
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 85%",
         },
       });
 
       tl.from(titleRef.current, {
         opacity: 0,
-        y: 50,
-        filter: "blur(10px)",
-        duration: 1,
+        y: 30,
+        duration: 0.7,
       })
       .from(subtitleRef.current, {
         opacity: 0,
-        y: 30,
-        duration: 0.8,
-      }, "-=0.6")
-      .from(cardsRef.current?.children ?? [], {
-        opacity: 0,
-        y: 60,
-        stagger: 0.15,
-        duration: 0.8,
+        y: 20,
+        duration: 0.6,
       }, "-=0.4");
+
+      // Only animate cards on high-performance devices
+      if (!isLowPerformance) {
+        tl.from(cardsRef.current?.children ?? [], {
+          opacity: 0,
+          y: 40,
+          stagger: 0.1,
+          duration: 0.5,
+        }, "-=0.3");
+      }
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isLowPerformance, prefersReducedMotion]);
 
   const features = [
     {
@@ -81,13 +87,13 @@ const AboutSection = () => {
       ref={sectionRef}
       className="py-6 relative"
     >
-      {/* Animated glowing backgrounds with extended reach */}
-      <div className="absolute inset-0 pointer-events-none -top-40 -bottom-40">
-        <div className="absolute top-32 -left-20 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] animate-glow-fade" />
-        <div className="absolute bottom-20 -right-20 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[80px] animate-glow-fade" style={{ animationDelay: '3s' }} />
-        <div className="absolute bottom-1/4 left-1/4 w-[350px] h-[350px] bg-accent/15 rounded-full blur-[90px] animate-glow-pulse" style={{ animationDelay: '4s' }} />
-      </div>
+      {/* Animated glowing backgrounds - conditional */}
+      {!isLowPerformance && (
+        <div className="absolute inset-0 pointer-events-none -top-40 -bottom-40">
+          <div className="absolute top-32 -left-20 w-[350px] h-[350px] bg-primary/15 rounded-full blur-[50px] animate-glow-fade" />
+          <div className="absolute bottom-20 -right-20 w-[300px] h-[300px] bg-accent/15 rounded-full blur-[50px] animate-glow-pulse" style={{ animationDelay: '2s' }} />
+        </div>
+      )}
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
@@ -109,9 +115,9 @@ const AboutSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="glass-card p-8 rounded-lg hover:glow-box transition-all duration-500 group cursor-pointer"
+              className="glass-card p-8 rounded-lg hover:shadow-md hover:shadow-primary/20 transition-all duration-200 group cursor-pointer"
             >
-              <div className="mb-6 inline-block p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+              <div className="mb-6 inline-block p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-200">
                 <feature.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">
