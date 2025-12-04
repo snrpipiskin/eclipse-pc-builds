@@ -123,6 +123,7 @@ const Hero = () => {
             <Button
               size="lg"
               className="inline-flex items-center font-semibold group/hero relative overflow-hidden glow-box"
+              onClick={() => document.getElementById('builds')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Конфигурации
               <ArrowRight className="ml-2 h-5 w-5 group-hover/hero:translate-x-2 transition-transform duration-300" />
