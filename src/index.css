@@ -101,12 +101,14 @@ All colors MUST be HSL.
   html {
     height: 100%;
     overflow: hidden;
+    scroll-padding-top: 5rem; /* Header height offset */
   }
 
   body {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    scroll-padding-top: 5rem; /* Header height offset */
     @apply bg-background text-foreground;
   }
 
