@@ -188,17 +188,17 @@ const Index = () => {
   }, [isLowPerformance, prefersReducedMotion]);
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background">
       <Header />
       <Hero />
       
       {/* About Section */}
-      <section ref={aboutRef} id="about" className="py-24 relative">
+      <section ref={aboutRef} id="about" className="py-24 relative overflow-hidden">
         {/* Animated glowing backgrounds - conditional rendering */}
         {!isLowPerformance && (
-          <div className="absolute inset-0 pointer-events-none -top-40 -bottom-40">
-            <div className="absolute top-40 -right-32 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[60px] animate-glow-pulse" />
-            <div className="absolute bottom-32 -left-32 w-[350px] h-[350px] bg-accent/10 rounded-full blur-[60px] animate-glow-fade" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute top-0 -right-32 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[60px] animate-glow-pulse" />
+            <div className="absolute bottom-0 -left-32 w-[350px] h-[350px] bg-accent/10 rounded-full blur-[60px] animate-glow-fade" style={{ animationDelay: '1s' }} />
           </div>
         )}
         
@@ -232,12 +232,12 @@ const Index = () => {
       <AboutSection />
       
       {/* Pre-Configured Builds Section */}
-      <section ref={buildsRef} id="builds" className="pt-6 pb-24 relative">
+      <section ref={buildsRef} id="builds" className="pt-6 pb-24 relative overflow-hidden">
         {/* Animated glowing backgrounds - conditional */}
         {!isLowPerformance && (
-          <div className="absolute inset-0 pointer-events-none -top-40 -bottom-40">
-            <div className="absolute top-48 left-1/4 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[50px] animate-glow-fade" style={{ animationDelay: '2s' }} />
-            <div className="absolute bottom-40 right-1/4 w-[300px] h-[300px] bg-accent/15 rounded-full blur-[50px] animate-glow-pulse" style={{ animationDelay: '4s' }} />
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute top-12 left-1/4 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[50px] animate-glow-fade" style={{ animationDelay: '2s' }} />
+            <div className="absolute bottom-12 right-1/4 w-[300px] h-[300px] bg-accent/15 rounded-full blur-[50px] animate-glow-pulse" style={{ animationDelay: '4s' }} />
           </div>
         )}
         
