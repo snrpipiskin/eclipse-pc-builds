@@ -98,14 +98,31 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  html,
-  body,
-  #root {
-    overflow-x: hidden;
+  html {
+    height: 100%;
+    overflow: hidden;
   }
 
   body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     @apply bg-background text-foreground;
+  }
+
+  #root {
+    min-height: 100%;
+    overflow: visible;
+  }
+
+  /* Hide scrollbar on iframes (Spline fix) */
+  iframe::-webkit-scrollbar {
+    display: none;
+  }
+  
+  iframe {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   
   /* Disable animations for users who prefer reduced motion */

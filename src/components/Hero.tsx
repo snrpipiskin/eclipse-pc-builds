@@ -68,16 +68,17 @@ const Hero = () => {
     >
       {/* Spline 3D Background - Only on high-performance devices */}
       {splineLoaded && !isLowPerformance && (
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 z-0 overflow-hidden h-screen">
           <iframe
             src="https://my.spline.design/orb-xkTrsJ4x8kMwcNDzRYSbdX4e/"
             frameBorder="0"
             width="100%"
             height="100%"
-            className="w-full h-full"
+            className="w-full h-full pointer-events-none"
             loading="lazy"
             scrolling="no"
-            style={{ overflow: 'hidden' }}
+            style={{ overflow: 'hidden', border: 'none' }}
+            title="3D Background"
           />
         </div>
       )}
