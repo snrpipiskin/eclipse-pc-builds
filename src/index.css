@@ -98,10 +98,20 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  html,
-  body,
-  #root {
+  html {
     overflow-x: hidden;
+    overflow-y: scroll; /* Always show scrollbar to prevent layout shift */
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+  }
+
+  #root {
+    overflow: visible; /* Let content flow naturally, no nested scrollbar */
+    min-height: 100vh;
   }
 
   body {
