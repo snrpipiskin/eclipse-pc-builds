@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "@/components/Header";
@@ -9,6 +9,7 @@ import ContactSection from "@/components/ContactSection";
 import BuildsFilter, { FilterState } from "@/components/BuildsFilter";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { buildsData } from "@/data/buildsData";
+import { usePerformance } from "@/hooks/use-performance";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,7 @@ const Index = () => {
   const aboutRef = useRef<HTMLElement>(null);
   const buildsRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
+  const { isLowPerformance, prefersReducedMotion } = usePerformance();
   const [filters, setFilters] = useState<FilterState>({
     sortBy: "default",
     gpuBrand: "all",
@@ -124,58 +126,64 @@ const Index = () => {
 
     return filtered;
   };
-
-  const filteredBuilds = getFilteredAndSortedBuilds();
+  // Memoize filtered builds for performance
+  const filteredBuilds = useMemo(() => getFilteredAndSortedBuilds(), [filters]);
 
   useEffect(() => {
+    // Skip animations if user prefers reduced motion
+    if (prefersReducedMotion) return;
+
     const ctx = gsap.context(() => {
         // About section animation
         gsap.from(aboutRef.current?.querySelector(".section-title"), {
           scrollTrigger: {
             trigger: aboutRef.current,
-            start: "top 80%",
+            start: "top 85%",
           },
           opacity: 0,
-          y: 50,
-          duration: 1,
+          y: 30,
+          duration: 0.8,
         });
 
         // Builds section animation
         gsap.from(buildsRef.current?.querySelector(".section-title"), {
           scrollTrigger: {
             trigger: buildsRef.current,
-            start: "top 80%",
+            start: "top 85%",
           },
           opacity: 0,
-          y: 50,
-          duration: 1,
-        });
-
-        gsap.from(buildsRef.current?.querySelectorAll(".product-card") ?? [], {
-          scrollTrigger: {
-            trigger: buildsRef.current,
-            start: "top 70%",
-          },
-          opacity: 0,
-          y: 60,
-          stagger: 0.15,
+          y: 30,
           duration: 0.8,
         });
+
+        // Only animate cards on high-performance devices
+        if (!isLowPerformance) {
+          gsap.from(buildsRef.current?.querySelectorAll(".product-card") ?? [], {
+            scrollTrigger: {
+              trigger: buildsRef.current,
+              start: "top 75%",
+            },
+            opacity: 0,
+            y: 40,
+            stagger: 0.1,
+            duration: 0.6,
+          });
+        }
 
         // Footer animation
         gsap.from(footerRef.current, {
           scrollTrigger: {
             trigger: footerRef.current,
-            start: "top 90%",
+            start: "top 95%",
           },
           opacity: 0,
-          y: 60,
-          duration: 1,
+          y: 30,
+          duration: 0.6,
         });
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [isLowPerformance, prefersReducedMotion]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -184,11 +192,13 @@ const Index = () => {
       
       {/* About Section */}
       <section ref={aboutRef} id="about" className="py-24 relative">
-        {/* Animated glowing backgrounds with smooth transitions */}
-        <div className="absolute inset-0 pointer-events-none -top-40 -bottom-40">
-          <div className="absolute top-40 -right-32 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] animate-glow-pulse" />
-          <div className="absolute bottom-32 -left-32 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[100px] animate-glow-fade" style={{ animationDelay: '1s' }} />
-        </div>
+        {/* Animated glowing backgrounds - conditional rendering */}
+        {!isLowPerformance && (
+          <div className="absolute inset-0 pointer-events-none -top-40 -bottom-40">
+            <div className="absolute top-40 -right-32 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[60px] animate-glow-pulse" />
+            <div className="absolute bottom-32 -left-32 w-[350px] h-[350px] bg-accent/10 rounded-full blur-[60px] animate-glow-fade" style={{ animationDelay: '1s' }} />
+          </div>
+        )}
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
@@ -221,12 +231,13 @@ const Index = () => {
       
       {/* Pre-Configured Builds Section */}
       <section ref={buildsRef} id="builds" className="pt-6 pb-24 relative">
-        {/* Animated glowing backgrounds with extended reach */}
-        <div className="absolute inset-0 pointer-events-none -top-40 -bottom-40">
-          <div className="absolute top-48 left-1/4 w-[550px] h-[550px] bg-primary/15 rounded-full blur-[100px] animate-glow-fade" style={{ animationDelay: '2s' }} />
-          <div className="absolute bottom-40 right-1/4 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: '4s' }} />
-          <div className="absolute top-1/3 -right-32 w-[450px] h-[450px] bg-primary/10 rounded-full blur-[90px] animate-glow-fade" style={{ animationDelay: '5s' }} />
-        </div>
+        {/* Animated glowing backgrounds - conditional */}
+        {!isLowPerformance && (
+          <div className="absolute inset-0 pointer-events-none -top-40 -bottom-40">
+            <div className="absolute top-48 left-1/4 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[50px] animate-glow-fade" style={{ animationDelay: '2s' }} />
+            <div className="absolute bottom-40 right-1/4 w-[300px] h-[300px] bg-accent/15 rounded-full blur-[50px] animate-glow-pulse" style={{ animationDelay: '4s' }} />
+          </div>
+        )}
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
@@ -254,11 +265,6 @@ const Index = () => {
               ))}
             </div>
           )}
-        </div>
-
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
       </section>
 
@@ -316,10 +322,12 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
-          <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-accent/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }} />
-        </div>
+        {!isLowPerformance && (
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="glow-orb absolute top-1/2 left-1/4 w-24 h-24 bg-primary/10 rounded-full blur-xl" />
+            <div className="glow-orb absolute top-1/3 right-1/3 w-20 h-20 bg-accent/10 rounded-full blur-xl" />
+          </div>
+        )}
       </footer>
     </div>
   );

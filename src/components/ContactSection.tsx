@@ -171,10 +171,7 @@ const ContactSection = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      </div>
+      {/* Removed heavy animated blur effects for performance */}
     </section>
   );
 };

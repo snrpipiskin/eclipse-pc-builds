@@ -1,77 +1,64 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import ContactDialog from "@/components/ContactDialog";
+import { usePerformance } from "@/hooks/use-performance";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const splineRef = useRef<HTMLDivElement>(null);
+  const { isLowPerformance, prefersReducedMotion } = usePerformance();
+  const [splineLoaded, setSplineLoaded] = useState(false);
 
   useEffect(() => {
+    // Only load Spline on high-performance devices after initial render
+    if (!isLowPerformance && !prefersReducedMotion) {
+      const timer = setTimeout(() => setSplineLoaded(true), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [isLowPerformance, prefersReducedMotion]);
+
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       tl.from(headlineRef.current, {
         opacity: 0,
-        y: 50,
-        filter: "blur(10px)",
-        duration: 1.2,
+        y: 30,
+        duration: 0.8,
       })
       .from(subtitleRef.current, {
         opacity: 0,
-        y: 30,
-        duration: 0.8,
-      }, "-=0.6")
-      .from(ctaRef.current?.querySelectorAll('button') ?? [], {
-        opacity: 0,
         y: 20,
         duration: 0.6,
-        clearProps: "transform,opacity"
       }, "-=0.4")
-      .from(splineRef.current, {
+      .from(ctaRef.current?.querySelectorAll('button') ?? [], {
         opacity: 0,
-        x: 100,
-        duration: 1,
-      }, "-=0.8");
+        y: 15,
+        duration: 0.5,
+        clearProps: "transform,opacity"
+      }, "-=0.3");
 
-      // Floating orbs animation
-      gsap.to(".glow-orb", {
-        y: -20,
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-        stagger: {
-          each: 0.5,
-        }
-      });
-
-      // CTA hover pulse
-      const ctaButtons = ctaRef.current?.querySelectorAll("button");
-      ctaButtons?.forEach((button) => {
-        button.addEventListener("mouseenter", () => {
-          gsap.to(button, {
-            scale: 1.05,
-            duration: 0.3,
-            ease: "power2.out"
-          });
+      // Floating orbs animation - only on high performance
+      if (!isLowPerformance) {
+        gsap.to(".glow-orb", {
+          y: -15,
+          duration: 4,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          stagger: 0.8,
         });
-        button.addEventListener("mouseleave", () => {
-          gsap.to(button, {
-            scale: 1,
-            duration: 0.3,
-            ease: "power2.out"
-          });
-        });
-      });
+      }
     }, heroRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isLowPerformance, prefersReducedMotion]);
 
   return (
     <section
@@ -79,35 +66,43 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center pt-20 overflow-hidden"
     >
-      {/* Spline 3D Background */}
-      <div
-        ref={splineRef}
-        className="absolute inset-0 z-0"
-      >
-        <iframe
-          src="https://my.spline.design/orb-xkTrsJ4x8kMwcNDzRYSbdX4e/"
-          frameBorder="0"
-          width="100%"
-          height="100%"
-          className="w-full h-full"
-        />
-      </div>
+      {/* Spline 3D Background - Only on high-performance devices */}
+      {splineLoaded && !isLowPerformance && (
+        <div className="absolute inset-0 z-0">
+          <iframe
+            src="https://my.spline.design/orb-xkTrsJ4x8kMwcNDzRYSbdX4e/"
+            frameBorder="0"
+            width="100%"
+            height="100%"
+            className="w-full h-full"
+            loading="lazy"
+          />
+        </div>
+      )}
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90 z-[1]" />
 
-      {/* Floating glow orbs */}
+      {/* Floating glow orbs - Simplified for performance */}
       <div className="absolute inset-0 z-[1] pointer-events-none">
-        <div className="glow-orb absolute top-20 left-20 w-64 h-64 bg-primary/30 rounded-full blur-3xl" />
-        <div className="glow-orb absolute bottom-40 right-20 w-80 h-80 bg-accent/30 rounded-full blur-3xl" />
-        <div className="glow-orb absolute top-1/2 left-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+        <div 
+          className={`glow-orb absolute top-20 left-20 w-48 md:w-64 h-48 md:h-64 bg-primary/20 rounded-full ${isLowPerformance ? '' : 'blur-2xl md:blur-3xl'}`} 
+          style={{ filter: isLowPerformance ? 'blur(20px)' : undefined }}
+        />
+        <div 
+          className={`glow-orb absolute bottom-40 right-20 w-56 md:w-80 h-56 md:h-80 bg-accent/20 rounded-full ${isLowPerformance ? '' : 'blur-2xl md:blur-3xl'}`}
+          style={{ filter: isLowPerformance ? 'blur(20px)' : undefined }}
+        />
+        {!isLowPerformance && (
+          <div className="glow-orb absolute top-1/2 left-1/2 w-72 md:w-96 h-72 md:h-96 bg-primary/15 rounded-full blur-3xl" />
+        )}
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h1
             ref={headlineRef}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight glow-text"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight glow-text"
           >
             Собери ПК
             <br />
@@ -116,7 +111,7 @@ const Hero = () => {
 
           <p
             ref={subtitleRef}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
             Настраиваемые высокопроизводительные компьютеры под ваши задачи.
           </p>
