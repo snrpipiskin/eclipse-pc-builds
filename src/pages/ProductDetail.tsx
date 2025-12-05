@@ -15,9 +15,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import auraLite1 from "@/assets/aura-lite-1.jpg";
-import auraLite2 from "@/assets/aura-lite-2.jpg";
-import auraLite3 from "@/assets/aura-lite-3.jpg";
 import series2_1 from "@/assets/series-2-1.png";
 import series2_2 from "@/assets/series-2-2.jpg";
 import series2_3 from "@/assets/series-2-3.jpg";
@@ -26,24 +23,16 @@ import series2Alpha1 from "@/assets/series-2-alpha-1.jpeg";
 import series2Alpha2 from "@/assets/series-2-alpha-2.jpeg";
 import series2Alpha3 from "@/assets/series-2-alpha-3.jpeg";
 import series2Alpha4 from "@/assets/series-2-alpha-4.jpeg";
+import series4_1 from "@/assets/series-4-1.jpg";
+import series4_2 from "@/assets/series-4-2.jpg";
+import series4_3 from "@/assets/series-4-3.jpg";
+import series4_4 from "@/assets/series-4-4.jpg";
+import series4Alpha1 from "@/assets/series-4-alpha-1.jpg";
+import series4Alpha2 from "@/assets/series-4-alpha-2.jpg";
+import series4Alpha3 from "@/assets/series-4-alpha-3.jpg";
+import series4Alpha4 from "@/assets/series-4-alpha-4.jpg";
 
 const productData = {
-  "aura-lite": {
-    name: "AURA LITE",
-    price: "31 990₽",
-    images: [auraLite1, auraLite2, auraLite3],
-    description: "Экономичная сборка на базе серверного процессора Intel Xeon E5-2640v4 с 10 ядрами и 20 потоками. В паре с RTX 2060 6GB обеспечивает отличную производительность в современных играх при доступной цене.",
-    specs: {
-      processor: "Xeon E5-2640v4",
-      gpu: "RTX 2060 6GB",
-      motherboard: "Серверная материнская плата",
-      cooling: "JONSBO CR-1000 EVO ARGB WHITE",
-      ram: "16Гб DDR4 2133 2x8Гб 2133МГц",
-      storage: "SSD 120GB, HDD 500GB",
-      psu: "700W IWONGOU ATX (RM700) WHITE Bronze+",
-      case: "Warrior Z5 WHITE"
-    }
-  },
   "series-2": {
     name: "Series 2",
     price: "89 000₽",
@@ -74,6 +63,38 @@ const productData = {
       storage: "ADATA LEGEND 860 1 ТБ",
       psu: "Powercase PW500",
       case: "Zalman P10 White"
+    }
+  },
+  "series-4": {
+    name: "Series 4",
+    price: "130 000₽",
+    images: [series4_1, series4_2, series4_3, series4_4],
+    description: "Производительная сборка на новой платформе AMD AM5 с DDR5 памятью. Ryzen 5 7500F и RTX 5060 обеспечивают стабильный FPS в современных играх на высоких настройках.",
+    specs: {
+      processor: "Ryzen 5 7500F",
+      gpu: "Gigabyte GeForce RTX 5060 WINDFORCE OC 8 ГБ",
+      motherboard: "ASUS PRIME B650M-R",
+      cooling: "JONSBO CR-1000 EVO ARGB Black",
+      ram: "Team Group T-Force Vulcan DDR5 32GB (2x16GB) 6000 MHz",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "Deepcool GAMERSTORM PF600X",
+      case: "DEEPCOOL CG380 3F Black"
+    }
+  },
+  "series-4-alpha": {
+    name: "Series 4 αlpha",
+    price: "140 000₽",
+    images: [series4Alpha1, series4Alpha2, series4Alpha3, series4Alpha4],
+    description: "Премиальная белая сборка с RTX 5060 Ti и RGB-подсветкой G.Skill Trident Z5. Идеальное сочетание эстетики и производительности для требовательных пользователей.",
+    specs: {
+      processor: "Ryzen 5 7500F",
+      gpu: "Palit GeForce RTX 5060 Ti White 8GB",
+      motherboard: "ASUS PRIME B650M-A WIFI II",
+      cooling: "JONSBO CR-1000 EVO ARGB White",
+      ram: "G.Skill Trident Z5 RGB DDR5 6000 МГц 2x16 ГБ",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "Deepcool GAMERSTORM PF600X",
+      case: "DEEPCOOL CG380 3F White"
     }
   }
 };
