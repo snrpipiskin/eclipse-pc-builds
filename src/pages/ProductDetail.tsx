@@ -54,6 +54,18 @@ import series8Alpha1 from "@/assets/series-8-alpha-1.jpg";
 import series8Alpha2 from "@/assets/series-8-alpha-2.jpg";
 import series8Alpha3 from "@/assets/series-8-alpha-3.jpg";
 import series8Alpha4 from "@/assets/series-8-alpha-4.jpg";
+import series9_1 from "@/assets/series-9-1.jpg";
+import series9_2 from "@/assets/series-9-2.jpg";
+import series9_3 from "@/assets/series-9-3.jpg";
+import series9_4 from "@/assets/series-9-4.jpg";
+import series9Alpha1 from "@/assets/series-9-alpha-1.jpg";
+import series9Alpha2 from "@/assets/series-9-alpha-2.jpg";
+import series9Alpha3 from "@/assets/series-9-alpha-3.jpg";
+import series9Alpha4 from "@/assets/series-9-alpha-4.jpg";
+import seriesX1 from "@/assets/series-x-1.jpg";
+import seriesX2 from "@/assets/series-x-2.jpg";
+import seriesX3 from "@/assets/series-x-3.jpg";
+import seriesX4 from "@/assets/series-x-4.jpg";
 
 const productData = {
   "series-2": {
@@ -213,7 +225,60 @@ const productData = {
       ram: "G.Skill Ripjaws S5 White DDR5 32Gb (2x16Gb) 6000MHz CL30",
       storage: "ADATA LEGEND 900 1 ТБ",
       psu: "PHANTEKS AMP GH 850W White GOLD",
-      case: "Jonsbo TK-2"
+      case: "Jonsbo TK-2",
+      fans: "Jungle Leopard Galaxy White (10 шт)"
+    }
+  },
+  "series-9": {
+    name: "Series 9",
+    price: "295 000₽",
+    images: [series9_1, series9_2, series9_3, series9_4],
+    description: "Ультра-мощная сборка с RTX 5080 и 7800X3D в культовом корпусе LIAN LI O11. 360мм СВО Elite Vision и 8 RGB-вентиляторов для бескомпромиссного 4K-гейминга.",
+    specs: {
+      processor: "AMD Ryzen 7 7800X3D",
+      gpu: "MSI RTX 5080 16G INSPIRE 3X OC",
+      motherboard: "ASUS TUF GAMING B850-PLUS WIFI",
+      cooling: "Thermalright Elite Vision 360 ARGB черная",
+      ram: "G.Skill Ripjaws S5 DDR5 32Gb (2x16Gb) 6000MHz CL30",
+      storage: "ADATA LEGEND 900 1 ТБ",
+      psu: "1STPLAYER NGDP Gold 1000W",
+      case: "LIAN LI O11 Vision COMPACT",
+      fans: "Jungle Leopard Galaxy (8 шт)"
+    }
+  },
+  "series-9-alpha": {
+    name: "Series 9 αlpha",
+    price: "310 000₽",
+    images: [series9Alpha1, series9Alpha2, series9Alpha3, series9Alpha4],
+    description: "Белоснежный флагман с RTX 5080 AERO OC и 7800X3D. Премиальные комплектующие ASUS и белая эстетика в панорамном корпусе LIAN LI для максимального визуального эффекта.",
+    specs: {
+      processor: "AMD Ryzen 7 7800X3D",
+      gpu: "GIGABYTE GeForce RTX 5080 AERO OC",
+      motherboard: "ASUS B850 MAX GAMING WIFI W",
+      cooling: "Thermalright Frozen Vision 360 ARGB White V2",
+      ram: "G.Skill Ripjaws S5 White DDR5 32Gb (2x16Gb) 6000MHz CL30",
+      storage: "ADATA LEGEND 900 1 ТБ",
+      psu: "1STPLAYER NGDP Gold 1000W White",
+      case: "LIAN LI O11 Vision COMPACT White",
+      fans: "Jungle Leopard Galaxy (8 шт)"
+    }
+  },
+  "series-x": {
+    name: "Series X",
+    price: "555 000₽",
+    images: [seriesX1, seriesX2, seriesX3, seriesX4],
+    description: "Абсолютная вершина производительности. Ryzen 9 9950X3D с 3D V-Cache, RTX 5090 32GB и 96GB DDR5. Двойная СВО 360мм, 1300W Platinum и беспроводные вентиляторы Lian Li для эксклюзивной машины мечты.",
+    specs: {
+      processor: "RYZEN 9 9950X3D OEM",
+      gpu: "Palit GeForce RTX 5090 GameRock 32 ГБ",
+      motherboard: "GIGABYTE X870 AORUS ELITE WIFI7",
+      cooling: "Phanteks Glacier One 360D30 X2 черная",
+      ram: "G.Skill TRIDENT Z5 ROYAL RGB 96GB 6400MHz (DDR5)",
+      storage: "Samsung 2 ТБ 9100 PRO",
+      psu: "Lian Li EDGE1300G Platinum",
+      case: "LIAN LI O11 Vision COMPACT",
+      fans: "Lian LI UNI FAN SL WIRELESS 120 Reverse Black (6 шт) + Lian LI UNI FAN SL WIRELESS 120 Black (2 шт)",
+      extras: "Кронштейн для видеокарты Lian Li (G89.VG4-4-V2X.R0)"
     }
   }
 };
@@ -364,10 +429,22 @@ const ProductDetail = () => {
                   <span className="text-muted-foreground">Блок питания</span>
                   <span className="font-medium">{product.specs.psu}</span>
                 </div>
-                <div className="flex justify-between py-2">
+                <div className="flex justify-between py-2 border-b border-border/50">
                   <span className="text-muted-foreground">Корпус</span>
                   <span className="font-medium">{product.specs.case}</span>
                 </div>
+                {(product.specs as any).fans && (
+                  <div className="flex justify-between py-2 border-b border-border/50">
+                    <span className="text-muted-foreground">Вентиляторы</span>
+                    <span className="font-medium text-right max-w-[60%]">{(product.specs as any).fans}</span>
+                  </div>
+                )}
+                {(product.specs as any).extras && (
+                  <div className="flex justify-between py-2">
+                    <span className="text-muted-foreground">Дополнительно</span>
+                    <span className="font-medium text-right max-w-[60%]">{(product.specs as any).extras}</span>
+                  </div>
+                )}
               </div>
             </div>
 
