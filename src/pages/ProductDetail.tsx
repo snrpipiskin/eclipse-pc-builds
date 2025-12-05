@@ -46,6 +46,14 @@ import series7_4 from "@/assets/series-7-4.jpg";
 import series7Alpha1 from "@/assets/series-7-alpha-1.jpg";
 import series7Alpha2 from "@/assets/series-7-alpha-2.jpg";
 import series7Alpha3 from "@/assets/series-7-alpha-3.jpg";
+import series8_1 from "@/assets/series-8-1.jpg";
+import series8_2 from "@/assets/series-8-2.jpg";
+import series8_3 from "@/assets/series-8-3.jpg";
+import series8_4 from "@/assets/series-8-4.jpg";
+import series8Alpha1 from "@/assets/series-8-alpha-1.jpg";
+import series8Alpha2 from "@/assets/series-8-alpha-2.jpg";
+import series8Alpha3 from "@/assets/series-8-alpha-3.jpg";
+import series8Alpha4 from "@/assets/series-8-alpha-4.jpg";
 
 const productData = {
   "series-2": {
@@ -174,6 +182,38 @@ const productData = {
       storage: "ADATA LEGEND 860 1 ТБ",
       psu: "1STPLAYER NGDP Gold 750W White",
       case: "Jonsbo D300 White"
+    }
+  },
+  "series-8": {
+    name: "Series 8",
+    price: "225 000₽",
+    images: [series8_1, series8_2, series8_3, series8_4],
+    description: "Экстремальная игровая станция с легендарным 7800X3D и RTX 5070 Ti 16GB. 360мм СВО, 7 RGB-вентиляторов и премиальные комплектующие для бескомпромиссного 4K-гейминга.",
+    specs: {
+      processor: "Ryzen 7 7800X3D",
+      gpu: "PALIT RTX 5070 Ti 16GB GAMING PRO-S",
+      motherboard: "MSI PRO B650-S WIFI",
+      cooling: "Thermalright Frozen Notte 360 BLACK ARGB V2",
+      ram: "G.Skill Ripjaws S5 DDR5 32Gb (2x16Gb) 6000MHz CL30",
+      storage: "ADATA LEGEND 900 1 ТБ",
+      psu: "Deepcool GAMERSTORM PQ750G GOLD",
+      case: "Jonsbo TK-3"
+    }
+  },
+  "series-8-alpha": {
+    name: "Series 8 αlpha",
+    price: "270 000₽",
+    images: [series8Alpha1, series8Alpha2, series8Alpha3, series8Alpha4],
+    description: "Абсолютный флагман с 7800X3D и RTX 5070 Ti в белом исполнении. СВО с дисплеем температуры, 10 RGB-вентиляторов и плата B850 BTF для идеального cable-less дизайна.",
+    specs: {
+      processor: "Ryzen 7 7800X3D",
+      gpu: "Gigabyte GeForce RTX 5070 Ti Eagle 16 ГБ",
+      motherboard: "ASUS TUF GAMING B850-BTF WIFI",
+      cooling: "Thermalright Frozen Vision 360 ARGB White V2",
+      ram: "G.Skill Ripjaws S5 White DDR5 32Gb (2x16Gb) 6000MHz CL30",
+      storage: "ADATA LEGEND 900 1 ТБ",
+      psu: "PHANTEKS AMP GH 850W White GOLD",
+      case: "Jonsbo TK-2"
     }
   }
 };
