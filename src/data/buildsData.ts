@@ -22,6 +22,13 @@ import series6Alpha1 from "@/assets/series-6-alpha-1.png";
 import series6Alpha2 from "@/assets/series-6-alpha-2.png";
 import series6Alpha3 from "@/assets/series-6-alpha-3.png";
 import series6Alpha4 from "@/assets/series-6-alpha-4.jpg";
+import series7_1 from "@/assets/series-7-1.png";
+import series7_2 from "@/assets/series-7-2.png";
+import series7_3 from "@/assets/series-7-3.jpg";
+import series7_4 from "@/assets/series-7-4.jpg";
+import series7Alpha1 from "@/assets/series-7-alpha-1.jpg";
+import series7Alpha2 from "@/assets/series-7-alpha-2.jpg";
+import series7Alpha3 from "@/assets/series-7-alpha-3.jpg";
 
 export const buildsData = [
   {
@@ -124,6 +131,41 @@ export const buildsData = [
       storage: "ADATA LEGEND 860 1 ТБ",
       psu: "PHANTEKS AMP BH 650 White",
       case: "ZALMAN P30 White"
+    }
+  },
+  {
+    id: "series-7",
+    name: "Series 7",
+    price: "175 000₽",
+    image: series7_1,
+    images: [series7_1, series7_2, series7_3, series7_4],
+    specs: {
+      processor: "Ryzen 5 9600X OEM",
+      gpu: "GIGABYTE RTX 5070 WINDFORCE SFF 12G",
+      motherboard: "MSI PRO B650M-P",
+      cooling: "THERMALRIGHT Frozen Prism 360 ARGB Black",
+      ram: "Team Group T-Force Vulcan DDR5 32GB (2x16GB) 6000 MHz",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "1STPLAYER ACK Silver 750W",
+      case: "Zalman P30 Black V2"
+    }
+  },
+  {
+    id: "series-7-alpha",
+    name: "Series 7 αlpha",
+    price: "195 000₽",
+    image: series7Alpha1,
+    images: [series7Alpha1, series7Alpha2, series7Alpha3],
+    specs: {
+      processor: "RYZEN 7 7700 OEM",
+      gpu: "GIGABYTE GeForce RTX 5070 EAGLE OC ICE SFF",
+      motherboard: "MSI B650M PROJECT ZERO",
+      cooling: "Thermalright Frozen Notte 360 White V2",
+      ram: "G.Skill Trident Z5 RGB DDR5 32Gb (2x16Gb) 6000MHz CL34",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "1STPLAYER NGDP Gold 750W White",
+      case: "Jonsbo D300 White",
+      fans: "Jungle Leopard Galaxy White (5 шт)"
     }
   }
 ];
