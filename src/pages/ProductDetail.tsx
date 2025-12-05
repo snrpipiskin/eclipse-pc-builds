@@ -244,12 +244,40 @@ const ProductDetail = () => {
 
       {/* Zoom Dialog */}
       <Dialog open={!!zoomImage} onOpenChange={() => setZoomImage(null)}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden">
-          <img
-            src={zoomImage || ""}
-            alt="Zoomed view"
-            className="w-full max-h-[80vh] object-contain"
-          />
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden p-2">
+          <div className="relative group">
+            <img
+              src={zoomImage || ""}
+              alt="Zoomed view"
+              className="w-full max-h-[80vh] object-contain"
+            />
+            {product.images.length > 1 && (
+              <>
+                <button
+                  onClick={() => {
+                    const currentIndex = product.images.findIndex(img => img === zoomImage);
+                    const prevIndex = currentIndex === 0 ? product.images.length - 1 : currentIndex - 1;
+                    setZoomImage(product.images[prevIndex]);
+                    setSelectedImage(prevIndex);
+                  }}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={() => {
+                    const currentIndex = product.images.findIndex(img => img === zoomImage);
+                    const nextIndex = currentIndex === product.images.length - 1 ? 0 : currentIndex + 1;
+                    setZoomImage(product.images[nextIndex]);
+                    setSelectedImage(nextIndex);
+                  }}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+              </>
+            )}
+          </div>
         </DialogContent>
       </Dialog>
 
