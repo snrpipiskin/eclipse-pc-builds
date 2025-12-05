@@ -32,8 +32,8 @@ export const buildsData = [
     id: "series-2",
     name: "Series 2",
     price: "89 000₽",
-    image: series2_1,
-    images: [series2_1, series2_2, series2_3, series2_4],
+    image: series2_4,
+    images: [series2_4, series2_2, series2_3, series2_1],
     specs: {
       processor: "Ryzen 5600",
       gpu: "Gigabyte GeForce RTX 5060 WINDFORCE OC 8 ГБ",

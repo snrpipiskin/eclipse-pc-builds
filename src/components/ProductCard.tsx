@@ -66,7 +66,7 @@ const ProductCard = ({ id, name, price, image, images, specs }: ProductCardProps
           src={imageArray[currentImageIndex]} 
           alt={name}
           loading="lazy"
-          className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full aspect-[3/4] object-cover transition-transform duration-300 group-hover:scale-105"
           style={{ filter: 'brightness(1.05)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
