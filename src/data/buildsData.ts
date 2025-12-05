@@ -37,6 +37,14 @@ import series8Alpha1 from "@/assets/series-8-alpha-1.jpg";
 import series8Alpha2 from "@/assets/series-8-alpha-2.jpg";
 import series8Alpha3 from "@/assets/series-8-alpha-3.jpg";
 import series8Alpha4 from "@/assets/series-8-alpha-4.jpg";
+import series9_1 from "@/assets/series-9-1.jpg";
+import series9_2 from "@/assets/series-9-2.jpg";
+import series9_3 from "@/assets/series-9-3.jpg";
+import series9_4 from "@/assets/series-9-4.jpg";
+import series9Alpha1 from "@/assets/series-9-alpha-1.jpg";
+import series9Alpha2 from "@/assets/series-9-alpha-2.jpg";
+import series9Alpha3 from "@/assets/series-9-alpha-3.jpg";
+import series9Alpha4 from "@/assets/series-9-alpha-4.jpg";
 
 export const buildsData = [
   {
@@ -210,6 +218,42 @@ export const buildsData = [
       psu: "PHANTEKS AMP GH 850W White GOLD",
       case: "Jonsbo TK-2",
       fans: "Jungle Leopard Galaxy White (10 шт)"
+    }
+  },
+  {
+    id: "series-9",
+    name: "Series 9",
+    price: "295 000₽",
+    image: series9_1,
+    images: [series9_1, series9_2, series9_3, series9_4],
+    specs: {
+      processor: "AMD Ryzen 7 7800X3D",
+      gpu: "MSI RTX 5080 16G INSPIRE 3X OC",
+      motherboard: "ASUS TUF GAMING B850-PLUS WIFI",
+      cooling: "Thermalright Elite Vision 360 ARGB черная",
+      ram: "G.Skill Ripjaws S5 DDR5 32Gb (2x16Gb) 6000MHz CL30",
+      storage: "ADATA LEGEND 900 1 ТБ",
+      psu: "1STPLAYER NGDP Gold 1000W",
+      case: "LIAN LI O11 Vision COMPACT",
+      fans: "Jungle Leopard Galaxy (8 шт)"
+    }
+  },
+  {
+    id: "series-9-alpha",
+    name: "Series 9 αlpha",
+    price: "310 000₽",
+    image: series9Alpha1,
+    images: [series9Alpha1, series9Alpha2, series9Alpha3, series9Alpha4],
+    specs: {
+      processor: "AMD Ryzen 7 7800X3D",
+      gpu: "GIGABYTE GeForce RTX 5080 AERO OC",
+      motherboard: "ASUS B850 MAX GAMING WIFI W",
+      cooling: "Thermalright Frozen Vision 360 ARGB White V2",
+      ram: "G.Skill Ripjaws S5 White DDR5 32Gb (2x16Gb) 6000MHz CL30",
+      storage: "ADATA LEGEND 900 1 ТБ",
+      psu: "1STPLAYER NGDP Gold 1000W White",
+      case: "LIAN LI O11 Vision COMPACT White",
+      fans: "Jungle Leopard Galaxy (8 шт)"
     }
   }
 ];
