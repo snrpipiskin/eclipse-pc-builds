@@ -15,153 +15,19 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import pcBuild1 from "@/assets/apex-hero-1.jpg";
-import pcBuild1_2 from "@/assets/apex-hero-2.jpg";
-import pcBuild2 from "@/assets/pc-build-5.jpg";
-import pcBuild3 from "@/assets/pc-build-6.png";
-import pcBuild4 from "@/assets/pc-build-7.jpg";
-import pcBuild5 from "@/assets/pc-build-8.jpg";
-import pcBuild6 from "@/assets/pc-build-9.jpg";
-import pcBuild7 from "@/assets/pc-build-1.jpg";
-import pcBuild8 from "@/assets/pc-build-2.jpg";
-import pcBuild9 from "@/assets/pc-build-3.jpg";
-import eclipseWhite1 from "@/assets/eclipse-white-1.jpg";
-import eclipseWhite2 from "@/assets/eclipse-white-2.jpg";
-import flowWhite1 from "@/assets/flow-white-1.jpg";
-import flowWhite2 from "@/assets/flow-white-2.jpg";
-import flowWhite3 from "@/assets/flow-white-3.jpg";
-import flowWhite4 from "@/assets/flow-white-4.jpg";
-import flow1 from "@/assets/flow-1.jpg";
-import flow2 from "@/assets/flow-2.jpg";
-import flow3 from "@/assets/flow-3.jpg";
-import flow4 from "@/assets/flow-4.jpg";
-import flow5 from "@/assets/flow-5.jpg";
-import eclipse1 from "@/assets/eclipse-1.jpg";
-import eclipse2 from "@/assets/eclipse-2.jpg";
-import eclipse3 from "@/assets/eclipse-3.jpg";
-import eclipsePro1 from "@/assets/eclipse-pro-1.jpg";
-import eclipsePro2 from "@/assets/eclipse-pro-2.jpg";
-import eclipsePro3 from "@/assets/eclipse-pro-3.jpg";
-import eclipsePro4 from "@/assets/eclipse-pro-4.jpg";
-import eclipsePro5 from "@/assets/eclipse-pro-5.jpg";
-import eclipseStart1 from "@/assets/eclipse-start-1.jpg";
-import eclipseStart2 from "@/assets/eclipse-start-2.jpg";
-import eclipseStart3 from "@/assets/eclipse-start-3.jpg";
-import eclipseStart4 from "@/assets/eclipse-start-4.jpg";
 import auraLite1 from "@/assets/aura-lite-1.jpg";
 import auraLite2 from "@/assets/aura-lite-2.jpg";
 import auraLite3 from "@/assets/aura-lite-3.jpg";
-import purplePc1 from "@/assets/purple-pc-1.webp";
-import purplePc2 from "@/assets/purple-pc-2.webp";
-import purplePc3 from "@/assets/purple-pc-3.webp";
-import purplePc4 from "@/assets/purple-pc-4.webp";
-import purplePc5 from "@/assets/purple-pc-5.webp";
-import purplePc6 from "@/assets/purple-pc-6.webp";
-import rgbSpectrum1 from "@/assets/rgb-spectrum-1.webp";
-import rgbSpectrum2 from "@/assets/rgb-spectrum-2.webp";
-import rgbSpectrum3 from "@/assets/rgb-spectrum-3.webp";
-import rgbSpectrum4 from "@/assets/rgb-spectrum-4.webp";
-import rgbSpectrum5 from "@/assets/rgb-spectrum-5.webp";
-import rgbSpectrum6 from "@/assets/rgb-spectrum-6.webp";
-import rgbSpectrum7 from "@/assets/rgb-spectrum-7.webp";
+import series2_1 from "@/assets/series-2-1.png";
+import series2_2 from "@/assets/series-2-2.jpg";
+import series2_3 from "@/assets/series-2-3.jpg";
+import series2_4 from "@/assets/series-2-4.jpg";
+import series2Alpha1 from "@/assets/series-2-alpha-1.jpeg";
+import series2Alpha2 from "@/assets/series-2-alpha-2.jpeg";
+import series2Alpha3 from "@/assets/series-2-alpha-3.jpeg";
+import series2Alpha4 from "@/assets/series-2-alpha-4.jpeg";
 
 const productData = {
-  "eclipse-starter": {
-    name: "APEX HERO",
-    price: "198 000₽",
-    images: [pcBuild1, pcBuild1_2],
-    description: "Мощная игровая сборка с новейшими технологиями. Процессор AMD Ryzen 7 7800X3D с технологией 3D V-Cache обеспечивает исключительную производительность в играх, а RTX 5070 позволяет наслаждаться играми в высоком разрешении с максимальными настройками графики.",
-    specs: {
-      processor: "AMD Ryzen 7 7800X3D",
-      gpu: "NVIDIA RTX 5070 (BLACK)",
-      motherboard: "ASRock B650 Pro RS",
-      cooling: "Cougar Poseidon Elite 360 ARGB",
-      ram: "32Гб DDR5 ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
-      storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-      psu: "1STPLAYER NGDP, 850W, 80+ Gold",
-      case: "LIAN LI O11 Vision COMPACT"
-    }
-  },
-  "eclipse-gaming": {
-    name: "ECLIPSE WHITE",
-    price: "155 000₽",
-    images: [pcBuild2, eclipseWhite1, eclipseWhite2],
-    description: "Создан для серьезных геймеров, требующих высокопроизводительного гейминга в 1440p. Оснащен мощным Intel Core i5-14600KF для отличной игровой производительности и RTX 5060 Ti для высоких настроек графики.",
-    specs: {
-      processor: "Intel Core i5-14600KF",
-      gpu: "NVIDIA RTX 5060 Ti 16Gb (BLACK)",
-      motherboard: "ASRock B760 Pro RS",
-      cooling: "Cougar Poseidon Elite 360 ARGB",
-      ram: "32Гб ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
-      storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-      psu: "PHANTEKS AMP BH, 650W, 80+ Bronze White",
-      case: "ARDOR GAMING Crystal CC2"
-    }
-  },
-  "eclipse-ultimate": {
-    name: "FLOW WHITE",
-    price: "99 000₽",
-    images: [flowWhite1, flowWhite2, flowWhite3, flowWhite4],
-    description: "Стильная белая сборка с оптимальным балансом производительности и цены. AMD Ryzen 5 7500F и RTX 5060 обеспечивают уверенную игровую производительность в Full HD и 1440p разрешениях.",
-    specs: {
-      processor: "AMD Ryzen 5 7500F",
-      gpu: "NVIDIA RTX 5060 (BLACK)",
-      motherboard: "MSI PRO B650M-B",
-      cooling: "JONSBO CR-1000 V2 PRO ARGB White",
-      ram: "16Гб ADATA XPG Lancer 2x8Гб 5600МГц",
-      storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-      psu: "PHANTEKS AMP BH 650W (80+ BRONZE) White",
-      case: "Powercase Alisio Micro Z3W"
-    }
-  },
-  "eclipse-creator": {
-    name: "FLOW",
-    price: "87 000₽",
-    images: [flow1, flow2, flow3, flow4, flow5],
-    description: "Сбалансированная игровая сборка с ярким RGB-освещением. Intel Core i5-12400F и RTX 5060 обеспечивают отличную производительность в Full HD и комфортный гейминг в 1440p.",
-    specs: {
-      processor: "Intel Core i5-12400F",
-      gpu: "NVIDIA RTX 5060",
-      motherboard: "MSI PRO H610M-G DDR4",
-      cooling: "XASTRA AR400 ARGB",
-      ram: "16Гб DDR4 2x8Гб 3200МГц",
-      storage: "1TB SSD",
-      psu: "GAMERSTORM PF500X, 500W, 80+ Bronze",
-      case: "XASTRA A400M"
-    }
-  },
-  "eclipse-streamer": {
-    name: "ECLIPSE",
-    price: "150 000₽",
-    images: [eclipse1, eclipse2, eclipse3],
-    description: "Элегантная игровая сборка с премиальным охлаждением. Intel Core i5-14600KF обеспечивает высокую производительность, а RTX 5060 Ti с 16GB памяти отлично справляется с играми в 1440p.",
-    specs: {
-      processor: "Intel Core i5-14600KF",
-      gpu: "NVIDIA RTX 5060 Ti 16Gb",
-      motherboard: "MSI PRO B760-P II",
-      cooling: "Ocypus Delta L36 ARGB V2",
-      ram: "32Гб ADATA XPG Lancer Blade RGB 2x16Гб 6000МГц",
-      storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-      psu: "PHANTEKS AMP BH, 650W, 80+ Bronze",
-      case: "ARDOR GAMING Crystal CC2"
-    }
-  },
-  "eclipse-elite": {
-    name: "ECLIPSE PRO",
-    price: "98 000₽",
-    images: [eclipsePro1, eclipsePro2, eclipsePro3, eclipsePro4, eclipsePro5],
-    description: "Продвинутая игровая сборка с впечатляющей RGB-подсветкой. AMD Ryzen 5 7500F в паре с RTX 5060 обеспечивают отличную производительность для современных игр в Full HD и 1440p.",
-    specs: {
-      processor: "AMD Ryzen 5 7500F",
-      gpu: "NVIDIA RTX 5060",
-      motherboard: "MSI PRO B650M-B",
-      cooling: "XASTRA AR400 ARGB",
-      ram: "16Гб ADATA XPG Lancer 2x8Гб 5600МГц",
-      storage: "1000 ГБ M.2 NVMe накопитель ADATA LEGEND 860",
-      psu: "Deepcool GAMERSTORM PF600X, 600W, 80+ Bronze",
-      case: "XASTRA A400M"
-    }
-  },
   "aura-lite": {
     name: "AURA LITE",
     price: "31 990₽",
@@ -178,36 +44,36 @@ const productData = {
       case: "Warrior Z5 WHITE"
     }
   },
-  "purple-gaming": {
-    name: "ECLIPSE START",
-    price: "53 000₽",
-    images: [purplePc1, purplePc2, purplePc3, purplePc4, purplePc5, purplePc6],
-    description: "Яркая игровая сборка с фиолетовой RGB-подсветкой. AMD Ryzen 5 5500 в паре с мощной RTX 3060 12GB обеспечивают высокую производительность в современных играх. Увеличенный объем оперативной памяти 32GB идеален для многозадачности.",
+  "series-2": {
+    name: "Series 2",
+    price: "89 000₽",
+    images: [series2_1, series2_2, series2_3, series2_4],
+    description: "Мощная игровая сборка на базе AMD Ryzen 5600 и RTX 5060. Отличный выбор для современных игр в Full HD и 1440p с высокими настройками графики.",
     specs: {
-      processor: "AMD Ryzen 5 5500",
-      gpu: "RTX 3060 12GB",
-      motherboard: "MSI A520M PRO",
-      cooling: "Jonsbo CR1000-Max",
-      ram: "32Гб DDR4 2х16Гб 3200МГц",
-      storage: "1TB SSD",
-      psu: "1STPLAYER BLACK SIR 600W 80 PLUS",
-      case: "HSPD"
+      processor: "Ryzen 5600",
+      gpu: "Gigabyte GeForce RTX 5060 WINDFORCE OC 8 ГБ",
+      motherboard: "Gigabyte B550M K",
+      cooling: "XASTRA AR400 ARGB Basic",
+      ram: "16 Gb 3200 MHz Netac Shadow II (2x8GB)",
+      storage: "NETAC NV3000 1 ТБ",
+      psu: "Powercase PW500",
+      case: "Ocypus Gamma C52 ARGB BLACK"
     }
   },
-  "rgb-spectrum": {
-    name: "NEXUS LITE",
-    price: "59 000₽",
-    images: [rgbSpectrum1, rgbSpectrum2, rgbSpectrum3, rgbSpectrum4, rgbSpectrum5, rgbSpectrum6, rgbSpectrum7],
-    description: "Впечатляющая сборка с радужной RGB-подсветкой. AMD Ryzen 5 5500 и RTX 5050 8GB обеспечивают отличную производительность в играх. Яркие RGB-вентиляторы создают завораживающее световое шоу. 32GB оперативной памяти и быстрый SSD 1TB гарантируют комфортную работу.",
+  "series-2-alpha": {
+    name: "Series 2 αlpha",
+    price: "105 000₽",
+    images: [series2Alpha1, series2Alpha2, series2Alpha3, series2Alpha4],
+    description: "Стильная белая сборка на базе Intel Core i5 12400F и RTX 5060. Увеличенный объём оперативной памяти 32GB и элегантный белый дизайн для современного рабочего места.",
     specs: {
-      processor: "AMD Ryzen 5 5500",
-      gpu: "RTX 5050 8GB",
-      motherboard: "Gigabyte A520M K V2",
-      cooling: "JONSBO CR-1000 EVO ARGB",
-      ram: "32GB DDR4 3200 2x16Гб",
-      storage: "1TB Reletech PCI-E 4.0 SSD",
-      psu: "4FAN 600W 80+",
-      case: "Xastra A402M Black"
+      processor: "i5 12400F",
+      gpu: "Gigabyte RTX 5060 EAGLE OC ICE-8",
+      motherboard: "MSI PRO B760M-A DDR4 II",
+      cooling: "JONSBO CR-1000 EVO ARGB White",
+      ram: "Knigbank White 3200MHz - 32GB (2x16GB)",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "Powercase PW500",
+      case: "Zalman P10 White"
     }
   }
 };
@@ -295,7 +161,7 @@ const ProductDetail = () => {
             </div>
 
             {/* Thumbnail Gallery */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-4 gap-4">
               {product.images.map((image, index) => (
                 <button
                   key={index}
@@ -309,7 +175,7 @@ const ProductDetail = () => {
                   <img
                     src={image}
                     alt={`${product.name} view ${index + 1}`}
-                    className="w-full h-32 object-cover"
+                    className="w-full h-24 object-cover"
                   />
                 </button>
               ))}
@@ -378,10 +244,10 @@ const ProductDetail = () => {
 
       {/* Zoom Dialog */}
       <Dialog open={!!zoomImage} onOpenChange={() => setZoomImage(null)}>
-        <DialogContent className="max-w-5xl">
+        <DialogContent className="max-w-4xl">
           <img
             src={zoomImage || ""}
-            alt={product.name}
+            alt="Zoomed view"
             className="w-full h-auto"
           />
         </DialogContent>
@@ -389,51 +255,39 @@ const ProductDetail = () => {
 
       {/* Order Dialog */}
       <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
-        <AlertDialogContent className="glass-card">
+        <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Готовы заказать?</AlertDialogTitle>
-            <AlertDialogDescription>
-              Чтобы завершить ваш заказ {product.name}, пожалуйста, свяжитесь с нами через один из этих каналов:
-              <div className="mt-4 space-y-3">
-                <div className="flex flex-col gap-2">
+            <AlertDialogTitle>Заказ {product.name}</AlertDialogTitle>
+            <AlertDialogDescription className="space-y-4">
+              <p>Для оформления заказа свяжитесь с нами:</p>
+              <div className="space-y-2">
+                <p>
+                  <strong>Telegram:</strong>{" "}
                   <a 
-                    href={`https://api.whatsapp.com/send/?phone=79993989762&text=Здравствуйте%2C+меня+заинтересовала+сборка%3A+${product.name}&type=phone_number&app_absent=0`}
-                    target="_blank"
+                    href="https://t.me/eclipsepc_order" 
+                    target="_blank" 
                     rel="noopener noreferrer"
-                    className="font-medium text-primary hover:underline"
+                    className="text-primary hover:underline"
                   >
-                    WhatsApp
+                    @eclipsepc_order
                   </a>
-                  <a 
-                    href="https://t.me/eclipsepcxx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-primary hover:underline"
-                  >
-                    Telegram
-                  </a>
-                  <a 
-                    href="https://vk.com/eclipse_pc"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-primary hover:underline"
-                  >
-                    VK
-                  </a>
-                </div>
-                <p className="text-sm">Мы поможем вам завершить индивидуальную сборку и ответим на любые вопросы!</p>
+                </p>
               </div>
+              <p className="text-sm text-muted-foreground">
+                Укажите название сборки ({product.name}) при обращении
+              </p>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Отмена</AlertDialogCancel>
-            <AlertDialogAction onClick={() => {
-              toast({
-                title: "Спасибо!",
-                description: "Пожалуйста, свяжитесь с нами через WhatsApp, Telegram или VK, чтобы завершить ваш заказ.",
-              });
-            }}>
-              Понятно
+            <AlertDialogCancel>Закрыть</AlertDialogCancel>
+            <AlertDialogAction asChild>
+              <a 
+                href="https://t.me/eclipsepc_order" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Написать в Telegram
+              </a>
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
