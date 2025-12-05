@@ -45,6 +45,10 @@ import series9Alpha1 from "@/assets/series-9-alpha-1.jpg";
 import series9Alpha2 from "@/assets/series-9-alpha-2.jpg";
 import series9Alpha3 from "@/assets/series-9-alpha-3.jpg";
 import series9Alpha4 from "@/assets/series-9-alpha-4.jpg";
+import seriesX1 from "@/assets/series-x-1.jpg";
+import seriesX2 from "@/assets/series-x-2.jpg";
+import seriesX3 from "@/assets/series-x-3.jpg";
+import seriesX4 from "@/assets/series-x-4.jpg";
 
 export const buildsData = [
   {
@@ -254,6 +258,25 @@ export const buildsData = [
       psu: "1STPLAYER NGDP Gold 1000W White",
       case: "LIAN LI O11 Vision COMPACT White",
       fans: "Jungle Leopard Galaxy (8 шт)"
+    }
+  },
+  {
+    id: "series-x",
+    name: "Series X",
+    price: "555 000₽",
+    image: seriesX1,
+    images: [seriesX1, seriesX2, seriesX3, seriesX4],
+    specs: {
+      processor: "RYZEN 9 9950X3D OEM",
+      gpu: "Palit GeForce RTX 5090 GameRock 32 ГБ",
+      motherboard: "GIGABYTE X870 AORUS ELITE WIFI7",
+      cooling: "Phanteks Glacier One 360D30 X2 черная",
+      ram: "G.Skill TRIDENT Z5 ROYAL RGB 96GB 6400MHz (DDR5)",
+      storage: "Samsung 2 ТБ 9100 PRO",
+      psu: "Lian Li EDGE1300G Platinum",
+      case: "LIAN LI O11 Vision COMPACT",
+      fans: "Lian LI UNI FAN SL WIRELESS 120 Reverse Black (6 шт) + Lian LI UNI FAN SL WIRELESS 120 Black (2 шт)",
+      extras: "Кронштейн для видеокарты Lian Li (G89.VG4-4-V2X.R0)"
     }
   }
 ];
