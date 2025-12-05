@@ -31,6 +31,14 @@ import series4Alpha1 from "@/assets/series-4-alpha-1.jpg";
 import series4Alpha2 from "@/assets/series-4-alpha-2.jpg";
 import series4Alpha3 from "@/assets/series-4-alpha-3.jpg";
 import series4Alpha4 from "@/assets/series-4-alpha-4.jpg";
+import series6_1 from "@/assets/series-6-1.jpg";
+import series6_2 from "@/assets/series-6-2.jpg";
+import series6_3 from "@/assets/series-6-3.png";
+import series6_4 from "@/assets/series-6-4.jpg";
+import series6Alpha1 from "@/assets/series-6-alpha-1.png";
+import series6Alpha2 from "@/assets/series-6-alpha-2.png";
+import series6Alpha3 from "@/assets/series-6-alpha-3.png";
+import series6Alpha4 from "@/assets/series-6-alpha-4.jpg";
 
 const productData = {
   "series-2": {
@@ -95,6 +103,38 @@ const productData = {
       storage: "ADATA LEGEND 860 1 ТБ",
       psu: "Deepcool GAMERSTORM PF600X",
       case: "DEEPCOOL CG380 3F White"
+    }
+  },
+  "series-6": {
+    name: "Series 6",
+    price: "145 000₽",
+    images: [series6_1, series6_2, series6_3, series6_4],
+    description: "Мощная сборка на 8-ядерном Ryzen 7 8700F с водяным охлаждением. RTX 5060 Ti и DDR5 память обеспечивают превосходную производительность в играх и рабочих задачах.",
+    specs: {
+      processor: "Ryzen 7 8700F",
+      gpu: "Palit GeForce RTX 5060 Ti DUAL 8 ГБ",
+      motherboard: "MSI PRO B650M-P",
+      cooling: "JONSBO CR-1000 EVO ARGB Black",
+      ram: "Team Group T-Force Vulcan DDR5 32GB (2x16GB) 6000 MHz",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "PHANTEKS AMP BH 650",
+      case: "Zalman P30 Black V2"
+    }
+  },
+  "series-6-alpha": {
+    name: "Series 6 αlpha",
+    price: "160 000₽",
+    images: [series6Alpha1, series6Alpha2, series6Alpha3, series6Alpha4],
+    description: "Флагманская белая сборка с 240мм СВО и RTX 5060 Ti 16GB. Wi-Fi 7, RGB-подсветка G.Skill Trident Z5 и безупречная эстетика для премиального игрового пространства.",
+    specs: {
+      processor: "Ryzen 7 8700F",
+      gpu: "Palit GeForce RTX 5060 Ti White 16GB",
+      motherboard: "MSI B850M GAMING PLUS WIFI",
+      cooling: "Thermalright Frozen Notte 240 White V2",
+      ram: "G.Skill Trident Z5 RGB DDR5 32Gb (2x16Gb) 6000MHz CL34",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "PHANTEKS AMP BH 650 White",
+      case: "ZALMAN P30 White"
     }
   }
 };
