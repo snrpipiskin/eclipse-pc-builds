@@ -132,7 +132,7 @@ const ProductDetail = () => {
               <img
                 src={product.images[selectedImage]}
                 alt={product.name}
-                className="w-full h-[500px] object-cover"
+                className="w-full aspect-[3/4] object-cover"
               />
               <button
                 onClick={() => setZoomImage(product.images[selectedImage])}
@@ -175,7 +175,7 @@ const ProductDetail = () => {
                   <img
                     src={image}
                     alt={`${product.name} view ${index + 1}`}
-                    className="w-full h-24 object-cover"
+                    className="w-full aspect-[3/4] object-cover"
                   />
                 </button>
               ))}
