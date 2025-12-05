@@ -47,7 +47,7 @@ const productData = {
   "series-2": {
     name: "Series 2",
     price: "89 000₽",
-    images: [series2_1, series2_2, series2_3, series2_4],
+    images: [series2_4, series2_2, series2_3, series2_1],
     description: "Мощная игровая сборка на базе AMD Ryzen 5600 и RTX 5060. Отличный выбор для современных игр в Full HD и 1440p с высокими настройками графики.",
     specs: {
       processor: "Ryzen 5600",
