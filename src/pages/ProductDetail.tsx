@@ -132,7 +132,7 @@ const ProductDetail = () => {
               <img
                 src={product.images[selectedImage]}
                 alt={product.name}
-                className="w-full aspect-[3/4] object-cover"
+                className="w-full aspect-[4/5] object-cover"
               />
               <button
                 onClick={() => setZoomImage(product.images[selectedImage])}
@@ -175,7 +175,7 @@ const ProductDetail = () => {
                   <img
                     src={image}
                     alt={`${product.name} view ${index + 1}`}
-                    className="w-full aspect-[3/4] object-cover"
+                    className="w-full aspect-[4/5] object-cover"
                   />
                 </button>
               ))}
@@ -244,11 +244,11 @@ const ProductDetail = () => {
 
       {/* Zoom Dialog */}
       <Dialog open={!!zoomImage} onOpenChange={() => setZoomImage(null)}>
-        <DialogContent className="max-w-4xl">
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden">
           <img
             src={zoomImage || ""}
             alt="Zoomed view"
-            className="w-full h-auto"
+            className="w-full max-h-[80vh] object-contain"
           />
         </DialogContent>
       </Dialog>
