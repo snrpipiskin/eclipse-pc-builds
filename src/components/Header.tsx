@@ -3,6 +3,7 @@ import { Menu, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import textLogo from "@/assets/eclipse-text-logo.png";
+import newLogo from "@/assets/new-logo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
@@ -35,10 +36,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        <button onClick={() => scrollToSection('home')} className="flex items-center gap-3 group cursor-pointer">
-          <div className="h-10 transition-all duration-300 group-hover:scale-105 group-hover:brightness-[1.3] group-hover:contrast-[1.2] group-hover:hue-rotate-[-15deg]">
-            <img src={textLogo} alt="Eclipse PC" className="h-full w-auto object-contain" />
-          </div>
+        <button onClick={() => scrollToSection('home')} className="flex items-center gap-2 group cursor-pointer">
+          <img src={newLogo} alt="Eclipse PC Logo" className="h-9 w-9 transition-all duration-300 group-hover:scale-110" />
+          <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">Eclipse PC</span>
         </button>
         
         <div className="hidden md:flex items-center gap-8">
@@ -84,8 +84,9 @@ const Header = () => {
           <SheetContent side="right" className="w-[300px] bg-background/95 backdrop-blur-lg border-border/50">
             <div className="flex flex-col h-full">
               {/* Logo */}
-              <div className="mb-8 mt-2">
-                <img src={textLogo} alt="Eclipse PC" className="h-8 w-auto object-contain" />
+              <div className="mb-8 mt-2 flex items-center gap-2">
+                <img src={newLogo} alt="Eclipse PC" className="h-8 w-8 object-contain" />
+                <span className="text-lg font-bold text-foreground">Eclipse PC</span>
               </div>
               
               {/* Navigation */}

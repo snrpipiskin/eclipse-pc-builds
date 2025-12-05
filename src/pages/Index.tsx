@@ -85,11 +85,9 @@ const Index = () => {
     // Filter by case color
     if (filters.caseColor !== "all") {
       filtered = filtered.filter(build => {
-        const caseName = build.name.toLowerCase();
         const caseSpec = build.specs.case.toLowerCase();
-        if (filters.caseColor === "white") return caseName.includes("white") || caseSpec.includes("white");
-        if (filters.caseColor === "black") return !caseName.includes("white") && (caseName.includes("black") || caseSpec.includes("black") || (!caseSpec.includes("white") && !caseSpec.includes("rgb")));
-        if (filters.caseColor === "rgb") return caseSpec.includes("rgb") || caseSpec.includes("argb") || caseName.includes("gaming");
+        if (filters.caseColor === "white") return caseSpec.includes("white");
+        if (filters.caseColor === "black") return caseSpec.includes("black") || !caseSpec.includes("white");
         return true;
       });
     }
@@ -98,11 +96,9 @@ const Index = () => {
     if (filters.priceRange !== "all") {
       filtered = filtered.filter(build => {
         const price = parseInt(build.price.replace(/\s/g, "").replace("₽", ""));
-        if (filters.priceRange === "0-50000") return price < 50000;
-        if (filters.priceRange === "50000-100000") return price >= 50000 && price < 100000;
+        if (filters.priceRange === "0-100000") return price < 100000;
         if (filters.priceRange === "100000-150000") return price >= 100000 && price < 150000;
-        if (filters.priceRange === "150000-200000") return price >= 150000 && price < 200000;
-        if (filters.priceRange === "200000+") return price >= 200000;
+        if (filters.priceRange === "150000+") return price >= 150000;
         return true;
       });
     }
@@ -343,8 +339,8 @@ const Index = () => {
               </Link>
             </div>
             
-            <p className="text-sm text-muted-foreground pt-6">
-              © 2024 Eclipse PC. Все права защищены.
+            <p className="text-sm text-muted-foreground pt-6 pb-8 md:pb-0">
+              © 2025 Eclipse PC. Все права защищены.
             </p>
           </div>
         </div>
