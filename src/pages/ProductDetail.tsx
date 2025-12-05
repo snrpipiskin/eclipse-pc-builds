@@ -39,6 +39,13 @@ import series6Alpha1 from "@/assets/series-6-alpha-1.png";
 import series6Alpha2 from "@/assets/series-6-alpha-2.png";
 import series6Alpha3 from "@/assets/series-6-alpha-3.png";
 import series6Alpha4 from "@/assets/series-6-alpha-4.jpg";
+import series7_1 from "@/assets/series-7-1.png";
+import series7_2 from "@/assets/series-7-2.png";
+import series7_3 from "@/assets/series-7-3.jpg";
+import series7_4 from "@/assets/series-7-4.jpg";
+import series7Alpha1 from "@/assets/series-7-alpha-1.jpg";
+import series7Alpha2 from "@/assets/series-7-alpha-2.jpg";
+import series7Alpha3 from "@/assets/series-7-alpha-3.jpg";
 
 const productData = {
   "series-2": {
@@ -135,6 +142,38 @@ const productData = {
       storage: "ADATA LEGEND 860 1 ТБ",
       psu: "PHANTEKS AMP BH 650 White",
       case: "ZALMAN P30 White"
+    }
+  },
+  "series-7": {
+    name: "Series 7",
+    price: "175 000₽",
+    images: [series7_1, series7_2, series7_3, series7_4],
+    description: "Топовая сборка с Ryzen 5 9600X и RTX 5070 12GB. 360мм СВО обеспечивает отличное охлаждение для стабильной работы на максимальных частотах в 4K-гейминге.",
+    specs: {
+      processor: "Ryzen 5 9600X OEM",
+      gpu: "GIGABYTE RTX 5070 WINDFORCE SFF 12G",
+      motherboard: "MSI PRO B650M-P",
+      cooling: "THERMALRIGHT Frozen Prism 360 ARGB Black",
+      ram: "Team Group T-Force Vulcan DDR5 32GB (2x16GB) 6000 MHz",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "1STPLAYER ACK Silver 750W",
+      case: "Zalman P30 Black V2"
+    }
+  },
+  "series-7-alpha": {
+    name: "Series 7 αlpha",
+    price: "195 000₽",
+    images: [series7Alpha1, series7Alpha2, series7Alpha3],
+    description: "Флагман линейки с Ryzen 7 7700 и RTX 5070 ICE. Материнская плата PROJECT ZERO с безкабельным дизайном, 360мм СВО и 5 RGB-вентиляторов для максимальной эстетики.",
+    specs: {
+      processor: "RYZEN 7 7700 OEM",
+      gpu: "GIGABYTE GeForce RTX 5070 EAGLE OC ICE SFF",
+      motherboard: "MSI B650M PROJECT ZERO",
+      cooling: "Thermalright Frozen Notte 360 White V2",
+      ram: "G.Skill Trident Z5 RGB DDR5 32Gb (2x16Gb) 6000MHz CL34",
+      storage: "ADATA LEGEND 860 1 ТБ",
+      psu: "1STPLAYER NGDP Gold 750W White",
+      case: "Jonsbo D300 White"
     }
   }
 };
