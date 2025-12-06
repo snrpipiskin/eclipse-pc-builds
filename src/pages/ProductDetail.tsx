@@ -502,12 +502,12 @@ const ProductDetail = () => {
       <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Заказ {product.name}</AlertDialogTitle>
+            <AlertDialogTitle>Заказ сборки</AlertDialogTitle>
             <AlertDialogDescription className="space-y-4">
-              <p>Для оформления заказа свяжитесь с нами любым удобным способом:</p>
+              <p>Чтобы завершить ваш заказ <strong className="text-foreground">{product.name}</strong>, пожалуйста, свяжитесь с нами через один из этих вариантов:</p>
               <div className="space-y-3">
                 <a 
-                  href="https://t.me/eclipsepc_order" 
+                  href={`https://t.me/eclipsepc_manager?text=${encodeURIComponent(`Здравствуйте, меня заинтересовала сборка: ${product.name}`)}`}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors"
@@ -517,11 +517,11 @@ const ProductDetail = () => {
                   </svg>
                   <div>
                     <p className="font-medium text-foreground">Telegram</p>
-                    <p className="text-sm text-muted-foreground">@eclipsepc_order</p>
+                    <p className="text-sm text-muted-foreground">@eclipsepc_manager</p>
                   </div>
                 </a>
                 <a 
-                  href="https://wa.me/79991234567" 
+                  href={`https://wa.me/79993989762?text=${encodeURIComponent(`Здравствуйте, меня заинтересовала сборка: ${product.name}`)}`}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors"
@@ -531,11 +531,11 @@ const ProductDetail = () => {
                   </svg>
                   <div>
                     <p className="font-medium text-foreground">WhatsApp</p>
-                    <p className="text-sm text-muted-foreground">Написать в WhatsApp</p>
+                    <p className="text-sm text-muted-foreground">+7 999 398-97-62</p>
                   </div>
                 </a>
                 <a 
-                  href="https://vk.com/eclipsepc" 
+                  href="https://vk.com/eclipsepc_ru" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors"
@@ -550,12 +550,21 @@ const ProductDetail = () => {
                 </a>
               </div>
               <p className="text-sm text-muted-foreground pt-2">
-                Укажите название сборки ({product.name}) при обращении
+                Мы поможем вам завершить сборку и ответим на любые вопросы!
               </p>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Закрыть</AlertDialogCancel>
+            <AlertDialogCancel>Отмена</AlertDialogCancel>
+            <AlertDialogAction onClick={() => {
+              setShowDialog(false);
+              toast({
+                title: "Спасибо за интерес!",
+                description: "Ждём вас в одном из наших мессенджеров!",
+              });
+            }}>
+              Понятно
+            </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
