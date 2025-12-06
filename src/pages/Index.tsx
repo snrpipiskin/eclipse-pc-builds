@@ -349,7 +349,10 @@ const Index = () => {
               </Link>
             </div>
             
-            <p className="text-sm text-muted-foreground pt-6">
+            <p className="text-sm text-muted-foreground pt-4">
+              Почта для поддержки: <a href="mailto:support@eclipsepc.ru" className="text-primary hover:underline transition-colors">support@eclipsepc.ru</a>
+            </p>
+            <p className="text-sm text-muted-foreground pt-2">
               © 2024 Eclipse PC. Все права защищены.
             </p>
           </div>
