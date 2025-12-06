@@ -554,15 +554,20 @@ const ProductDetail = () => {
               </p>
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Отмена</AlertDialogCancel>
-            <AlertDialogAction onClick={() => {
-              setShowDialog(false);
-              toast({
-                title: "Спасибо за интерес!",
-                description: "Ждём вас в одном из наших мессенджеров!",
-              });
-            }}>
+          <AlertDialogFooter className="gap-3 sm:gap-3">
+            <AlertDialogCancel className="border-0 bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/30 transition-all duration-200">
+              Отмена
+            </AlertDialogCancel>
+            <AlertDialogAction 
+              className="border border-primary/40 bg-transparent text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+              onClick={() => {
+                setShowDialog(false);
+                toast({
+                  title: "Спасибо за интерес!",
+                  description: "Ждём вас в одном из наших мессенджеров!",
+                });
+              }}
+            >
               Понятно
             </AlertDialogAction>
           </AlertDialogFooter>
