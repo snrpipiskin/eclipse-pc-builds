@@ -71,11 +71,11 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl mb-2">
-                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    <a href="https://wa.me/79993989762" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                       WhatsApp
                     </a>
                     {" и "}
-                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    <a href="https://t.me/eclipsepc_ru" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                       Telegram
                     </a>
                   </h3>
@@ -93,7 +93,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl mb-2">
-                    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors bg-inherit">
+                    <a href="https://vk.com/eclipsepc_ru" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors bg-inherit">
                       VK
                     </a>
                   </h3>
