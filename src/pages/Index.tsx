@@ -325,11 +325,11 @@ const Index = () => {
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
                 title="Avito"
               >
-                <svg className="w-6 h-6" viewBox="0 0 100 100" fill="currentColor">
-                  <circle cx="22" cy="22" r="14"/>
-                  <circle cx="72" cy="28" r="22"/>
-                  <circle cx="32" cy="62" r="30"/>
-                  <circle cx="78" cy="76" r="18"/>
+                <svg className="w-6 h-6" viewBox="0 0 60 60" fill="currentColor">
+                  <circle cx="12" cy="12" r="8"/>
+                  <circle cx="42" cy="16" r="14"/>
+                  <circle cx="18" cy="40" r="16"/>
+                  <circle cx="48" cy="48" r="10"/>
                 </svg>
               </a>
             </div>
