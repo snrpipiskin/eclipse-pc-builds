@@ -282,6 +282,14 @@ const Index = () => {
             <p className="text-muted-foreground">
               Строим будущее, один ПК за раз
             </p>
+            <p className="text-muted-foreground">
+              <a 
+                href="mailto:support@eclipsepc.ru" 
+                className="hover:text-primary transition-colors"
+              >
+                support@eclipsepc.ru
+              </a>
+            </p>
             
             {/* Social Media Links */}
             <div className="flex justify-center gap-6 mt-6">
