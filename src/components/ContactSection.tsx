@@ -5,22 +5,23 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-
 const ContactSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
     try {
-      const { error } = await supabase.functions.invoke("send-telegram", {
+      const {
+        error
+      } = await supabase.functions.invoke("send-telegram", {
         body: {
           name: formData.name,
           email: formData.email,
@@ -28,28 +29,28 @@ const ContactSection = () => {
           source: "Форма обратной связи"
         }
       });
-
       if (error) throw error;
-
       toast({
         title: "Сообщение отправлено!",
-        description: "Спасибо за обращение. Мы скоро свяжемся с вами!",
+        description: "Спасибо за обращение. Мы скоро свяжемся с вами!"
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
     } catch (error) {
       console.error("Error sending message:", error);
       toast({
         title: "Ошибка",
         description: "Не удалось отправить сообщение. Попробуйте позже.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsLoading(false);
     }
   };
-
-  return (
-    <section id="contact" className="py-24 relative overflow-hidden scroll-mt-20">
+  return <section id="contact" className="py-24 relative overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
@@ -92,7 +93,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl mb-2">
-                    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors bg-inherit">
                       VK
                     </a>
                   </h3>
@@ -125,41 +126,30 @@ const ContactSection = () => {
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Имя
                 </label>
-                <Input
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Ваше имя"
-                  required
-                />
+                <Input id="name" value={formData.name} onChange={e => setFormData({
+                ...formData,
+                name: e.target.value
+              })} placeholder="Ваше имя" required />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Email
                 </label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="your.email@example.com"
-                  required
-                />
+                <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                ...formData,
+                email: e.target.value
+              })} placeholder="your.email@example.com" required />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Сообщение
                 </label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Расскажите нам о сборке ПК вашей мечты..."
-                  rows={5}
-                  required
-                />
+                <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                ...formData,
+                message: e.target.value
+              })} placeholder="Расскажите нам о сборке ПК вашей мечты..." rows={5} required />
               </div>
 
               <Button type="submit" className="w-full glow-box" disabled={isLoading}>
@@ -172,8 +162,6 @@ const ContactSection = () => {
       </div>
 
       {/* Removed heavy animated blur effects for performance */}
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
