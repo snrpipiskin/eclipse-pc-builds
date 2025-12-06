@@ -294,7 +294,7 @@ const Index = () => {
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
                 title="WhatsApp"
               >
-                <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6 brightness-0 invert opacity-80 hover:opacity-100" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(240deg)' }} />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" style={{ filter: 'invert(29%) sepia(98%) saturate(1752%) hue-rotate(243deg) brightness(87%) contrast(92%)' }} />
               </a>
               <a 
                 href="https://vk.com/eclipsepc" 
@@ -314,7 +314,7 @@ const Index = () => {
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
                 title="Telegram"
               >
-                <img src={telegramIcon} alt="Telegram" className="w-6 h-6" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(240deg)' }} />
+                <img src={telegramIcon} alt="Telegram" className="w-6 h-6" style={{ filter: 'invert(29%) sepia(98%) saturate(1752%) hue-rotate(243deg) brightness(87%) contrast(92%)' }} />
               </a>
               <a 
                 href="https://www.avito.ru/brands/99ae3b0888a34cd772f8690683463ef4/all?sellerId=f4be8b98442a0b6811e031e77e59aca2" 
@@ -323,7 +323,7 @@ const Index = () => {
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
                 title="Avito"
               >
-                <img src={avitoIcon} alt="Avito" className="w-6 h-6" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(240deg)' }} />
+                <img src={avitoIcon} alt="Avito" className="w-6 h-6" style={{ filter: 'invert(29%) sepia(98%) saturate(1752%) hue-rotate(243deg) brightness(87%) contrast(92%)' }} />
               </a>
             </div>
 
