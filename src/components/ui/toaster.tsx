@@ -12,17 +12,12 @@ export function Toaster() {
   const { toasts } = useToast();
 
   return (
-    <ToastProvider>
-      {toasts.map(function ({ id, title, description, action, variant, ...props }, index) {
+    <ToastProvider swipeDirection="right">
+      {toasts.map(function ({ id, title, description, action, variant, ...props }) {
         return (
           <Toast 
             key={id} 
             variant={variant as "default" | "success" | "destructive" | "info" | null | undefined}
-            style={{
-              // Stack effect: slightly offset and scale down items below the first
-              transform: index > 0 ? `translateY(${index * -4}px) scale(${1 - index * 0.02})` : undefined,
-              zIndex: 100 - index,
-            }}
             {...props}
           >
             <div className="grid gap-0.5">

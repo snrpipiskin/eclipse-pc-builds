@@ -76,31 +76,47 @@ export default {
           "0%, 100%": { boxShadow: "0 0 20px rgba(132, 255, 0, 0.1)" },
           "50%": { boxShadow: "0 0 40px rgba(132, 255, 0, 0.3)" },
         },
-        "toast-slide-in": {
-          "0%": { opacity: "0", transform: "translateX(100%) scale(0.95)" },
-          "100%": { opacity: "1", transform: "translateX(0) scale(1)" },
+        "toast-enter": {
+          "0%": { 
+            opacity: "0", 
+            transform: "translateX(100%) scale(0.8)",
+            filter: "blur(4px)"
+          },
+          "50%": {
+            opacity: "0.8",
+            transform: "translateX(-8%) scale(1.02)",
+            filter: "blur(0px)"
+          },
+          "100%": { 
+            opacity: "1", 
+            transform: "translateX(0) scale(1)",
+            filter: "blur(0px)"
+          },
         },
-        "toast-slide-out": {
-          "0%": { opacity: "1", transform: "translateX(0) scale(1)" },
-          "100%": { opacity: "0", transform: "translateX(100%) scale(0.95)" },
+        "toast-exit": {
+          "0%": { 
+            opacity: "1", 
+            transform: "translateX(0) scale(1)",
+            filter: "blur(0px)"
+          },
+          "100%": { 
+            opacity: "0", 
+            transform: "translateX(100%) scale(0.8)",
+            filter: "blur(4px)"
+          },
         },
-        "toast-stack": {
-          "0%": { opacity: "0", transform: "translateY(-8px) scale(0.96)" },
-          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
-        },
-        "progress-shrink": {
-          "0%": { width: "100%" },
-          "100%": { width: "0%" },
+        "toast-shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "toast-slide-in": "toast-slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-        "toast-slide-out": "toast-slide-out 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-        "toast-stack": "toast-stack 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-        "progress-shrink": "progress-shrink linear",
+        "toast-enter": "toast-enter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "toast-exit": "toast-exit 0.3s cubic-bezier(0.4, 0, 1, 1)",
+        "toast-shimmer": "toast-shimmer 2s linear infinite",
       },
     },
   },
