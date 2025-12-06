@@ -9,7 +9,9 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
 import BuildsFilter, { FilterState } from "@/components/BuildsFilter";
-import { MessageCircle, Send } from "lucide-react";
+import avitoIcon from "@/assets/icons/avito.png";
+import telegramIcon from "@/assets/icons/telegram.png";
+import whatsappIcon from "@/assets/icons/whatsapp.png";
 import { buildsData } from "@/data/buildsData";
 import { usePerformance } from "@/hooks/use-performance";
 
@@ -289,10 +291,10 @@ const Index = () => {
                 href="https://wa.me/79993989762" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
                 title="WhatsApp"
               >
-                <MessageCircle className="w-6 h-6" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6 brightness-0 invert opacity-80 hover:opacity-100" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(240deg)' }} />
               </a>
               <a 
                 href="https://vk.com/eclipsepc" 
@@ -309,21 +311,19 @@ const Index = () => {
                 href="https://t.me/eclipsepc_ru" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
                 title="Telegram"
               >
-                <Send className="w-6 h-6" />
+                <img src={telegramIcon} alt="Telegram" className="w-6 h-6" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(240deg)' }} />
               </a>
               <a 
                 href="https://www.avito.ru/brands/99ae3b0888a34cd772f8690683463ef4/all?sellerId=f4be8b98442a0b6811e031e77e59aca2" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
                 title="Avito"
               >
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 16.894c-.763.763-1.658 1.29-2.658 1.566-.334.092-.678.14-1.024.14-.346 0-.69-.048-1.024-.14-1-.276-1.895-.803-2.658-1.566-.763-.763-1.29-1.658-1.566-2.658-.092-.334-.14-.678-.14-1.024 0-.346.048-.69.14-1.024.276-1 .803-1.895 1.566-2.658.763-.763 1.658-1.29 2.658-1.566.334-.092.678-.14 1.024-.14.346 0 .69.048 1.024.14 1 .276 1.895.803 2.658 1.566.763.763 1.29 1.658 1.566 2.658.092.334.14.678.14 1.024 0 .346-.048.69-.14 1.024-.276 1-.803 1.895-1.566 2.658z"/>
-                </svg>
+                <img src={avitoIcon} alt="Avito" className="w-6 h-6" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(240deg)' }} />
               </a>
             </div>
 
