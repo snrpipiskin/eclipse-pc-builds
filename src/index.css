@@ -219,4 +219,43 @@ All colors MUST be HSL.
       box-shadow: 0 0 10px hsl(var(--glow-primary) / 0.2);
     }
   }
+
+  /* Toast notification styles */
+  .toast-glass {
+    background: hsl(var(--card) / 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .toast-stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .toast-stack-container:hover .toast-item {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  .toast-item {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .toast-item:hover {
+    transform: translateY(-2px) !important;
+    border-color: hsl(var(--primary) / 0.4) !important;
+    box-shadow: 0 8px 32px hsl(var(--primary) / 0.15),
+                0 0 0 1px hsl(var(--primary) / 0.1);
+  }
+
+  .toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary) / 0.5));
+    border-radius: 0 0 0.75rem 0.75rem;
+  }
 }
