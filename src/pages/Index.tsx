@@ -9,7 +9,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
 import BuildsFilter, { FilterState } from "@/components/BuildsFilter";
-import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { MessageCircle, Send } from "lucide-react";
 import { buildsData } from "@/data/buildsData";
 import { usePerformance } from "@/hooks/use-performance";
 
@@ -286,36 +286,44 @@ const Index = () => {
             {/* Social Media Links */}
             <div className="flex justify-center gap-6 mt-6">
               <a 
-                href="https://facebook.com" 
+                href="https://wa.me/79993989762" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                title="WhatsApp"
               >
-                <Facebook className="w-6 h-6" />
+                <MessageCircle className="w-6 h-6" />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://vk.com/eclipsepc" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                title="ВКонтакте"
               >
-                <Twitter className="w-6 h-6" />
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.523-2.049-1.713-1.033-1.001-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.562c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202-2.17-3.048-2.763-5.335-2.763-5.792 0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.847 2.457 2.271 4.607 2.865 4.607.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.746c.372 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.149-3.574 2.149-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .643.27.525.643-.22 1.017-2.356 4.031-2.356 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.474-.085.729-.576.729z"/>
+                </svg>
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://t.me/eclipsepc_ru" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                title="Telegram"
               >
-                <Instagram className="w-6 h-6" />
+                <Send className="w-6 h-6" />
               </a>
               <a 
-                href="https://youtube.com" 
+                href="https://www.avito.ru/brands/99ae3b0888a34cd772f8690683463ef4/all?sellerId=f4be8b98442a0b6811e031e77e59aca2" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                title="Avito"
               >
-                <Youtube className="w-6 h-6" />
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 16.894c-.763.763-1.658 1.29-2.658 1.566-.334.092-.678.14-1.024.14-.346 0-.69-.048-1.024-.14-1-.276-1.895-.803-2.658-1.566-.763-.763-1.29-1.658-1.566-2.658-.092-.334-.14-.678-.14-1.024 0-.346.048-.69.14-1.024.276-1 .803-1.895 1.566-2.658.763-.763 1.658-1.29 2.658-1.566.334-.092.678-.14 1.024-.14.346 0 .69.048 1.024.14 1 .276 1.895.803 2.658 1.566.763.763 1.29 1.658 1.566 2.658.092.334.14.678.14 1.024 0 .346-.048.69-.14 1.024-.276 1-.803 1.895-1.566 2.658z"/>
+                </svg>
               </a>
             </div>
 
