@@ -132,8 +132,8 @@ const Index = () => {
   const filteredBuilds = useMemo(() => getFilteredAndSortedBuilds(), [filters]);
 
   useEffect(() => {
-    // Skip animations if user prefers reduced motion
-    if (prefersReducedMotion) return;
+    // Skip all GSAP animations on mobile/low-performance devices or if user prefers reduced motion
+    if (prefersReducedMotion || isLowPerformance) return;
 
     const ctx = gsap.context(() => {
         // About section animation
@@ -158,19 +158,17 @@ const Index = () => {
           duration: 0.8,
         });
 
-        // Only animate cards on high-performance devices
-        if (!isLowPerformance) {
-          gsap.from(buildsRef.current?.querySelectorAll(".product-card") ?? [], {
-            scrollTrigger: {
-              trigger: buildsRef.current,
-              start: "top 75%",
-            },
-            opacity: 0,
-            y: 40,
-            stagger: 0.1,
-            duration: 0.6,
-          });
-        }
+        // Animate cards
+        gsap.from(buildsRef.current?.querySelectorAll(".product-card") ?? [], {
+          scrollTrigger: {
+            trigger: buildsRef.current,
+            start: "top 75%",
+          },
+          opacity: 0,
+          y: 40,
+          stagger: 0.1,
+          duration: 0.6,
+        });
 
         // Footer animation
         gsap.from(footerRef.current, {
