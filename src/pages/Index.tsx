@@ -12,15 +12,14 @@ import BuildsFilter, { FilterState } from "@/components/BuildsFilter";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { buildsData } from "@/data/buildsData";
 import { usePerformance } from "@/hooks/use-performance";
+
 gsap.registerPlugin(ScrollTrigger);
+
 const Index = () => {
   const aboutRef = useRef<HTMLElement>(null);
   const buildsRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
-  const {
-    isLowPerformance,
-    prefersReducedMotion
-  } = usePerformance();
+  const { isLowPerformance, prefersReducedMotion } = usePerformance();
   const [filters, setFilters] = useState<FilterState>({
     sortBy: "default",
     gpuBrand: "all",
@@ -30,6 +29,7 @@ const Index = () => {
     priceRange: "all",
     searchQuery: ""
   });
+
   const builds = buildsData;
 
   // Filter and sort builds
@@ -40,7 +40,16 @@ const Index = () => {
     if (filters.searchQuery.trim() !== "") {
       const query = filters.searchQuery.toLowerCase();
       filtered = filtered.filter(build => {
-        return build.name.toLowerCase().includes(query) || build.specs.processor.toLowerCase().includes(query) || build.specs.gpu.toLowerCase().includes(query) || build.specs.motherboard.toLowerCase().includes(query) || build.specs.ram.toLowerCase().includes(query) || build.specs.storage.toLowerCase().includes(query) || build.specs.case.toLowerCase().includes(query) || build.price.includes(query);
+        return (
+          build.name.toLowerCase().includes(query) ||
+          build.specs.processor.toLowerCase().includes(query) ||
+          build.specs.gpu.toLowerCase().includes(query) ||
+          build.specs.motherboard.toLowerCase().includes(query) ||
+          build.specs.ram.toLowerCase().includes(query) ||
+          build.specs.storage.toLowerCase().includes(query) ||
+          build.specs.case.toLowerCase().includes(query) ||
+          build.price.includes(query)
+        );
       });
     }
 
@@ -79,7 +88,7 @@ const Index = () => {
         const caseName = build.name.toLowerCase();
         const caseSpec = build.specs.case.toLowerCase();
         if (filters.caseColor === "white") return caseName.includes("white") || caseSpec.includes("white");
-        if (filters.caseColor === "black") return !caseName.includes("white") && (caseName.includes("black") || caseSpec.includes("black") || !caseSpec.includes("white") && !caseSpec.includes("rgb"));
+        if (filters.caseColor === "black") return !caseName.includes("white") && (caseName.includes("black") || caseSpec.includes("black") || (!caseSpec.includes("white") && !caseSpec.includes("rgb")));
         if (filters.caseColor === "rgb") return caseSpec.includes("rgb") || caseSpec.includes("argb") || caseName.includes("gaming");
         return true;
       });
@@ -116,74 +125,80 @@ const Index = () => {
         return 0;
       });
     }
+
     return filtered;
   };
   // Memoize filtered builds for performance
   const filteredBuilds = useMemo(() => getFilteredAndSortedBuilds(), [filters]);
+
   useEffect(() => {
     // Skip all GSAP animations on mobile/low-performance devices or if user prefers reduced motion
     if (prefersReducedMotion || isLowPerformance) return;
+
     const ctx = gsap.context(() => {
-      // About section animation
-      gsap.from(aboutRef.current?.querySelector(".section-title"), {
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          start: "top 85%"
-        },
-        opacity: 0,
-        y: 30,
-        duration: 0.8
-      });
+        // About section animation
+        gsap.from(aboutRef.current?.querySelector(".section-title"), {
+          scrollTrigger: {
+            trigger: aboutRef.current,
+            start: "top 85%",
+          },
+          opacity: 0,
+          y: 30,
+          duration: 0.8,
+        });
 
-      // Builds section animation
-      gsap.from(buildsRef.current?.querySelector(".section-title"), {
-        scrollTrigger: {
-          trigger: buildsRef.current,
-          start: "top 85%"
-        },
-        opacity: 0,
-        y: 30,
-        duration: 0.8
-      });
+        // Builds section animation
+        gsap.from(buildsRef.current?.querySelector(".section-title"), {
+          scrollTrigger: {
+            trigger: buildsRef.current,
+            start: "top 85%",
+          },
+          opacity: 0,
+          y: 30,
+          duration: 0.8,
+        });
 
-      // Animate cards
-      gsap.from(buildsRef.current?.querySelectorAll(".product-card") ?? [], {
-        scrollTrigger: {
-          trigger: buildsRef.current,
-          start: "top 75%"
-        },
-        opacity: 0,
-        y: 40,
-        stagger: 0.1,
-        duration: 0.6
-      });
+        // Animate cards
+        gsap.from(buildsRef.current?.querySelectorAll(".product-card") ?? [], {
+          scrollTrigger: {
+            trigger: buildsRef.current,
+            start: "top 75%",
+          },
+          opacity: 0,
+          y: 40,
+          stagger: 0.1,
+          duration: 0.6,
+        });
 
-      // Footer animation
-      gsap.from(footerRef.current, {
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 95%"
-        },
-        opacity: 0,
-        y: 30,
-        duration: 0.6
-      });
+        // Footer animation
+        gsap.from(footerRef.current, {
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: "top 95%",
+          },
+          opacity: 0,
+          y: 30,
+          duration: 0.6,
+        });
     });
+
     return () => ctx.revert();
   }, [isLowPerformance, prefersReducedMotion]);
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       <Header />
       <Hero />
       
       {/* About Section */}
       <section ref={aboutRef} id="about" className="py-24 relative overflow-hidden scroll-mt-20">
         {/* Animated glowing backgrounds - conditional rendering */}
-        {!isLowPerformance && <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {!isLowPerformance && (
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute top-0 -right-32 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[60px] animate-glow-pulse" />
-            <div className="absolute bottom-0 -left-32 w-[350px] h-[350px] bg-accent/10 rounded-full blur-[60px] animate-glow-fade" style={{
-          animationDelay: '1s'
-        }} />
-          </div>}
+            <div className="absolute bottom-0 -left-32 w-[350px] h-[350px] bg-accent/10 rounded-full blur-[60px] animate-glow-fade" style={{ animationDelay: '1s' }} />
+          </div>
+        )}
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
@@ -217,14 +232,12 @@ const Index = () => {
       {/* Pre-Configured Builds Section */}
       <section ref={buildsRef} id="builds" className="pt-6 pb-24 relative overflow-hidden scroll-mt-20">
         {/* Animated glowing backgrounds - conditional */}
-        {!isLowPerformance && <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute top-12 left-1/4 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[50px] animate-glow-fade" style={{
-          animationDelay: '2s'
-        }} />
-            <div className="absolute bottom-12 right-1/4 w-[300px] h-[300px] bg-accent/15 rounded-full blur-[50px] animate-glow-pulse" style={{
-          animationDelay: '4s'
-        }} />
-          </div>}
+        {!isLowPerformance && (
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute top-12 left-1/4 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[50px] animate-glow-fade" style={{ animationDelay: '2s' }} />
+            <div className="absolute bottom-12 right-1/4 w-[300px] h-[300px] bg-accent/15 rounded-full blur-[50px] animate-glow-pulse" style={{ animationDelay: '4s' }} />
+          </div>
+        )}
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
@@ -238,14 +251,20 @@ const Index = () => {
           
           <BuildsFilter onFilterChange={setFilters} />
           
-          {filteredBuilds.length === 0 ? <div className="text-center py-20">
+          {filteredBuilds.length === 0 ? (
+            <div className="text-center py-20">
               <p className="text-xl text-muted-foreground">Нет компьютеров, соответствующих выбранным фильтрам</p>
               <p className="text-sm text-muted-foreground mt-2">Попробуйте изменить параметры фильтрации</p>
-            </div> : <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredBuilds.map((build, index) => <div key={index} className="product-card">
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredBuilds.map((build, index) => (
+                <div key={index} className="product-card">
                   <ProductCard {...build} />
-                </div>)}
-            </div>}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -264,50 +283,90 @@ const Index = () => {
               Строим будущее, один ПК за раз
             </p>
             <p className="text-muted-foreground">
-              <a href="mailto:support@eclipsepc.ru" className="hover:text-primary transition-colors">support@eclipsepc.ru</a>
+              <a 
+                href="mailto:support@eclipsepc.ru" 
+                className="hover:text-primary transition-colors"
+              >
+                support@eclipsepc.ru
+              </a>
             </p>
             
             {/* Social Media Links */}
             <div className="flex justify-center gap-6 mt-6">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300">
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+              >
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300">
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+              >
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300">
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+              >
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300">
+              <a 
+                href="https://youtube.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+              >
                 <Youtube className="w-6 h-6" />
               </a>
             </div>
 
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 pt-4">
-              <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link 
+                to="/privacy" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Политика конфиденциальности
               </Link>
-              <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link 
+                to="/terms" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Условия использования
               </Link>
-              <Link to="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link 
+                to="/cookies" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Политика Cookies
               </Link>
             </div>
             
-            
+            <p className="text-sm text-muted-foreground pt-4">
+              Почта для поддержки: <a href="mailto:support@eclipsepc.ru" className="text-primary hover:underline transition-colors">support@eclipsepc.ru</a>
+            </p>
             <p className="text-sm text-muted-foreground pt-2">
               © 2024 Eclipse PC. Все права защищены.
             </p>
           </div>
         </div>
 
-        {!isLowPerformance && <div className="absolute inset-0 pointer-events-none">
+        {!isLowPerformance && (
+          <div className="absolute inset-0 pointer-events-none">
             <div className="glow-orb absolute top-1/2 left-1/4 w-24 h-24 bg-primary/10 rounded-full blur-xl" />
             <div className="glow-orb absolute top-1/3 right-1/3 w-20 h-20 bg-accent/10 rounded-full blur-xl" />
-          </div>}
+          </div>
+        )}
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
