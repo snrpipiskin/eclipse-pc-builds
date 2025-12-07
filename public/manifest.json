@@ -1,0 +1,19 @@
+{
+  "name": "Eclipse PC",
+  "short_name": "Eclipse PC",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#7c3aed",
+  "background_color": "#0f0f0f",
+  "display": "standalone"
+}
